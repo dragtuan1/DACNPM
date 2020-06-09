@@ -24,5 +24,10 @@ namespace DACNPM.Entities
         public virtual Employee Employee { get; set; }
         [ForeignKey("ID_Customer")]
         public virtual Customer Customer { get; set; }
+        public virtual ICollection<Detail_Contract> Detail_Contracts { get; set; }
+        public Contract()
+        {
+            this.Detail_Contracts = new HashSet<Detail_Contract>();
+        }
     }
 }

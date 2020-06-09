@@ -19,6 +19,11 @@ namespace DACNPM.Entities
         public string Phone { get; set; }
         public string License { get; set; }
         public bool Driver_State { get; set; }
+        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public Driver()
+        {
+            this.Vehicles = new HashSet<Vehicle>();
+        }
 
     }
 }

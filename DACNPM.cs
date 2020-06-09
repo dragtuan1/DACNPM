@@ -22,8 +22,13 @@ namespace DACNPM
         public virtual DbSet<Entities.Employee> Employees { get; set; }
         public virtual DbSet<Entities.MN_Salary> MN_Salaries { get; set; }
         public virtual DbSet<Entities.Contract> Contracts { get; set; }
-
         public virtual DbSet<Entities.Customer> Customers { get; set; }
+        public virtual DbSet<Entities.Detail_Contract> Detail_Contracts { get; set; }
+        public virtual DbSet<Entities.Vehicle> Vehicles { get; set; }
+        public virtual DbSet<Entities.Driver> Drivers { get; set; }
+        public virtual DbSet<Entities.Type_Vehicle> Type_Vehicles { get; set; }
+        public virtual DbSet<Entities.Image> Images { get; set; }
+
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 

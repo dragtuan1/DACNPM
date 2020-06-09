@@ -17,5 +17,18 @@ namespace DACNPM.Entities
         public int ID_Type_Vehicle { get; set; }
         public int ID_Driver { get; set; }
         public int Vehicle_State { get; set; }
+        public virtual ICollection<Detail_Contract> Detail_Contracts { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
+        [ForeignKey("ID_Driver")]
+        public virtual Driver Driver { get; set; }
+        [ForeignKey("ID_Type_Vehicle")]
+        public virtual Type_Vehicle Type_Vehicle { get; set; }
+
+        public Vehicle()
+        {
+            this.Detail_Contracts = new HashSet<Detail_Contract>();
+            this.Images = new HashSet<Image>();
+        }
+
     }
 }

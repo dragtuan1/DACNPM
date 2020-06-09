@@ -69,6 +69,7 @@
     <Compile Include="Entities\Detail_Contract.cs" />
     <Compile Include="Entities\Driver.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Image.cs" />
     <Compile Include="Entities\MN_Salary.cs" />
     <Compile Include="Entities\Type_Account.cs" />
     <Compile Include="Entities\Type_Vehicle.cs" />

@@ -15,6 +15,10 @@ namespace DACNPM.Entities
         public int ID_Type_Vehicle { get; set; }
         public string Name_Type { get; set; }
         public int Amount_Seat { get; set; }
-
+        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public Type_Vehicle()
+        {
+            this.Vehicles = new HashSet<Vehicle>();
+        }
     }
 }

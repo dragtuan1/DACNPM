@@ -8,17 +8,12 @@ using System.Threading.Tasks;
 
 namespace DACNPM.Entities
 {
-    [Table("DETAIL_CONTRACT")]
-    public class Detail_Contract
+    public class Image
     {
         [Key]
-        public int ID_Detail_Contract { get; set; }
-        public int ID_Contract { get; set; }
+        public int ID_Image { get; set; }
         public int ID_Vehicle { get; set; }
-        public int Total_Price { get; set; }
-        public DateTime Date_Make_Contract { get; set; }
-        [ForeignKey("ID_Contract")]
-        public virtual Contract Contract { get; set; }
+        public byte[] Image_Vehicle { get; set; }
         [ForeignKey("ID_Vehicle")]
         public virtual Vehicle Vehicle { get; set; }
     }
