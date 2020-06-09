@@ -88,8 +88,68 @@
     <Compile Include="Library_Control\QL_Car.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Library_Control\QL_Car.Designer.cs">
+    <Compile Include="Library_Control\QL_Car.designer.cs">
       <DependentUpon>QL_Car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\QL_ChiPhi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_ChiPhi.Designer.cs">
+      <DependentUpon>QL_ChiPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\QL_HopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_HopDong.designer.cs">
+      <DependentUpon>QL_HopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\QL_In4_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_In4_TaiKhoan.designer.cs">
+      <DependentUpon>QL_In4_TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\QL_KhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_KhachHang.designer.cs">
+      <DependentUpon>QL_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\QL_NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_NhanVien.designer.cs">
+      <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\QL_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_TaiKhoan.designer.cs">
+      <DependentUpon>QL_TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\QL_TaiXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_TaiXe.designer.cs">
+      <DependentUpon>QL_TaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\TK_DoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\TK_DoanhThu.designer.cs">
+      <DependentUpon>TK_DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\TK_HopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\TK_HopDong.designer.cs">
+      <DependentUpon>TK_HopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library_Control\TK_LuongNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\TK_LuongNV.designer.cs">
+      <DependentUpon>TK_LuongNV.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -107,6 +167,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_Car.resx">
       <DependentUpon>QL_Car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_ChiPhi.resx">
+      <DependentUpon>QL_ChiPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_In4_TaiKhoan.resx">
+      <DependentUpon>QL_In4_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_KhachHang.resx">
+      <DependentUpon>QL_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_NhanVien.resx">
+      <DependentUpon>QL_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_TaiKhoan.resx">
+      <DependentUpon>QL_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_TaiXe.resx">
+      <DependentUpon>QL_TaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\TK_DoanhThu.resx">
+      <DependentUpon>TK_DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\TK_HopDong.resx">
+      <DependentUpon>TK_HopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\TK_LuongNV.resx">
+      <DependentUpon>TK_LuongNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

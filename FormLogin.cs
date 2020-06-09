@@ -60,7 +60,11 @@ namespace DACNPM
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if(MessageBox.Show("Are you sure to close the application?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -82,23 +86,23 @@ namespace DACNPM
         private void msgError(string msg)
         {
             lblMessageError.Text = msg;
-            lblMessageError.Enabled = true;
+            lblMessageError.Visible = true;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text != "Username" && txtUser.TextLength > 2)
+            if (txtUser.Text != "USERNAME" && txtUser.TextLength > 2)
             {
-                if (txtPass.Text != "Password")
+                if (txtPass.Text != "PASSWORD")
                 {
                     DACNPM db = new DACNPM();
                     var list = db.Accounts.Where(p => p.Username == txtUser.Text && p.UserPassword == txtPass.Text)
                         .Select(p => p);
-                    if (list.ToList() != null)
+                    if (list.ToList().Count != 0)
                     {
                         this.Hide();
-                        FormWellcome wellcome = new FormWellcome();
-                        wellcome.ShowDialog();
-                        MainForm mainForm = new MainForm();
+                        //FormWellcome wellcome = new FormWellcome();
+                        //wellcome.ShowDialog();
+                        MainForm mainForm = new MainForm(txtUser.Text);
                         mainForm.Show();
                         mainForm.FormClosed += Logout;
                     }
@@ -112,13 +116,20 @@ namespace DACNPM
                 }
                 else msgError("Please enter password.");
             }
-            else msgError("Please enter username.");
+            else
+            {
+                msgError("Please enter username.");
+                txtPass.Text = "PASSWORD";
+                txtPass.UseSystemPasswordChar = false;
+                txtUser.Focus();
+            }
         }
-        private void Logout(object sender, FormClosedEventArgs e)
+        public void Logout(object sender, FormClosedEventArgs e)
         {
-            txtUser.Clear();
-            txtPass.Clear();
+            txtUser.Text = "USERNAME";
+            txtPass.Text = "PASSWORD";
             lblMessageError.Visible = false;
+            txtPass.UseSystemPasswordChar = false;
             this.Show();
             txtUser.Focus();
         }
