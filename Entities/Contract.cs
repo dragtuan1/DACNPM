@@ -22,5 +22,7 @@ namespace DACNPM.Entities
 
         [ForeignKey("ID_Employee")]
         public virtual Employee Employee { get; set; }
+        [ForeignKey("ID_Customer")]
+        public virtual Customer Customer { get; set; }
     }
 }
