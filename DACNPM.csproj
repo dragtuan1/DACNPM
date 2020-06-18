@@ -61,7 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BLL_QLKH.cs" />
+    <Compile Include="BLL_QLKH.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="DACNPM.cs" />
     <Compile Include="Entities\Account.cs" />
