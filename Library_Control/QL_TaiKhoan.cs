@@ -16,5 +16,10 @@ namespace DACNPM.Library_Control
         {
             InitializeComponent();
         }
+
+        private void quyen_nv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

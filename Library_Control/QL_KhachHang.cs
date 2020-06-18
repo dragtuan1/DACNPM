@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DACNPM.Library_Control
 {
-    public partial class QL_Khach_Hang : UserControl
+    public partial class QL_KhachHang : UserControl
     {
-        public QL_Khach_Hang()
+        public QL_KhachHang()
         {
             InitializeComponent();
         }

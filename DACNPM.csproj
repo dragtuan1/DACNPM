@@ -128,6 +128,12 @@
     <Compile Include="Library_Control\QL_TaiKhoan.designer.cs">
       <DependentUpon>QL_TaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Library_Control\QL_TaiKhoan1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Library_Control\QL_TaiKhoan1.Designer.cs">
+      <DependentUpon>QL_TaiKhoan1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Library_Control\QL_TaiXe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <EmbeddedResource Include="Library_Control\QL_ChiPhi.resx">
       <DependentUpon>QL_ChiPhi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_HopDong.resx">
+      <DependentUpon>QL_HopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_In4_TaiKhoan.resx">
       <DependentUpon>QL_In4_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_TaiKhoan.resx">
       <DependentUpon>QL_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library_Control\QL_TaiKhoan1.resx">
+      <DependentUpon>QL_TaiKhoan1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_TaiXe.resx">
       <DependentUpon>QL_TaiXe.cs</DependentUpon>

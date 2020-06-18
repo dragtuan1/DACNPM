@@ -21,5 +21,10 @@ namespace DACNPM.Library_Control
         {
 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

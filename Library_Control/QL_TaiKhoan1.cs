@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DACNPM.Library_Control
 {
-    public partial class TK_HopDong : UserControl
+    public partial class QL_TaiKhoan1 : UserControl
     {
-        public TK_HopDong()
+        public QL_TaiKhoan1()
         {
             InitializeComponent();
-        }
-
-        private void TK_HopDong_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -131,6 +131,41 @@ namespace DACNPM
             panelMain.Controls.Add(new Library_Control.QL_TaiXe());
         }
 
+        private void btnQL_KH_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.QL_KhachHang());
+        }
+
+        private void btnQL_TK_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.QL_TaiKhoan());
+        }
+
+        private void btnQL_HD_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.QL_HopDong());
+        }
+
+        private void btnTK_DT_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.TK_DoanhThu());
+        }
+
+        private void btnTK_HD_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.TK_HopDong());
+        }
+
+        private void btnTK_LNV_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.TK_LuongNV());
+        }
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
             showSubmenu(panelQuanLySubmenu);
