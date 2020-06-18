@@ -1,6 +1,6 @@
 ﻿namespace DACNPM.Library_Control
 {
-    partial class QL_TaiKhoan
+    partial class QL_TaiKhoan1
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_TaiKhoan));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_TaiKhoan1));
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,59 +47,94 @@
             this.quyen_nv = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_reset = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_reset = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.ten_hang = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ma_hang = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox2
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.quyen_nv);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.btn_reset);
-            this.groupBox1.Controls.Add(this.btn_delete);
-            this.groupBox1.Controls.Add(this.btn_edit);
-            this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.ten_hang);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.ma_hang);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox1.Location = new System.Drawing.Point(50, 56);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1021, 357);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Location = new System.Drawing.Point(50, 435);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1021, 242);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.account,
+            this.password,
+            this.position,
+            this.employee});
+            this.dataGridView1.Location = new System.Drawing.Point(35, 32);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(952, 210);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            // 
+            // account
+            // 
+            this.account.HeaderText = "Tên tài khoản";
+            this.account.MinimumWidth = 6;
+            this.account.Name = "account";
+            // 
+            // password
+            // 
+            this.password.HeaderText = "Mật khẩu";
+            this.password.MinimumWidth = 6;
+            this.password.Name = "password";
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Chức vụ";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            // 
+            // employee
+            // 
+            this.employee.HeaderText = "Tên nhân viên";
+            this.employee.MinimumWidth = 6;
+            this.employee.Name = "employee";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(8, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(207, 21);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Danh sách chi tiết tài khoản";
             // 
             // comboBox2
             // 
@@ -189,7 +231,6 @@
             this.quyen_nv.Name = "quyen_nv";
             this.quyen_nv.Size = new System.Drawing.Size(339, 32);
             this.quyen_nv.TabIndex = 32;
-            this.quyen_nv.SelectedIndexChanged += new System.EventHandler(this.quyen_nv_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -215,22 +256,6 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông tin tài khoản";
             // 
-            // btn_reset
-            // 
-            this.btn_reset.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_reset.FlatAppearance.BorderSize = 0;
-            this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
-            this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reset.Location = new System.Drawing.Point(74, 283);
-            this.btn_reset.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btn_reset.Size = new System.Drawing.Size(147, 49);
-            this.btn_reset.TabIndex = 11;
-            this.btn_reset.Text = "         Nhập Lại";
-            this.btn_reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reset.UseVisualStyleBackColor = false;
-            // 
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.SystemColors.Info;
@@ -247,6 +272,34 @@
             this.btn_delete.Text = "         Xóa";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_reset.FlatAppearance.BorderSize = 0;
+            this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
+            this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reset.Location = new System.Drawing.Point(74, 283);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_reset.Size = new System.Drawing.Size(147, 49);
+            this.btn_reset.TabIndex = 11;
+            this.btn_reset.Text = "         Nhập Lại";
+            this.btn_reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reset.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(379, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(282, 37);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "QUẢN LÍ TÀI KHOẢN";
             // 
             // btn_edit
             // 
@@ -313,6 +366,36 @@
             this.ma_hang.Size = new System.Drawing.Size(285, 45);
             this.ma_hang.TabIndex = 1;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.quyen_nv);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.btn_reset);
+            this.groupBox1.Controls.Add(this.btn_delete);
+            this.groupBox1.Controls.Add(this.btn_edit);
+            this.groupBox1.Controls.Add(this.btn_add);
+            this.groupBox1.Controls.Add(this.ten_hang);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.ma_hang);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.groupBox1.Location = new System.Drawing.Point(50, 56);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1021, 357);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -325,113 +408,32 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên tài Khoản:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(50, 435);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1021, 242);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.account,
-            this.password,
-            this.position,
-            this.employee});
-            this.dataGridView1.Location = new System.Drawing.Point(35, 32);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(952, 210);
-            this.dataGridView1.TabIndex = 19;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            // 
-            // account
-            // 
-            this.account.HeaderText = "Tên tài khoản";
-            this.account.MinimumWidth = 6;
-            this.account.Name = "account";
-            // 
-            // password
-            // 
-            this.password.HeaderText = "Mật khẩu";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Chức vụ";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            // 
-            // employee
-            // 
-            this.employee.HeaderText = "Tên nhân viên";
-            this.employee.MinimumWidth = 6;
-            this.employee.Name = "employee";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(8, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 21);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Danh sách chi tiết tài khoản";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.PanSW;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1100, 700);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 7;
+            this.panel1.Visible = false;
             // 
-            // label1
+            // QL_TaiKhoan1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(379, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 37);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "QUẢN LÍ TÀI KHOẢN";
-            // 
-            // QL_TaiKhoan
-            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "QL_TaiKhoan";
+            this.Name = "QL_TaiKhoan1";
             this.Size = new System.Drawing.Size(1100, 700);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -440,7 +442,14 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn account;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -451,23 +460,16 @@
         private System.Windows.Forms.ComboBox quyen_nv;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_reset;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox ten_hang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ma_hang;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn account;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employee;
     }
 }

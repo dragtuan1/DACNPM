@@ -31,11 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelThongKeSubmenu = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnTK_LNV = new System.Windows.Forms.Button();
+            this.btnTK_HD = new System.Windows.Forms.Button();
+            this.btnTK_DT = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.panelQuanLySubmenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnQL_HD = new System.Windows.Forms.Button();
+            this.btnQL_TK = new System.Windows.Forms.Button();
+            this.btnQL_KH = new System.Windows.Forms.Button();
             this.btnQL_TaiXe = new System.Windows.Forms.Button();
             this.btnQL_NhanVien = new System.Windows.Forms.Button();
             this.btnQL_ChiPhi = new System.Windows.Forms.Button();
@@ -55,9 +58,6 @@
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelThongKeSubmenu.SuspendLayout();
             this.panelQuanLySubmenu.SuspendLayout();
@@ -92,52 +92,73 @@
             // panelThongKeSubmenu
             // 
             this.panelThongKeSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.panelThongKeSubmenu.Controls.Add(this.button3);
-            this.panelThongKeSubmenu.Controls.Add(this.button6);
-            this.panelThongKeSubmenu.Controls.Add(this.button7);
+            this.panelThongKeSubmenu.Controls.Add(this.btnTK_LNV);
+            this.panelThongKeSubmenu.Controls.Add(this.btnTK_HD);
+            this.panelThongKeSubmenu.Controls.Add(this.btnTK_DT);
             this.panelThongKeSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelThongKeSubmenu.Location = new System.Drawing.Point(0, 570);
             this.panelThongKeSubmenu.Name = "panelThongKeSubmenu";
             this.panelThongKeSubmenu.Size = new System.Drawing.Size(200, 150);
             this.panelThongKeSubmenu.TabIndex = 8;
             // 
-            // button6
+            // btnTK_LNV
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 50);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 50);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "                Thống kê hợp đồng";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnTK_LNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnTK_LNV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTK_LNV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTK_LNV.FlatAppearance.BorderSize = 0;
+            this.btnTK_LNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTK_LNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTK_LNV.ForeColor = System.Drawing.Color.White;
+            this.btnTK_LNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTK_LNV.Location = new System.Drawing.Point(0, 100);
+            this.btnTK_LNV.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTK_LNV.Name = "btnTK_LNV";
+            this.btnTK_LNV.Size = new System.Drawing.Size(200, 50);
+            this.btnTK_LNV.TabIndex = 7;
+            this.btnTK_LNV.Text = "            Thống kê lương NV";
+            this.btnTK_LNV.UseVisualStyleBackColor = false;
+            this.btnTK_LNV.Click += new System.EventHandler(this.btnTK_LNV_Click);
             // 
-            // button7
+            // btnTK_HD
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.button7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 50);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "          Thống kê doanh thu";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnTK_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnTK_HD.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTK_HD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTK_HD.FlatAppearance.BorderSize = 0;
+            this.btnTK_HD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTK_HD.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTK_HD.ForeColor = System.Drawing.Color.White;
+            this.btnTK_HD.Image = ((System.Drawing.Image)(resources.GetObject("btnTK_HD.Image")));
+            this.btnTK_HD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTK_HD.Location = new System.Drawing.Point(0, 50);
+            this.btnTK_HD.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTK_HD.Name = "btnTK_HD";
+            this.btnTK_HD.Size = new System.Drawing.Size(200, 50);
+            this.btnTK_HD.TabIndex = 5;
+            this.btnTK_HD.Text = "                Thống kê hợp đồng";
+            this.btnTK_HD.UseVisualStyleBackColor = false;
+            this.btnTK_HD.Click += new System.EventHandler(this.btnTK_HD_Click);
+            // 
+            // btnTK_DT
+            // 
+            this.btnTK_DT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnTK_DT.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTK_DT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTK_DT.FlatAppearance.BorderSize = 0;
+            this.btnTK_DT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTK_DT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTK_DT.ForeColor = System.Drawing.Color.White;
+            this.btnTK_DT.Image = ((System.Drawing.Image)(resources.GetObject("btnTK_DT.Image")));
+            this.btnTK_DT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTK_DT.Location = new System.Drawing.Point(0, 0);
+            this.btnTK_DT.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTK_DT.Name = "btnTK_DT";
+            this.btnTK_DT.Size = new System.Drawing.Size(200, 50);
+            this.btnTK_DT.TabIndex = 6;
+            this.btnTK_DT.Text = "          Thống kê doanh thu";
+            this.btnTK_DT.UseVisualStyleBackColor = false;
+            this.btnTK_DT.Click += new System.EventHandler(this.btnTK_DT_Click);
             // 
             // btnThongKe
             // 
@@ -157,9 +178,9 @@
             // panelQuanLySubmenu
             // 
             this.panelQuanLySubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.panelQuanLySubmenu.Controls.Add(this.button2);
-            this.panelQuanLySubmenu.Controls.Add(this.button1);
-            this.panelQuanLySubmenu.Controls.Add(this.button5);
+            this.panelQuanLySubmenu.Controls.Add(this.btnQL_HD);
+            this.panelQuanLySubmenu.Controls.Add(this.btnQL_TK);
+            this.panelQuanLySubmenu.Controls.Add(this.btnQL_KH);
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_TaiXe);
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_NhanVien);
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_ChiPhi);
@@ -170,22 +191,59 @@
             this.panelQuanLySubmenu.Size = new System.Drawing.Size(200, 350);
             this.panelQuanLySubmenu.TabIndex = 6;
             // 
-            // button5
+            // btnQL_HD
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 200);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 50);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Quản lý khách hàng";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnQL_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_HD.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_HD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_HD.FlatAppearance.BorderSize = 0;
+            this.btnQL_HD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_HD.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_HD.ForeColor = System.Drawing.Color.White;
+            this.btnQL_HD.Location = new System.Drawing.Point(0, 300);
+            this.btnQL_HD.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_HD.Name = "btnQL_HD";
+            this.btnQL_HD.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_HD.TabIndex = 8;
+            this.btnQL_HD.Text = "Quản lý hợp đồng";
+            this.btnQL_HD.UseVisualStyleBackColor = false;
+            this.btnQL_HD.Click += new System.EventHandler(this.btnQL_HD_Click);
+            // 
+            // btnQL_TK
+            // 
+            this.btnQL_TK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_TK.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_TK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_TK.FlatAppearance.BorderSize = 0;
+            this.btnQL_TK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_TK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_TK.ForeColor = System.Drawing.Color.White;
+            this.btnQL_TK.Location = new System.Drawing.Point(0, 250);
+            this.btnQL_TK.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_TK.Name = "btnQL_TK";
+            this.btnQL_TK.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_TK.TabIndex = 7;
+            this.btnQL_TK.Text = "Quản lý tài khoản";
+            this.btnQL_TK.UseVisualStyleBackColor = false;
+            this.btnQL_TK.Click += new System.EventHandler(this.btnQL_TK_Click);
+            // 
+            // btnQL_KH
+            // 
+            this.btnQL_KH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_KH.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_KH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_KH.FlatAppearance.BorderSize = 0;
+            this.btnQL_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_KH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_KH.ForeColor = System.Drawing.Color.White;
+            this.btnQL_KH.Location = new System.Drawing.Point(0, 200);
+            this.btnQL_KH.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_KH.Name = "btnQL_KH";
+            this.btnQL_KH.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_KH.TabIndex = 2;
+            this.btnQL_KH.Text = "Quản lý khách hàng";
+            this.btnQL_KH.UseVisualStyleBackColor = false;
+            this.btnQL_KH.Click += new System.EventHandler(this.btnQL_KH_Click);
             // 
             // btnQL_TaiXe
             // 
@@ -438,8 +496,8 @@
             // 
             // panel
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.Image = ((System.Drawing.Image)(resources.GetObject("panel.Image")));
             this.panel.Location = new System.Drawing.Point(0, 0);
@@ -448,59 +506,6 @@
             this.panel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.panel.TabIndex = 0;
             this.panel.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 250);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Quản lý tài khoản";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 300);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 50);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Quản lý hợp đồng";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 100);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 50);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "            Thống kê lương NV";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -551,18 +556,18 @@
         private System.Windows.Forms.Label lbPost;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelQuanLySubmenu;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnQL_KH;
         private System.Windows.Forms.Button btnQL_TaiXe;
         private System.Windows.Forms.Button btnQL_NhanVien;
         private System.Windows.Forms.Button btnQL_ChiPhi;
         private System.Windows.Forms.Button btnQL_Car;
         private System.Windows.Forms.Button btnQuanLy;
         private System.Windows.Forms.Panel panelThongKeSubmenu;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnTK_HD;
+        private System.Windows.Forms.Button btnTK_DT;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTK_LNV;
+        private System.Windows.Forms.Button btnQL_HD;
+        private System.Windows.Forms.Button btnQL_TK;
     }
 }

@@ -37,6 +37,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,14 +59,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SalaryInMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -74,7 +75,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.button2);
@@ -82,6 +82,7 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.btn_reset);
             this.groupBox1.Controls.Add(this.btn_delete);
+            this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.btn_edit);
             this.groupBox1.Controls.Add(this.btn_add);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -101,11 +102,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox1.Location = new System.Drawing.Point(19, 56);
+            this.groupBox1.Location = new System.Drawing.Point(67, 56);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1060, 432);
+            this.groupBox1.Size = new System.Drawing.Size(1392, 432);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -115,7 +116,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(298, 378);
+            this.button3.Location = new System.Drawing.Point(467, 319);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -141,7 +142,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(168, 381);
+            this.button2.Location = new System.Drawing.Point(316, 383);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -178,7 +179,7 @@
             this.btn_reset.FlatAppearance.BorderSize = 0;
             this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
             this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reset.Location = new System.Drawing.Point(38, 378);
+            this.btn_reset.Location = new System.Drawing.Point(168, 386);
             this.btn_reset.Margin = new System.Windows.Forms.Padding(4);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -195,7 +196,7 @@
             this.btn_delete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(298, 319);
+            this.btn_delete.Location = new System.Drawing.Point(316, 321);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -204,6 +205,22 @@
             this.btn_delete.Text = "         Xóa";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_save.FlatAppearance.BorderSize = 0;
+            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
+            this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_save.Location = new System.Drawing.Point(38, 388);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btn_save.Size = new System.Drawing.Size(110, 40);
+            this.btn_save.TabIndex = 37;
+            this.btn_save.Text = "          Lưu Lại";
+            this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_save.UseVisualStyleBackColor = false;
             // 
             // btn_edit
             // 
@@ -355,7 +372,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(417, 3);
+            this.label5.Location = new System.Drawing.Point(413, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 21);
@@ -434,13 +451,14 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(19, 490);
+            this.groupBox2.Location = new System.Drawing.Point(67, 496);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1060, 200);
+            this.groupBox2.Size = new System.Drawing.Size(1012, 205);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dataGridView1
             // 
@@ -450,7 +468,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.NameAccount,
-            this.Namee,
+            this.Name,
             this.Address,
             this.PhoneNumber,
             this.Position,
@@ -461,19 +479,6 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(988, 141);
             this.dataGridView1.TabIndex = 19;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(364, -4);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(222, 21);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Danh Sách Chi Tiết Nhân Viên";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // STT
             // 
@@ -489,12 +494,12 @@
             this.NameAccount.MinimumWidth = 6;
             this.NameAccount.Name = "NameAccount";
             // 
-            // Namee
+            // Name
             // 
-            this.Namee.FillWeight = 108.8175F;
-            this.Namee.HeaderText = "Họ Và Tên";
-            this.Namee.MinimumWidth = 6;
-            this.Namee.Name = "Namee";
+            this.Name.FillWeight = 108.8175F;
+            this.Name.HeaderText = "Họ Và Tên";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
             // 
             // Address
             // 
@@ -524,12 +529,25 @@
             this.SalaryInMonth.MinimumWidth = 6;
             this.SalaryInMonth.Name = "SalaryInMonth";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(364, -4);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(222, 21);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Danh Sách Chi Tiết Nhân Viên";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // QL_NhanVien
             // 
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "QL_NhanVien";
+            //this.Name = "QL_NhanVien";
             this.Size = new System.Drawing.Size(1100, 700);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -552,6 +570,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox textBox1;
@@ -574,10 +593,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameAccount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Position;
