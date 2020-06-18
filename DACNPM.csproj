@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_QLKH.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="DACNPM.cs" />
     <Compile Include="Entities\Account.cs" />
@@ -234,8 +235,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
