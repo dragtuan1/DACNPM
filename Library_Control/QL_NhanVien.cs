@@ -26,5 +26,9 @@ namespace DACNPM.Library_Control
         {
 
         }
+        public void get_all_employee()
+        {
+
+        }
     }
 }

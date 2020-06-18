@@ -63,7 +63,7 @@ namespace DACNPM
             });
             context.Customers.Add(new Entities.Customer
             {
-                ID_Customer = 1,
+                ID_Customer = 2,
                 Customer_Address = "Quang Binh",
                 CMND = "192201494",
                 Phone = "081759008",
@@ -71,7 +71,7 @@ namespace DACNPM
             });
             context.Customers.Add(new Entities.Customer
             {
-                ID_Customer = 1,
+                ID_Customer = 3,
                 Customer_Address = "Quang Nam",
                 CMND = "192201493",
                 Phone = "081759007",
@@ -288,24 +288,6 @@ namespace DACNPM
                 Salary = 2000000,
                 Total_Contract = 10
             });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }

@@ -348,7 +348,7 @@
             // 
             this.ho_ten.BackColor = System.Drawing.Color.White;
             this.ho_ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ho_ten.Location = new System.Drawing.Point(158, 183);
+            this.ho_ten.Location = new System.Drawing.Point(158, 180);
             this.ho_ten.Margin = new System.Windows.Forms.Padding(4);
             this.ho_ten.Multiline = true;
             this.ho_ten.Name = "ho_ten";
@@ -360,7 +360,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(31, 194);
+            this.label7.Location = new System.Drawing.Point(31, 191);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 16);
@@ -547,7 +547,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            //this.Name = "QL_NhanVien";
+            this.Name = "QL_NhanVien";
             this.Size = new System.Drawing.Size(1100, 700);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
