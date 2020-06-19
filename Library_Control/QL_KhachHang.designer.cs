@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_KhachHang));
             this.label6 = new System.Windows.Forms.Label();
-            this.gw_khachhang = new System.Windows.Forms.DataGridView();
-            this.customer_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ma_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customer_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,20 +40,21 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ten_xe = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_CMND = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.phone = new System.Windows.Forms.TextBox();
+            this.Txt_Phone = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dia_chi = new System.Windows.Forms.TextBox();
-            this.ten_khach_hang = new System.Windows.Forms.TextBox();
+            this.Txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.Txt_TenKH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ma_khach_hang = new System.Windows.Forms.TextBox();
+            this.Txt_MaKH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gw_khachhang)).BeginInit();
+            this.DGV_QLKH = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_QLKH)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -76,93 +69,6 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Danh Sách Chi Tiết Khách Hàng";
             // 
-            // gw_khachhang
-            // 
-            this.gw_khachhang.AllowUserToAddRows = false;
-            this.gw_khachhang.AllowUserToDeleteRows = false;
-            this.gw_khachhang.BackgroundColor = System.Drawing.SystemColors.Info;
-            this.gw_khachhang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gw_khachhang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.gw_khachhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gw_khachhang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.customer_id,
-            this.STT,
-            this.ma_kh,
-            this.customer_name,
-            this.address,
-            this.phones,
-            this.description});
-            this.gw_khachhang.Location = new System.Drawing.Point(57, 490);
-            this.gw_khachhang.Margin = new System.Windows.Forms.Padding(4);
-            this.gw_khachhang.Name = "gw_khachhang";
-            this.gw_khachhang.ReadOnly = true;
-            this.gw_khachhang.RowHeadersWidth = 51;
-            this.gw_khachhang.Size = new System.Drawing.Size(1033, 202);
-            this.gw_khachhang.TabIndex = 21;
-            // 
-            // customer_id
-            // 
-            this.customer_id.DataPropertyName = "customer_id";
-            this.customer_id.HeaderText = "ID";
-            this.customer_id.MinimumWidth = 6;
-            this.customer_id.Name = "customer_id";
-            this.customer_id.ReadOnly = true;
-            this.customer_id.Visible = false;
-            this.customer_id.Width = 125;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            this.STT.Width = 50;
-            // 
-            // ma_kh
-            // 
-            this.ma_kh.DataPropertyName = "ma_kh";
-            this.ma_kh.HeaderText = "Mã Khách Hàng";
-            this.ma_kh.MinimumWidth = 6;
-            this.ma_kh.Name = "ma_kh";
-            this.ma_kh.ReadOnly = true;
-            this.ma_kh.Width = 140;
-            // 
-            // customer_name
-            // 
-            this.customer_name.DataPropertyName = "customer_name";
-            this.customer_name.HeaderText = "Tên Khách Hàng";
-            this.customer_name.MinimumWidth = 6;
-            this.customer_name.Name = "customer_name";
-            this.customer_name.ReadOnly = true;
-            this.customer_name.Width = 250;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "address";
-            this.address.HeaderText = "Địa Chỉ";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.Width = 200;
-            // 
-            // phones
-            // 
-            this.phones.DataPropertyName = "phone";
-            this.phones.HeaderText = "Điện Thoại";
-            this.phones.MinimumWidth = 6;
-            this.phones.Name = "phones";
-            this.phones.ReadOnly = true;
-            this.phones.Width = 130;
-            // 
-            // description
-            // 
-            this.description.DataPropertyName = "description";
-            this.description.HeaderText = "CMND";
-            this.description.MinimumWidth = 6;
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
-            this.description.Width = 200;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button2);
@@ -174,15 +80,15 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.ten_xe);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Txt_CMND);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.phone);
+            this.groupBox1.Controls.Add(this.Txt_Phone);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.dia_chi);
-            this.groupBox1.Controls.Add(this.ten_khach_hang);
+            this.groupBox1.Controls.Add(this.Txt_DiaChi);
+            this.groupBox1.Controls.Add(this.Txt_TenKH);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.ma_khach_hang);
+            this.groupBox1.Controls.Add(this.Txt_MaKH);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,6 +165,7 @@
             this.btn_delete.Text = "         Xóa";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_edit
             // 
@@ -290,6 +197,7 @@
             this.btn_add.Text = "         Thêm Mới";
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // comboBox1
             // 
@@ -328,16 +236,16 @@
             this.textBox2.Size = new System.Drawing.Size(185, 40);
             this.textBox2.TabIndex = 53;
             // 
-            // textBox1
+            // Txt_CMND
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(200, 179);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 45);
-            this.textBox1.TabIndex = 52;
+            this.Txt_CMND.BackColor = System.Drawing.Color.White;
+            this.Txt_CMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_CMND.Location = new System.Drawing.Point(200, 179);
+            this.Txt_CMND.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_CMND.Multiline = true;
+            this.Txt_CMND.Name = "Txt_CMND";
+            this.Txt_CMND.Size = new System.Drawing.Size(266, 45);
+            this.Txt_CMND.TabIndex = 52;
             // 
             // label1
             // 
@@ -351,16 +259,16 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "CMND:";
             // 
-            // phone
+            // Txt_Phone
             // 
-            this.phone.BackColor = System.Drawing.Color.White;
-            this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(665, 146);
-            this.phone.Margin = new System.Windows.Forms.Padding(4);
-            this.phone.Multiline = true;
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(369, 45);
-            this.phone.TabIndex = 50;
+            this.Txt_Phone.BackColor = System.Drawing.Color.White;
+            this.Txt_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Phone.Location = new System.Drawing.Point(665, 146);
+            this.Txt_Phone.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_Phone.Multiline = true;
+            this.Txt_Phone.Name = "Txt_Phone";
+            this.Txt_Phone.Size = new System.Drawing.Size(369, 45);
+            this.Txt_Phone.TabIndex = 50;
             // 
             // label11
             // 
@@ -386,27 +294,27 @@
             this.label8.TabIndex = 48;
             this.label8.Text = "Địa Chỉ:";
             // 
-            // dia_chi
+            // Txt_DiaChi
             // 
-            this.dia_chi.BackColor = System.Drawing.Color.White;
-            this.dia_chi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dia_chi.Location = new System.Drawing.Point(665, 63);
-            this.dia_chi.Margin = new System.Windows.Forms.Padding(4);
-            this.dia_chi.Multiline = true;
-            this.dia_chi.Name = "dia_chi";
-            this.dia_chi.Size = new System.Drawing.Size(369, 45);
-            this.dia_chi.TabIndex = 47;
+            this.Txt_DiaChi.BackColor = System.Drawing.Color.White;
+            this.Txt_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_DiaChi.Location = new System.Drawing.Point(665, 63);
+            this.Txt_DiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_DiaChi.Multiline = true;
+            this.Txt_DiaChi.Name = "Txt_DiaChi";
+            this.Txt_DiaChi.Size = new System.Drawing.Size(369, 45);
+            this.Txt_DiaChi.TabIndex = 47;
             // 
-            // ten_khach_hang
+            // Txt_TenKH
             // 
-            this.ten_khach_hang.BackColor = System.Drawing.Color.White;
-            this.ten_khach_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ten_khach_hang.Location = new System.Drawing.Point(200, 110);
-            this.ten_khach_hang.Margin = new System.Windows.Forms.Padding(4);
-            this.ten_khach_hang.Multiline = true;
-            this.ten_khach_hang.Name = "ten_khach_hang";
-            this.ten_khach_hang.Size = new System.Drawing.Size(266, 45);
-            this.ten_khach_hang.TabIndex = 46;
+            this.Txt_TenKH.BackColor = System.Drawing.Color.White;
+            this.Txt_TenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_TenKH.Location = new System.Drawing.Point(200, 110);
+            this.Txt_TenKH.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_TenKH.Multiline = true;
+            this.Txt_TenKH.Name = "Txt_TenKH";
+            this.Txt_TenKH.Size = new System.Drawing.Size(266, 45);
+            this.Txt_TenKH.TabIndex = 46;
             // 
             // label3
             // 
@@ -420,16 +328,16 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Tên Khách Hàng:";
             // 
-            // ma_khach_hang
+            // Txt_MaKH
             // 
-            this.ma_khach_hang.BackColor = System.Drawing.Color.White;
-            this.ma_khach_hang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ma_khach_hang.Location = new System.Drawing.Point(200, 48);
-            this.ma_khach_hang.Margin = new System.Windows.Forms.Padding(4);
-            this.ma_khach_hang.Multiline = true;
-            this.ma_khach_hang.Name = "ma_khach_hang";
-            this.ma_khach_hang.Size = new System.Drawing.Size(266, 45);
-            this.ma_khach_hang.TabIndex = 44;
+            this.Txt_MaKH.BackColor = System.Drawing.Color.White;
+            this.Txt_MaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_MaKH.Location = new System.Drawing.Point(200, 48);
+            this.Txt_MaKH.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_MaKH.Multiline = true;
+            this.Txt_MaKH.Name = "Txt_MaKH";
+            this.Txt_MaKH.Size = new System.Drawing.Size(266, 45);
+            this.Txt_MaKH.TabIndex = 44;
             // 
             // label2
             // 
@@ -467,18 +375,29 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "QUẢN LÍ KHÁCH HÀNG";
             // 
+            // DGV_QLKH
+            // 
+            this.DGV_QLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DGV_QLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_QLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.DGV_QLKH.Location = new System.Drawing.Point(57, 498);
+            this.DGV_QLKH.Name = "DGV_QLKH";
+            this.DGV_QLKH.RowHeadersWidth = 51;
+            this.DGV_QLKH.RowTemplate.Height = 24;
+            this.DGV_QLKH.Size = new System.Drawing.Size(988, 150);
+            this.DGV_QLKH.TabIndex = 42;
+            // 
             // QL_KhachHang
             // 
-        
+            this.Controls.Add(this.DGV_QLKH);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.gw_khachhang);
             this.Controls.Add(this.groupBox1);
             this.Name = "QL_KhachHang";
             this.Size = new System.Drawing.Size(1110, 700);
-            ((System.ComponentModel.ISupportInitialize)(this.gw_khachhang)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_QLKH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,14 +406,6 @@
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView gw_khachhang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customer_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ma_kh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customer_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -505,17 +416,18 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox ten_xe;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_CMND;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox phone;
+        private System.Windows.Forms.TextBox Txt_Phone;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox dia_chi;
-        private System.Windows.Forms.TextBox ten_khach_hang;
+        private System.Windows.Forms.TextBox Txt_DiaChi;
+        private System.Windows.Forms.TextBox Txt_TenKH;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ma_khach_hang;
+        private System.Windows.Forms.TextBox Txt_MaKH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView DGV_QLKH;
     }
 }
