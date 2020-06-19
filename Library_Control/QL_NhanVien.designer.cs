@@ -40,7 +40,7 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.luong_nv = new System.Windows.Forms.TextBox();
             this.quyen_nv = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.TextBox();
@@ -58,15 +58,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SalaryInMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,7 +78,7 @@
             this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.btn_edit);
             this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.luong_nv);
             this.groupBox1.Controls.Add(this.quyen_nv);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.phone);
@@ -253,16 +246,16 @@
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // luong_nv
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(619, 193);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(369, 45);
-            this.textBox1.TabIndex = 33;
+            this.luong_nv.BackColor = System.Drawing.Color.White;
+            this.luong_nv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.luong_nv.Location = new System.Drawing.Point(619, 193);
+            this.luong_nv.Margin = new System.Windows.Forms.Padding(4);
+            this.luong_nv.Multiline = true;
+            this.luong_nv.Name = "luong_nv";
+            this.luong_nv.Size = new System.Drawing.Size(369, 45);
+            this.luong_nv.TabIndex = 33;
             // 
             // quyen_nv
             // 
@@ -460,75 +453,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.NameAccount,
-            this.Name,
-            this.Address,
-            this.PhoneNumber,
-            this.Position,
-            this.SalaryInMonth});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 42);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(988, 141);
-            this.dataGridView1.TabIndex = 19;
-            // 
-            // STT
-            // 
-            this.STT.FillWeight = 36.8873F;
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            // 
-            // NameAccount
-            // 
-            this.NameAccount.FillWeight = 108.8175F;
-            this.NameAccount.HeaderText = "Tên tài khoản";
-            this.NameAccount.MinimumWidth = 6;
-            this.NameAccount.Name = "NameAccount";
-            // 
-            // Name
-            // 
-            this.Name.FillWeight = 108.8175F;
-            this.Name.HeaderText = "Họ Và Tên";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            // 
-            // Address
-            // 
-            this.Address.FillWeight = 108.8175F;
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.FillWeight = 89.65662F;
-            this.PhoneNumber.HeaderText = "Số Điện Thoại";
-            this.PhoneNumber.MinimumWidth = 6;
-            this.PhoneNumber.Name = "PhoneNumber";
-            // 
-            // Position
-            // 
-            this.Position.FillWeight = 115.9874F;
-            this.Position.HeaderText = "Quyền Nhân Viên";
-            this.Position.MinimumWidth = 6;
-            this.Position.Name = "Position";
-            // 
-            // SalaryInMonth
-            // 
-            this.SalaryInMonth.FillWeight = 131.0161F;
-            this.SalaryInMonth.HeaderText = "Lương Trong Tháng";
-            this.SalaryInMonth.MinimumWidth = 6;
-            this.SalaryInMonth.Name = "SalaryInMonth";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -541,6 +465,16 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Danh Sách Chi Tiết Nhân Viên";
             this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(954, 168);
+            this.dataGridView1.TabIndex = 19;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // QL_NhanVien
             // 
@@ -573,7 +507,7 @@
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox luong_nv;
         private System.Windows.Forms.ComboBox quyen_nv;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox phone;
@@ -591,14 +525,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameAccount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SalaryInMonth;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
