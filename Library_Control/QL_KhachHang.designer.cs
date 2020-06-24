@@ -31,15 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_KhachHang));
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.ten_xe = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TXT_Search = new System.Windows.Forms.TextBox();
             this.Txt_CMND = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Phone = new System.Windows.Forms.TextBox();
@@ -48,8 +47,6 @@
             this.Txt_DiaChi = new System.Windows.Forms.TextBox();
             this.Txt_TenKH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Txt_MaKH = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DGV_QLKH = new System.Windows.Forms.DataGridView();
@@ -62,7 +59,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(52, 453);
+            this.label6.Location = new System.Drawing.Point(52, 458);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(299, 28);
@@ -71,15 +68,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_reset);
             this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.btn_edit);
             this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.ten_xe);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.TXT_Search);
             this.groupBox1.Controls.Add(this.Txt_CMND);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Txt_Phone);
@@ -88,8 +84,6 @@
             this.groupBox1.Controls.Add(this.Txt_DiaChi);
             this.groupBox1.Controls.Add(this.Txt_TenKH);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.Txt_MaKH);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -101,19 +95,36 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Info;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(473, 312);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(144, 48);
+            this.button3.TabIndex = 66;
+            this.button3.Text = "Lưu";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(473, 313);
+            this.button2.Location = new System.Drawing.Point(665, 311);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(144, 49);
+            this.button2.Size = new System.Drawing.Size(172, 49);
             this.button2.TabIndex = 65;
-            this.button2.Text = "    Sort";
+            this.button2.Text = "    Sort Name";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -132,6 +143,7 @@
             this.button1.Text = "  Tìm Kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_reset
             // 
@@ -139,7 +151,7 @@
             this.btn_reset.FlatAppearance.BorderSize = 0;
             this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
             this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reset.Location = new System.Drawing.Point(78, 312);
+            this.btn_reset.Location = new System.Drawing.Point(72, 312);
             this.btn_reset.Margin = new System.Windows.Forms.Padding(4);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -148,6 +160,7 @@
             this.btn_reset.Text = "         Nhập Lại";
             this.btn_reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // btn_delete
             // 
@@ -156,7 +169,7 @@
             this.btn_delete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(268, 312);
+            this.btn_delete.Location = new System.Drawing.Point(281, 314);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -173,7 +186,7 @@
             this.btn_edit.FlatAppearance.BorderSize = 0;
             this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
             this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit.Location = new System.Drawing.Point(268, 244);
+            this.btn_edit.Location = new System.Drawing.Point(281, 245);
             this.btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(147, 49);
@@ -181,6 +194,7 @@
             this.btn_edit.Text = "        Sửa Thông Tin";
             this.btn_edit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_add
             // 
@@ -188,7 +202,7 @@
             this.btn_add.FlatAppearance.BorderSize = 0;
             this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
             this.btn_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_add.Location = new System.Drawing.Point(78, 244);
+            this.btn_add.Location = new System.Drawing.Point(72, 244);
             this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -199,48 +213,22 @@
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // comboBox1
+            // TXT_Search
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Còn Bảo Hành",
-            "Hết Bảo Hành"});
-            this.comboBox1.Location = new System.Drawing.Point(665, 318);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(369, 40);
-            this.comboBox1.TabIndex = 56;
-            // 
-            // ten_xe
-            // 
-            this.ten_xe.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ten_xe.FormattingEnabled = true;
-            this.ten_xe.Items.AddRange(new object[] {
-            "Còn Bảo Hành",
-            "Hết Bảo Hành"});
-            this.ten_xe.Location = new System.Drawing.Point(665, 245);
-            this.ten_xe.Margin = new System.Windows.Forms.Padding(4);
-            this.ten_xe.Name = "ten_xe";
-            this.ten_xe.Size = new System.Drawing.Size(172, 40);
-            this.ten_xe.TabIndex = 54;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(849, 245);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 40);
-            this.textBox2.TabIndex = 53;
+            this.TXT_Search.BackColor = System.Drawing.Color.White;
+            this.TXT_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Search.Location = new System.Drawing.Point(665, 245);
+            this.TXT_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_Search.Multiline = true;
+            this.TXT_Search.Name = "TXT_Search";
+            this.TXT_Search.Size = new System.Drawing.Size(319, 40);
+            this.TXT_Search.TabIndex = 53;
             // 
             // Txt_CMND
             // 
             this.Txt_CMND.BackColor = System.Drawing.Color.White;
             this.Txt_CMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_CMND.Location = new System.Drawing.Point(200, 179);
+            this.Txt_CMND.Location = new System.Drawing.Point(196, 152);
             this.Txt_CMND.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_CMND.Multiline = true;
             this.Txt_CMND.Name = "Txt_CMND";
@@ -252,7 +240,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(51, 189);
+            this.label1.Location = new System.Drawing.Point(47, 162);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
@@ -263,11 +251,11 @@
             // 
             this.Txt_Phone.BackColor = System.Drawing.Color.White;
             this.Txt_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Phone.Location = new System.Drawing.Point(665, 146);
+            this.Txt_Phone.Location = new System.Drawing.Point(665, 152);
             this.Txt_Phone.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Phone.Multiline = true;
             this.Txt_Phone.Name = "Txt_Phone";
-            this.Txt_Phone.Size = new System.Drawing.Size(369, 45);
+            this.Txt_Phone.Size = new System.Drawing.Size(319, 45);
             this.Txt_Phone.TabIndex = 50;
             // 
             // label11
@@ -275,7 +263,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(529, 157);
+            this.label11.Location = new System.Drawing.Point(529, 163);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(119, 20);
@@ -287,7 +275,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(532, 73);
+            this.label8.Location = new System.Drawing.Point(532, 79);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 20);
@@ -298,18 +286,18 @@
             // 
             this.Txt_DiaChi.BackColor = System.Drawing.Color.White;
             this.Txt_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_DiaChi.Location = new System.Drawing.Point(665, 63);
+            this.Txt_DiaChi.Location = new System.Drawing.Point(665, 69);
             this.Txt_DiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_DiaChi.Multiline = true;
             this.Txt_DiaChi.Name = "Txt_DiaChi";
-            this.Txt_DiaChi.Size = new System.Drawing.Size(369, 45);
+            this.Txt_DiaChi.Size = new System.Drawing.Size(319, 45);
             this.Txt_DiaChi.TabIndex = 47;
             // 
             // Txt_TenKH
             // 
             this.Txt_TenKH.BackColor = System.Drawing.Color.White;
             this.Txt_TenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_TenKH.Location = new System.Drawing.Point(200, 110);
+            this.Txt_TenKH.Location = new System.Drawing.Point(196, 83);
             this.Txt_TenKH.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_TenKH.Multiline = true;
             this.Txt_TenKH.Name = "Txt_TenKH";
@@ -321,35 +309,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(51, 121);
+            this.label3.Location = new System.Drawing.Point(47, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 20);
             this.label3.TabIndex = 45;
             this.label3.Text = "Tên Khách Hàng:";
-            // 
-            // Txt_MaKH
-            // 
-            this.Txt_MaKH.BackColor = System.Drawing.Color.White;
-            this.Txt_MaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_MaKH.Location = new System.Drawing.Point(200, 48);
-            this.Txt_MaKH.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_MaKH.Multiline = true;
-            this.Txt_MaKH.Name = "Txt_MaKH";
-            this.Txt_MaKH.Size = new System.Drawing.Size(266, 45);
-            this.Txt_MaKH.TabIndex = 44;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(51, 59);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 20);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Mã Khách Hàng:";
             // 
             // label5
             // 
@@ -377,10 +342,11 @@
             // 
             // DGV_QLKH
             // 
+            this.DGV_QLKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_QLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.DGV_QLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_QLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.DGV_QLKH.Location = new System.Drawing.Point(57, 498);
+            this.DGV_QLKH.Location = new System.Drawing.Point(57, 508);
             this.DGV_QLKH.Name = "DGV_QLKH";
             this.DGV_QLKH.RowHeadersWidth = 51;
             this.DGV_QLKH.RowTemplate.Height = 24;
@@ -413,9 +379,7 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox ten_xe;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TXT_Search;
         private System.Windows.Forms.TextBox Txt_CMND;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_Phone;
@@ -424,10 +388,9 @@
         private System.Windows.Forms.TextBox Txt_DiaChi;
         private System.Windows.Forms.TextBox Txt_TenKH;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Txt_MaKH;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView DGV_QLKH;
+        private System.Windows.Forms.Button button3;
     }
 }

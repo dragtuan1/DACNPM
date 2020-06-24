@@ -8,5 +8,6 @@ namespace DACNPM.Model
 {
     class CustumerModel
     {
+
     }
 }

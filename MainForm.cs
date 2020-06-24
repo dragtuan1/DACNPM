@@ -153,6 +153,8 @@ namespace DACNPM
         {
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Library_Control.TK_DoanhThu());
+
+
         }
 
         private void btnTK_HD_Click(object sender, EventArgs e)

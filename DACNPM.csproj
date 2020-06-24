@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -166,6 +167,17 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\AccountModel.cs" />
+    <Compile Include="Model\ContractModel.cs" />
+    <Compile Include="Model\CustumerModel.cs" />
+    <Compile Include="Model\DetailContractModel.cs" />
+    <Compile Include="Model\DriverModel.cs" />
+    <Compile Include="Model\EmloyeeModel.cs" />
+    <Compile Include="Model\ImageModel.cs" />
+    <Compile Include="Model\MNSalaryModel.cs" />
+    <Compile Include="Model\TypeAcountModel.cs" />
+    <Compile Include="Model\TypeVehicleModel.cs" />
+    <Compile Include="Model\VehicleModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormLogin.resx">
