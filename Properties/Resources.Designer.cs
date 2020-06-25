@@ -73,6 +73,16 @@ namespace DACNPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fileboard___1801_ {
+            get {
+                object obj = ResourceManager.GetObject("fileboard [#1801]", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap profile_minus___1340_ {
             get {
                 object obj = ResourceManager.GetObject("profile_minus [#1340]", resourceCulture);

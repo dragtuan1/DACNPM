@@ -14,6 +14,7 @@ namespace DACNPM
     public partial class MainForm : Form
     {
         public string Username { get; set; }
+        public int ID_NV { get; set; }
         public MainForm(string username)
         {
             InitializeComponent();
@@ -34,9 +35,8 @@ namespace DACNPM
             DACNPM db = new DACNPM();
             Entities.Account list = db.Accounts.Where(p => p.Username == Username).FirstOrDefault();          
             Lb_ChucVu.Text = list.Type_Account.Name_Type;
-            int ID_ACC = list.ID_Account;
-            Entities.Employee List = db.Employees.Where(p => p.ID_Account == ID_ACC).FirstOrDefault();
-
+            ID_NV = list.ID_Account;
+            Entities.Employee List = db.Employees.Where(p => p.ID_Account == ID_NV).FirstOrDefault();
             lb_Name.Text = List.Name_Employee;
         }
         private void customDesign()
@@ -145,7 +145,9 @@ namespace DACNPM
         private void btnQL_TK_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_TaiKhoan());
+            panelMain.Controls.Add(new Library_Control.QL_In4_TaiKhoan(Username,ID_NV));
+
+            
         }
 
         private void btnQL_HD_Click(object sender, EventArgs e)

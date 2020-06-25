@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DACNPM.Entities;
 
 namespace DACNPM
@@ -92,6 +93,21 @@ namespace DACNPM
             var List =  DB.Customers.Where (c => c.CMND.Contains(StrSeach) || c.Customer_Address.Contains(StrSeach) || c.Customer_Name.Contains(StrSeach) || c.Phone.Contains(StrSeach))
                        .Select (c => new {c.ID_Customer, c.Customer_Name,c.Customer_Address,c.CMND,c.Phone });
             return List.ToList();
+        }
+        public bool CheckIn4_CTMBLL(Customer cmt)
+        {   
+            if(cmt.CMND == "" || cmt.Phone == "" || cmt.Customer_Name == "" || cmt.Customer_Address == "")
+            {
+                MessageBox.Show("Vui Lòng Nhập Đầy đủ thông tin ");
+                return false; 
+            }
+            if(cmt.Phone.Length > 11)
+            {
+               MessageBox.Show("Số Điện Thoại Vượt Quá 11 Số");
+                return false;
+            }    
+            
+            return true;
         }
     }
 }

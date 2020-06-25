@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="BLL_QLKH.cs" />
     <Compile Include="BLL_QLChiPhi.cs" />
+    <Compile Include="BLL_QLTaiKhoan.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="DACNPM.cs" />
     <Compile Include="Entities\Account.cs" />
@@ -130,12 +131,6 @@
     </Compile>
     <Compile Include="Library_Control\QL_TaiKhoan.designer.cs">
       <DependentUpon>QL_TaiKhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Library_Control\QL_TaiKhoan1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Library_Control\QL_TaiKhoan1.Designer.cs">
-      <DependentUpon>QL_TaiKhoan1.cs</DependentUpon>
     </Compile>
     <Compile Include="Library_Control\QL_TaiXe.cs">
       <SubType>UserControl</SubType>
@@ -207,9 +202,6 @@
     <EmbeddedResource Include="Library_Control\QL_TaiKhoan.resx">
       <DependentUpon>QL_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Library_Control\QL_TaiKhoan1.resx">
-      <DependentUpon>QL_TaiKhoan1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_TaiXe.resx">
       <DependentUpon>QL_TaiXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sketch [#125].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileboard [#1801].png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

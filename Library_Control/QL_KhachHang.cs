@@ -27,10 +27,15 @@ namespace DACNPM.Library_Control
                 Customer_Name = Txt_TenKH.Text,
                 Phone = Txt_Phone.Text,
             };
-            BLL_QLKH.Instance.AddNV_BLL(st1);
-            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
+           
+            if (BLL_QLKH.Instance.CheckIn4_CTMBLL(st1))
+            {
+                BLL_QLKH.Instance.AddNV_BLL(st1);
+                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
+            }
+            else return;
+            
         }
-
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
@@ -48,68 +53,75 @@ namespace DACNPM.Library_Control
             else
             {
                 MessageBox.Show("Vui Lòng Chọn Một Đối Tượng cần xóa");
-            }
-       
+            }     
         }
-
         private void btn_edit_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
+            if (r.Count == 1)
+            {
+                Customer st1 = new Customer
+                {
+                    ID_Customer = Convert.ToInt32(r[0].Cells["ID_Customer"].Value.ToString()),
+                    CMND = Txt_CMND.Text,
+                    Customer_Address = Txt_DiaChi.Text,
+                    Customer_Name = Txt_TenKH.Text,
+                    Phone = Txt_Phone.Text,
+                };
+                if (BLL_QLKH.Instance.UpdateNV_BLL(st1))
+                {
+                    MessageBox.Show("Update Thành Công ");
+                    DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
+                }
+                else {
+                    MessageBox.Show("Error Data ");
+                };                     
+            }
+            else
+            {
+                MessageBox.Show("Vui Lòng Chọn Khách Hàng Cần Sửa Thông Tin");
+            }
 
-            //  Txt_MaKH.Enabled = false;
-            //   Txt_MaKH.Text = r[0].Cells["ID_Customer"].Value.ToString();
-            Txt_CMND.Text = r[0].Cells["CMND"].Value.ToString();
-            Txt_DiaChi.Text = r[0].Cells["Customer_Address"].Value.ToString();
-            Txt_Phone.Text = r[0].Cells["Phone"].Value.ToString();
-            Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
-            //Txt_MaKH.Enabled = false;
-           
         }
-
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            Txt_CMND.Text   = null;
+            Txt_CMND.Text = null;
             Txt_DiaChi.Text = null;
-         //   Txt_MaKH.Text   = null;
-            Txt_Phone.Text  = null;
-            Txt_TenKH.Text  = null;
-        }
-
-        
-
-        private void DGV_QLKH_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
-          //  Txt_MaKH.Enabled = false;
-        //    Txt_MaKH.Text = r[0].Cells["ID_Customer"].Value.ToString();
-            Txt_CMND.Text = r[0].Cells["CMND"].Value.ToString();
-            Txt_DiaChi.Text = r[0].Cells["Customer_Address"].Value.ToString();
-            Txt_Phone.Text = r[0].Cells["Phone"].Value.ToString();
-            Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
-            Customer st1 = new Customer
-            {
-                ID_Customer = Convert.ToInt32(r[0].Cells["ID_Customer"].Value.ToString()),
-                CMND = Txt_CMND.Text,
-                Customer_Address = Txt_DiaChi.Text,
-                Customer_Name = Txt_TenKH.Text,
-                Phone = Txt_Phone.Text,
-            };
-            BLL_QLKH.Instance.UpdateNV_BLL(st1);
-            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
-
+            //   Txt_MaKH.Text   = null;
+            Txt_Phone.Text = null;
+            Txt_TenKH.Text = null;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string StringSeach = TXT_Search.Text;
             DGV_QLKH.DataSource = BLL_QLKH.Instance.SearchKH_BLL(StringSeach);
+           
+        }
 
+        private void DGV_QLKH_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
+            //  Txt_MaKH.Enabled = false;
+            //    Txt_MaKH.Text = r[0].Cells["ID_Customer"].Value.ToString();
+            Txt_CMND.Text = r[0].Cells["CMND"].Value.ToString();
+            Txt_DiaChi.Text = r[0].Cells["Customer_Address"].Value.ToString();
+            Txt_Phone.Text = r[0].Cells["Phone"].Value.ToString();
+            Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
+        }
+
+        private void DGV_QLKH_RowHeaderMouseDoubleClick_2(object sender, DataGridViewCellMouseEventArgs e)
+        {
             
+        }
+
+        private void DGV_QLKH_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
+            Txt_CMND.Text = r[0].Cells["CMND"].Value.ToString();
+            Txt_DiaChi.Text = r[0].Cells["Customer_Address"].Value.ToString();
+            Txt_Phone.Text = r[0].Cells["Phone"].Value.ToString();
+            Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
         }
     }
 }

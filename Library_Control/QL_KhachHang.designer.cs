@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_KhachHang));
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
@@ -68,7 +67,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_reset);
@@ -95,34 +93,17 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Info;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(473, 312);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(144, 48);
-            this.button3.TabIndex = 66;
-            this.button3.Text = "Lưu";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(665, 311);
+            this.button2.Location = new System.Drawing.Point(476, 312);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(172, 49);
+            this.button2.Size = new System.Drawing.Size(141, 49);
             this.button2.TabIndex = 65;
             this.button2.Text = "    Sort Name";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -352,6 +333,8 @@
             this.DGV_QLKH.RowTemplate.Height = 24;
             this.DGV_QLKH.Size = new System.Drawing.Size(988, 150);
             this.DGV_QLKH.TabIndex = 42;
+            this.DGV_QLKH.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseClick);
+            this.DGV_QLKH.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseDoubleClick_2);
             // 
             // QL_KhachHang
             // 
@@ -391,6 +374,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView DGV_QLKH;
-        private System.Windows.Forms.Button button3;
     }
 }
