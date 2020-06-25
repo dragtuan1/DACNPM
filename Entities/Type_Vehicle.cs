@@ -20,5 +20,9 @@ namespace DACNPM.Entities
         {
             this.Vehicles = new HashSet<Vehicle>();
         }
+        public override string ToString()
+        {
+            return Name_Type + " " + Amount_Seat + " Chỗ";
+        }
     }
 }
