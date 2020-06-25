@@ -233,6 +233,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -248,6 +249,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\profile_minus [#1340].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shelf_double_down [#1534].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoji_happy_circle [#540].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sketch [#125].png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

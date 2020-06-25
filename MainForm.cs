@@ -20,6 +20,8 @@ namespace DACNPM
             this.Username = username;
             loadUserData();
             customDesign();
+            showSubmenu(panelQuanLySubmenu);
+            showSubmenu(panelThongKeSubmenu);
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -30,9 +32,12 @@ namespace DACNPM
         private void loadUserData()
         {
             DACNPM db = new DACNPM();
-            Entities.Account list = db.Accounts.Where(p => p.Username == Username).FirstOrDefault();
-            lbName.Text = list.Username;
-            lbPost.Text = list.Type_Account.Name_Type;
+            Entities.Account list = db.Accounts.Where(p => p.Username == Username).FirstOrDefault();          
+            Lb_ChucVu.Text = list.Type_Account.Name_Type;
+            int ID_ACC = list.ID_Account;
+            Entities.Employee List = db.Employees.Where(p => p.ID_Account == ID_ACC).FirstOrDefault();
+
+            lb_Name.Text = List.Name_Employee;
         }
         private void customDesign()
         {
@@ -41,10 +46,10 @@ namespace DACNPM
         }
         private void HideSubmenu()
         {
-            if (panelQuanLySubmenu.Visible == true)
-                panelQuanLySubmenu.Visible = false;
-            if (panelThongKeSubmenu.Visible == true)
-                panelThongKeSubmenu.Visible = false;
+            //if (panelQuanLySubmenu.Visible == true)
+            //    panelQuanLySubmenu.Visible = false;
+            //if (panelThongKeSubmenu.Visible == true)
+              //  panelThongKeSubmenu.Visible = false;
         }
         private void showSubmenu(Panel subMenu)
         {
@@ -176,6 +181,16 @@ namespace DACNPM
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             showSubmenu(panelThongKeSubmenu);
+        }
+
+        private void lbName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQL_Car_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
