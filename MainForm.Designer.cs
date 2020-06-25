@@ -323,6 +323,7 @@
             this.btnQL_Car.TabIndex = 6;
             this.btnQL_Car.Text = "          Quản lý ô tô";
             this.btnQL_Car.UseVisualStyleBackColor = false;
+            this.btnQL_Car.Click += new System.EventHandler(this.btnQL_Car_Click);
             // 
             // btnQuanLy
             // 

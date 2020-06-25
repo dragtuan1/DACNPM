@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DACNPM.Entities;
 
 namespace DACNPM.Library_Control
 {
@@ -16,42 +16,53 @@ namespace DACNPM.Library_Control
         public QL_NhanVien()
         {
             InitializeComponent();
-            GetAllEmployee();
+            DGV_QLNV.DataSource = BLL_QLNV.Instance.GetALL_EPL();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void btn_add_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-        public void GetAllEmployee()
-        {
-            dataGridView1.DataSource = BLL.BLL_QLNV.Instance.GetAllEmployee_BLL();
-        }
-
-        private void dataGridView1_Click(object sender, EventArgs e)
-        {
-            DACNPM db = new DACNPM();
-            DataGridViewSelectedRowCollection r = dataGridView1.SelectedRows;
-            if(r.Count == 1)
+            Employee emp = new Employee
             {
-                int ID_Employee = Convert.ToInt32(r[0].Cells["ID_Employee"].Value);
-                Entities.Employee emp = db.Employees.Where(p => p.ID_Employee == ID_Employee).FirstOrDefault();
-                ma_nhan_vien.Text = emp.ID_Employee.ToString();
-                ten_tk.Text = emp.Account.Username;
-                ho_ten.Text = emp.Name_Employee;
-                phone.Text = emp.Phone;
-                luong_nv.Text = emp.Account.Type_Account.Salary.ToString();
-                dia_chi.Text = emp.Email;             
+                Name_Employee = txt_NameNV.Text,
+                Email = txt_Email.Text,
+                Phone = txt_Phone.Text,
+                //MN_Salaries = txt_LuongNV.Text;
+            };
+            BLL_QLNV.Instance.AddNV_BLL(emp);
+            DGV_QLNV.DataSource = BLL_QLNV.Instance.GetALL_EPL();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = DGV_QLNV.SelectedRows;
+            if (r.Count != 0)
+            {
+                List<int> List_ID = new List<int>();
+
+                foreach (DataGridViewRow j in r)
+                {
+                    List_ID.Add((int)j.Cells["ID_Customer"].Value);
+                }
+                BLL_QLNV.Instance.DelNV_BLL(List_ID);
+                DGV_QLNV.DataSource = BLL_QLNV.Instance.GetALL_EPL();
+            }
+            else
+            {
+                MessageBox.Show("Vui Lòng Chọn Một Đối Tượng cần xóa");
             }
         }
-        public void showRole()
+
+        private void btn_reset_Click(object sender, EventArgs e)
         {
-            BLL.BLL_QLNV.Instance.showRole_BLL(quyen_nv);
+            txt_NameNV.Text = null;
+            txt_Email.Text = null;
+            txt_Phone.Text = null;
+            txt_LuongNV.Text = null;
+        }
+
+        private void DGV_QLNV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

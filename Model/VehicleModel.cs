@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DACNPM.Model
 {
-    public public class VehicleModel
+    public  class VehicleModel
     {
         public int ID_Vehicle { get; set; }
         public string License_Plate { get; set; }

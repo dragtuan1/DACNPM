@@ -106,7 +106,11 @@ namespace DACNPM
                 this.Close();
             }
         }
-
+        private void btnQL_Car_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.QL_Vehicle());
+        }
         private void btnQL_ChiPhi_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
@@ -153,6 +157,8 @@ namespace DACNPM
         {
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Library_Control.TK_DoanhThu());
+
+
         }
 
         private void btnTK_HD_Click(object sender, EventArgs e)
@@ -174,6 +180,6 @@ namespace DACNPM
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             showSubmenu(panelThongKeSubmenu);
-        }
+        } 
     }
 }

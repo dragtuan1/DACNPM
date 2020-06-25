@@ -16,5 +16,10 @@ namespace DACNPM.Library_Control
         {
             InitializeComponent();
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

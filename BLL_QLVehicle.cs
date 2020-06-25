@@ -1,36 +1,36 @@
-﻿using System;
+﻿using DACNPM.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DACNPM.Entities;
 
 namespace DACNPM
 {
-    public class BLL_QLKH
+    public class BLL_QLVehicle
     {
-        private static BLL_QLKH _Instance;
-        public static BLL_QLKH Instance
+        private static BLL_QLVehicle _Instance;
+        public static BLL_QLVehicle Instance
         {
             get
             {
                 if (_Instance == null)
                 {
-                    _Instance = new BLL_QLKH();
+                    _Instance = new BLL_QLVehicle();
                 }
                 return _Instance;
             }
             private set => _Instance = value;
         }
-        private BLL_QLKH()
+        private BLL_QLVehicle()
         {
         }
-        public bool AddNV_BLL(Customer ctm)
+        public bool AddNV_BLL(Vehicle vehicle)
         {
             try
             {
                 DACNPM DB = new DACNPM();
-                DB.Customers.Add(ctm);
+                DB.Vehicles.Add(vehicle);
                 DB.SaveChanges();
                 return true;
             }
@@ -39,10 +39,10 @@ namespace DACNPM
                 return false;
             }
         }
-        public object GetALL_CTM()
+        public object GetALL_Vehicle()
         {
             DACNPM DB = new DACNPM();
-            var List = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }) ;
+            var List = DB.Vehicles.Select(p => new { p.ID_Vehicle, p.License_Plate, p.Price, p.Type_Vehicle.Name_Type, p.Type_Vehicle.Amount_Seat });
             return List.ToList();
         }
         public bool DelNV_BLL(List<int> List_ID)
@@ -50,13 +50,13 @@ namespace DACNPM
             try
             {
                 DACNPM DB = new DACNPM();
-                foreach (Customer i in DB.Customers)
+                foreach (Vehicle i in DB.Vehicles)
                 {
                     foreach (int j in List_ID.ToArray())
                     {
-                        if (i.ID_Customer == j)
+                        if (i.ID_Vehicle == j)
                         {
-                            DB.Customers.Remove(i);
+                            DB.Vehicles.Remove(i);
                         }
                     }
                 }
@@ -68,16 +68,13 @@ namespace DACNPM
                 return false;
             }
         }
-        public bool UpdateNV_BLL(Customer ctm)
+        public bool UpdateNV_BLL(Vehicle vehicle)
         {
             try
             {
                 DACNPM DB = new DACNPM();
-                Customer s = DB.Customers.Where(p => p.ID_Customer == ctm.ID_Customer).FirstOrDefault();
-                s.Customer_Address = ctm.Customer_Address;
-                s.CMND = ctm.CMND;
-                s.Customer_Name = ctm.Customer_Name;
-                s.Phone = ctm.Phone;
+                Vehicle v = DB.Vehicles.Where(p => p.ID_Vehicle == vehicle.ID_Vehicle).FirstOrDefault();
+                v.License_Plate = vehicle.License_Plate;
                 DB.SaveChanges();
                 return true;
             }
@@ -89,8 +86,8 @@ namespace DACNPM
         public object SearchKH_BLL(string StrSeach)
         {
             DACNPM DB = new DACNPM();
-            var List =  DB.Customers.Where (c => c.CMND.Contains(StrSeach) || c.Customer_Address.Contains(StrSeach) || c.Customer_Name.Contains(StrSeach) || c.Phone.Contains(StrSeach))
-                       .Select (c => new {c.ID_Customer, c.Customer_Name,c.Customer_Address,c.CMND,c.Phone });
+            var List = DB.Customers.Where(c => c.CMND.Contains(StrSeach) || c.Customer_Address.Contains(StrSeach) || c.Customer_Name.Contains(StrSeach) || c.Phone.Contains(StrSeach))
+                       .Select(c => new { c.ID_Customer, c.Customer_Name, c.Customer_Address, c.CMND, c.Phone });
             return List.ToList();
         }
     }
