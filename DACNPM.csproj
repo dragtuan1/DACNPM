@@ -62,6 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\QLChiPhi_BLL.cs" />
+    <Compile Include="BLL\QLNhanVien_BLL.cs" />
     <Compile Include="BLL_QLKH.cs" />
     <Compile Include="BLL_QLChiPhi.cs" />
     <Compile Include="BLL_QLNV.cs" />

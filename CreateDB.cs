@@ -180,7 +180,7 @@ namespace DACNPM
                 ID_Employee = 1,
                 Name_Employee = "Nguyen Quang Truong",
                 Email = "nqtruong2510@gmail.com",
-                ID_Account = 1,
+                ID_Account = 2,
                 Phone = "0817590009"
             });
             context.Employees.Add(new Entities.Employee
@@ -188,7 +188,7 @@ namespace DACNPM
                 ID_Employee = 2,
                 Name_Employee = "Le Truong Sanh",
                 Email = "sanh@gmail.com",
-                ID_Account = 2,
+                ID_Account = 3,
                 Phone = "0817590004"
             });
             context.Employees.Add(new Entities.Employee
@@ -196,7 +196,7 @@ namespace DACNPM
                 ID_Employee = 3,
                 Name_Employee = "Phan Anh Tuan",
                 Email = "tuanphan@gmail.com",
-                ID_Account = 2,
+                ID_Account = 1,
                 Phone = "0817590005"
             });
             context.Contracts.Add(new Entities.Contract
