@@ -22,5 +22,10 @@ namespace DACNPM.Entities
         {
             this.Accounts = new HashSet<Account>();
         }
+
+        public override string ToString()
+        {
+            return Name_Type;
+        }
     }
 }

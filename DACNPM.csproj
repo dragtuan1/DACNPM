@@ -62,8 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\QLChiPhi_BLL.cs" />
     <Compile Include="BLL_QLKH.cs" />
-    <Compile Include="BLL_QLChiPhi.cs" />
     <Compile Include="BLL_QLTaiKhoan.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="DACNPM.cs" />

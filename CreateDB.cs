@@ -288,24 +288,6 @@ namespace DACNPM
                 Salary = 2000000,
                 Total_Contract = 10
             });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }

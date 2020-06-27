@@ -14,7 +14,6 @@ namespace DACNPM.Library_Control
 {
     public partial class QL_KhachHang : UserControl
     {   
-
         public QL_KhachHang()
         {
             InitializeComponent();
@@ -31,7 +30,7 @@ namespace DACNPM.Library_Control
             if (BLL_QLKH.Instance.CheckIn4_CTMBLL(st1))
             {
                 BLL_QLKH.Instance.AddNV_BLL(st1);
-                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
+                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM().Select (  p => new { p.CMND, p.Customer_Address, p.Customer_Name, p.ID_Customer} ).ToList();
             }
             else return;
             
@@ -81,7 +80,6 @@ namespace DACNPM.Library_Control
             {
                 MessageBox.Show("Vui Lòng Chọn Khách Hàng Cần Sửa Thông Tin");
             }
-
         }
         private void btn_reset_Click(object sender, EventArgs e)
         {
@@ -91,14 +89,12 @@ namespace DACNPM.Library_Control
             Txt_Phone.Text = null;
             Txt_TenKH.Text = null;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string StringSeach = TXT_Search.Text;
             DGV_QLKH.DataSource = BLL_QLKH.Instance.SearchKH_BLL(StringSeach);
            
         }
-
         private void DGV_QLKH_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;

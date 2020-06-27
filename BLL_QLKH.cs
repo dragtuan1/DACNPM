@@ -40,11 +40,12 @@ namespace DACNPM
                 return false;
             }
         }
-        public object GetALL_CTM()
+        public List<Customer> GetALL_CTM()
         {
             DACNPM DB = new DACNPM();
-            var List = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }) ;
-            return List.ToList();
+            var list = DB.Customers.Select(p => p);
+        //    var List = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }) ;
+            return list.ToList();
         }
         public bool DelNV_BLL(List<int> List_ID)
         {
