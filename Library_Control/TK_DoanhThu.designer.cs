@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tongtien = new System.Windows.Forms.TextBox();
-            this.ngay_mua = new System.Windows.Forms.DateTimePicker();
+            this.Doanh_Thu = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -81,6 +82,7 @@
             this.button1.Text = "   Thống Kê";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -91,12 +93,30 @@
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             // 
+            // chart1
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.AutoFitMinFontSize = 5;
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(82, 21);
+            this.chart1.Name = "chart1";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(806, 375);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.tongtien);
-            this.groupBox1.Controls.Add(this.ngay_mua);
+            this.groupBox1.Controls.Add(this.Doanh_Thu);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(75, 61);
@@ -140,16 +160,18 @@
             this.tongtien.Size = new System.Drawing.Size(247, 34);
             this.tongtien.TabIndex = 61;
             // 
-            // ngay_mua
+            // Doanh_Thu
             // 
-            this.ngay_mua.CustomFormat = "yyyy";
-            this.ngay_mua.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngay_mua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngay_mua.Location = new System.Drawing.Point(238, 57);
-            this.ngay_mua.Margin = new System.Windows.Forms.Padding(4);
-            this.ngay_mua.Name = "ngay_mua";
-            this.ngay_mua.Size = new System.Drawing.Size(107, 34);
-            this.ngay_mua.TabIndex = 59;
+            this.Doanh_Thu.CustomFormat = "yyyy";
+            this.Doanh_Thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Doanh_Thu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Doanh_Thu.Location = new System.Drawing.Point(238, 57);
+            this.Doanh_Thu.Margin = new System.Windows.Forms.Padding(4);
+            this.Doanh_Thu.Name = "Doanh_Thu";
+            this.Doanh_Thu.ShowUpDown = true;
+            this.Doanh_Thu.Size = new System.Drawing.Size(152, 34);
+            this.Doanh_Thu.TabIndex = 59;
+            this.Doanh_Thu.ValueChanged += new System.EventHandler(this.Doanh_Thu_ValueChanged);
             // 
             // label11
             // 
@@ -187,23 +209,13 @@
             this.label3.TabIndex = 52;
             this.label3.Text = "THỐNG KÊ DOANH THU";
             // 
-            // chart1
+            // entityCommand1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.AutoFitMinFontSize = 5;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(82, 21);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(806, 375);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
             // 
             // TK_DoanhThu
             // 
@@ -215,9 +227,9 @@
             this.Name = "TK_DoanhThu";
             this.Size = new System.Drawing.Size(1100, 700);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,10 +244,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tongtien;
-        private System.Windows.Forms.DateTimePicker ngay_mua;
+        private System.Windows.Forms.DateTimePicker Doanh_Thu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }

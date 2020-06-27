@@ -65,6 +65,7 @@
     <Compile Include="BLL\QLChiPhi_BLL.cs" />
     <Compile Include="BLL_QLKH.cs" />
     <Compile Include="BLL_QLTaiKhoan.cs" />
+    <Compile Include="BLL_TK_DoanhThu.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="DACNPM.cs" />
     <Compile Include="Entities\Account.cs" />

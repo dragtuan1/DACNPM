@@ -135,7 +135,6 @@ namespace DACNPM
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Library_Control.QL_TaiXe());
         }
-
         private void btnQL_KH_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
