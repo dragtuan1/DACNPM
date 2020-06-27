@@ -25,7 +25,8 @@ namespace DACNPM.Library_Control
 
         private void them_hd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Entities.AccountLogin.getInstance().Pass);
+            
+
         }
     }
 }
