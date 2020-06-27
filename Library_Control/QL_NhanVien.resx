@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAu5JREFUSEvF
         VktP1FAUHkYwwYQgPiK2t9MZiS40cSc7ExcsJZEFMRISTdRoJBFfQKFze/+AiRt/gks37tSVcUFMgPiI
@@ -136,7 +136,7 @@
         Q0R19EyVPNW3Nq0uBjLt+S8hnS6T+Qf6YQ3noFWKWgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAp9JREFUSEut
         lktv00AQxw2i34NS4IIfaTmBvTSgQg+AEFBOQFQ4gZA4gZSWb0S5I6pIfAe4oAguNA+acgHivEh2mP9m
@@ -186,7 +186,7 @@
         8D+XqLxFB0nFEgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAsdJREFUSEul
         lk1rE2EQx1dpaEHwE7gvlWBV7KlSCyL1EOOHEEG8efE1BUFQUNA2NxFistlGEaoinqz2YkGhamnrweLL
@@ -204,7 +204,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="btn_add.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Add.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAApZJREFUSEvF
         ls9rE1EQxxOxYIs9iFJtQfBQ9OLNm+S9aZv6N3jwXpQgtGrPFWyS/ZHt0h4UD/4HYkFyaLXdkCa7uXiw

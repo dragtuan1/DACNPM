@@ -244,23 +244,6 @@
             this.pn_chitiet.Size = new System.Drawing.Size(1467, 431);
             this.pn_chitiet.TabIndex = 7;
             // 
-<<<<<<< HEAD
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(265, 293);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(147, 49);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "         Nhập Lại";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-=======
             // label1
             // 
             this.label1.AutoSize = true;
@@ -282,7 +265,7 @@
             this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
             this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(182, 37);
             this.txtTongLuong_QLChiPhi.TabIndex = 50;
->>>>>>> 0dee21b059e1b0300b6da9cccd3f0d0fe57b38d1
+
             // 
             // button4
             // 
@@ -290,12 +273,12 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.button4.Location = new System.Drawing.Point(97, 293);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
+
             this.button4.Location = new System.Drawing.Point(143, 242);
->>>>>>> 0dee21b059e1b0300b6da9cccd3f0d0fe57b38d1
+
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(147, 49);
@@ -414,7 +397,7 @@
             this.gw_chitiethoadon.TabIndex = 23;
             this.gw_chitiethoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_chitiethoadon_RowHeaderMouseClick);
             // 
-<<<<<<< HEAD
+
             // txtTongLuong_QLChiPhi
             // 
             this.txtTongLuong_QLChiPhi.BackColor = System.Drawing.Color.White;
@@ -439,8 +422,6 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Tổng lương";
             // 
-=======
->>>>>>> 0dee21b059e1b0300b6da9cccd3f0d0fe57b38d1
             // QL_ChiPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

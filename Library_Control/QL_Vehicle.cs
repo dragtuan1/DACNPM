@@ -17,5 +17,6 @@ namespace DACNPM.Library_Control
             InitializeComponent();
             DGV_QLXe.DataSource = BLL_QLVehicle.Instance.GetALL_Vehicle();
         }
+
     }
 }

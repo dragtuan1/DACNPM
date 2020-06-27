@@ -39,7 +39,7 @@ namespace DACNPM.BLL
         }
         public Entities.Account getAccountByID_BLL(int ID)
         {
-            return (db.Accounts.Where(p => p.Type_Account.ID_Type_Account == ID).ToList())[0];
+            return (db.Accounts.Where(p => p.Type_Account.ID_Type_Account == ID).FirstOrDefault());
         }
         public Entities.Employee getNhanVienByID_BLL(int id)
         {
@@ -89,7 +89,6 @@ namespace DACNPM.BLL
                 Entities.Account a = getAccountByID_BLL(Convert.ToInt32(acc.ID_Type_Account.ToString()));
                 a.UserPassword = acc.UserPassword;
                 a.ID_Type_Account = acc.ID_Type_Account;
-                //db.SaveChanges();
                 Entities.Employee e = getNhanVienByID_BLL(Convert.ToInt32(emp.ID_Employee.ToString()));          
                 e.Name_Employee = emp.Name_Employee;
                 e.Email = emp.Email;
@@ -99,7 +98,6 @@ namespace DACNPM.BLL
             }
             catch (Exception e )
             {
-                MessageBox.Show(e.ToString());
                 return false;
             }
         }
