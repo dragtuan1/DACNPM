@@ -54,6 +54,37 @@ namespace DACNPM.BLL
             }
         }
 
+        public bool addDetailHopDong_BLL(int idHopDong, String BienSo)
+        {
+            try
+            {
+                Entities.Vehicle vehicle = db.Vehicles.Where(p => p.License_Plate == BienSo).FirstOrDefault();
+
+                Entities.Detail_Contract detail = new Entities.Detail_Contract
+                {
+                    ID_Contract = idHopDong,
+                    ID_Vehicle = vehicle.ID_Vehicle,
+                    Total_Price = vehicle.Price,
+                    Date_Make_Contract = DateTime.Now
+                };
+
+                db.Detail_Contracts.Add(detail);
+
+                Entities.Contract contract = BLL.QLHopDong_BLL.Instance.getHopDongByID_BLL(idHopDong);
+
+                contract.Total_Bill = contract.Total_Bill + detail.Total_Price;
+
+                db.SaveChanges();
+
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         internal object getAcountByUserName_BLL(object username)
         {
             throw new NotImplementedException();
@@ -79,6 +110,61 @@ namespace DACNPM.BLL
         {
             var hopDong = db.Contracts.Where(p => p.Customer.Phone == sdt).Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill });
             return hopDong.ToList();
+        }
+
+        public Object getHopDongByName_BLL(String name)
+        {
+            var hopdong = db.Contracts.Where(p => p.Customer.Customer_Name.StartsWith(name))
+                .Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill })
+                .ToList();
+            return hopdong;
+        }
+
+        public bool UpdateHopDong_BLL(int id, DateTime borrow, DateTime retun)
+        {
+            try
+            {
+                Entities.Contract contract = db.Contracts.Where(p => p.ID_Contract == id).FirstOrDefault();
+                contract.Date_Borrow = borrow;
+                contract.Date_Return = retun;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public Entities.Contract getHopDongByID_BLL(int id)
+        {
+            return db.Contracts.Where(p => p.ID_Contract == id).FirstOrDefault();
+        }
+
+        public void deleteHopDongByID(int id)
+        {
+            Entities.Contract contract = db.Contracts.Where(p => p.ID_Contract == id).FirstOrDefault();
+            db.Contracts.Remove(contract);
+            db.SaveChanges();
+        }
+
+        public Object getAllDetailHoaDon(int idHopDong)
+        {
+            var detailHoaDon = db.Detail_Contracts.Where(p => p.Contract.ID_Contract == idHopDong)
+                                .Select(p => new { p.ID_Detail_Contract, p.ID_Contract, p.Vehicle.License_Plate, p.Vehicle.Price});
+            return detailHoaDon.ToList();
+        }
+
+        public void deleteDetailHopDongByBienSo_BLL(int id)
+        {
+            Entities.Detail_Contract contract = db.Detail_Contracts.Where(p => p.ID_Detail_Contract == id).FirstOrDefault();
+
+            contract.Contract.Total_Bill = contract.Contract.Total_Bill - contract.Vehicle.Price;
+
+            db.Detail_Contracts.Remove(contract);
+
+            db.SaveChanges();
         }
     }
 
