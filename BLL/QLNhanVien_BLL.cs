@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DACNPM.BLL
 {
@@ -81,21 +82,24 @@ namespace DACNPM.BLL
                 return false;
             }
         }
-        public bool UpdateNV_BLL(Entities.Employee emp)
+        public bool UpdateNV_BLL(Entities.Account acc, Entities.Employee emp)
         {
             try
             {
-                Entities.Employee e = getNhanVienByID_BLL(Convert.ToInt32(emp.ID_Employee.ToString()));
-                e.Account.UserPassword = emp.Account.UserPassword;
-                e.Account.ID_Type_Account = emp.Account.ID_Type_Account;
+                Entities.Account a = getAccountByID_BLL(Convert.ToInt32(acc.ID_Type_Account.ToString()));
+                a.UserPassword = acc.UserPassword;
+                a.ID_Type_Account = acc.ID_Type_Account;
+                //db.SaveChanges();
+                Entities.Employee e = getNhanVienByID_BLL(Convert.ToInt32(emp.ID_Employee.ToString()));          
                 e.Name_Employee = emp.Name_Employee;
                 e.Email = emp.Email;
                 e.Phone = emp.Phone;
                 db.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e )
             {
+                MessageBox.Show(e.ToString());
                 return false;
             }
         }

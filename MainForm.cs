@@ -14,12 +14,15 @@ namespace DACNPM
     public partial class MainForm : Form
     {
         public string Username { get; set; }
+        public int ID_NV { get; set; }
         public MainForm(string username)
         {
             InitializeComponent();
             this.Username = username;
             loadUserData();
             customDesign();
+            showSubmenu(panelQuanLySubmenu);
+            showSubmenu(panelThongKeSubmenu);
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -30,9 +33,11 @@ namespace DACNPM
         private void loadUserData()
         {
             DACNPM db = new DACNPM();
-            Entities.Account list = db.Accounts.Where(p => p.Username == Username).FirstOrDefault();
-            lbName.Text = list.Username;
-            lbPost.Text = list.Type_Account.Name_Type;
+            Entities.Account list = db.Accounts.Where(p => p.Username == Username).FirstOrDefault();          
+            Lb_ChucVu.Text = list.Type_Account.Name_Type;
+            ID_NV = list.ID_Account;
+            Entities.Employee List = db.Employees.Where(p => p.ID_Account == ID_NV).FirstOrDefault();
+            lb_Name.Text = List.Name_Employee;
         }
         private void customDesign()
         {
@@ -41,10 +46,10 @@ namespace DACNPM
         }
         private void HideSubmenu()
         {
-            if (panelQuanLySubmenu.Visible == true)
-                panelQuanLySubmenu.Visible = false;
-            if (panelThongKeSubmenu.Visible == true)
-                panelThongKeSubmenu.Visible = false;
+            //if (panelQuanLySubmenu.Visible == true)
+            //    panelQuanLySubmenu.Visible = false;
+            //if (panelThongKeSubmenu.Visible == true)
+              //  panelThongKeSubmenu.Visible = false;
         }
         private void showSubmenu(Panel subMenu)
         {
@@ -144,7 +149,9 @@ namespace DACNPM
         private void btnQL_TK_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_TaiKhoan());
+            panelMain.Controls.Add(new Library_Control.QL_In4_TaiKhoan(Username,ID_NV));
+
+            
         }
 
         private void btnQL_HD_Click(object sender, EventArgs e)
@@ -181,5 +188,16 @@ namespace DACNPM
         {
             showSubmenu(panelThongKeSubmenu);
         } 
+        
+
+        private void lbName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnQL_Car_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
