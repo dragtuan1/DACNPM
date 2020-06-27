@@ -42,7 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.gw_hoadon = new System.Windows.Forms.DataGridView();
             this.pn_chitiet = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTongLuong_QLChiPhi = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.cbbChucVu_QLChiPhi = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -53,8 +54,6 @@
             this.txtName_QLChiPhi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gw_chitiethoadon = new System.Windows.Forms.DataGridView();
-            this.txtTongLuong_QLChiPhi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gw_hoadon)).BeginInit();
             this.pn_chitiet.SuspendLayout();
@@ -216,7 +215,6 @@
             // 
             this.pn_chitiet.Controls.Add(this.label1);
             this.pn_chitiet.Controls.Add(this.txtTongLuong_QLChiPhi);
-            this.pn_chitiet.Controls.Add(this.button2);
             this.pn_chitiet.Controls.Add(this.button4);
             this.pn_chitiet.Controls.Add(this.cbbChucVu_QLChiPhi);
             this.pn_chitiet.Controls.Add(this.label14);
@@ -233,20 +231,27 @@
             this.pn_chitiet.Size = new System.Drawing.Size(1100, 350);
             this.pn_chitiet.TabIndex = 7;
             // 
-            // button2
+            // label1
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(199, 238);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(110, 40);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "         Nhập Lại";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(7, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 16);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Tổng lương";
+            // 
+            // txtTongLuong_QLChiPhi
+            // 
+            this.txtTongLuong_QLChiPhi.BackColor = System.Drawing.Color.White;
+            this.txtTongLuong_QLChiPhi.Enabled = false;
+            this.txtTongLuong_QLChiPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongLuong_QLChiPhi.Location = new System.Drawing.Point(117, 177);
+            this.txtTongLuong_QLChiPhi.Multiline = true;
+            this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
+            this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(182, 37);
+            this.txtTongLuong_QLChiPhi.TabIndex = 50;
             // 
             // button4
             // 
@@ -254,7 +259,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(73, 238);
+            this.button4.Location = new System.Drawing.Point(143, 242);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(110, 40);
@@ -364,28 +369,6 @@
             this.gw_chitiethoadon.TabIndex = 23;
             this.gw_chitiethoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_chitiethoadon_RowHeaderMouseClick);
             // 
-            // txtTongLuong_QLChiPhi
-            // 
-            this.txtTongLuong_QLChiPhi.BackColor = System.Drawing.Color.White;
-            this.txtTongLuong_QLChiPhi.Enabled = false;
-            this.txtTongLuong_QLChiPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongLuong_QLChiPhi.Location = new System.Drawing.Point(117, 177);
-            this.txtTongLuong_QLChiPhi.Multiline = true;
-            this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
-            this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(182, 37);
-            this.txtTongLuong_QLChiPhi.TabIndex = 50;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(7, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Tổng lương";
-            // 
             // QL_ChiPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,7 +411,6 @@
         private System.Windows.Forms.TextBox txtName_QLChiPhi;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView gw_chitiethoadon;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtTenTaiXe_QLChiPhi;
         private System.Windows.Forms.Label label1;

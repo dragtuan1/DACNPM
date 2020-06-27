@@ -12,9 +12,20 @@ namespace DACNPM.Library_Control
 {
     public partial class QL_HopDong : UserControl
     {
+        public string Username { get; set; }
         public QL_HopDong()
         {
             InitializeComponent();
+        }
+
+        public QL_HopDong(string username)
+        {
+            Username = username;
+        }
+
+        private void them_hd_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Entities.AccountLogin.getInstance().Pass);
         }
     }
 }
