@@ -212,6 +212,8 @@ namespace DACNPM
                 btnTK_DT.Visible = false;
                 btnTK_HD.Visible = false;
                 btnTK_LNV.Visible = false;
+                panelQuanLySubmenu.Height = 200;
+                panelThongKeSubmenu.Height = 0;
             }
             if (acc.ID_Type_Account == 3) 
             {

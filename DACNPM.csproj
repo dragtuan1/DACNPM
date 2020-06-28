@@ -68,9 +68,14 @@
     <Compile Include="BLL\QLTaiXe_BLL.cs" />
     <Compile Include="BLL\QLXe_BLL.cs" />
     <Compile Include="BLL\QLHopDong_BLL.cs" />
+<<<<<<< HEAD
     <Compile Include="BLL\BLL_QLTaiKhoan.cs" />
     <Compile Include="BLL\BLL_TK_DoanhThu.cs" />
     <Compile Include="BLL\BLL_TK_HopDong.cs" />
+=======
+    <Compile Include="BLL_QLKH.cs" />
+    <Compile Include="BLL_QLTaiKhoan.cs" />
+>>>>>>> 0a3e048cc11b7bbd6f40a3a70d49c28b688ca7bb
     <Compile Include="CreateDB.cs" />
     <Compile Include="DACNPM.cs" />
     <Compile Include="Entities\Account.cs" />

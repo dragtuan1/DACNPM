@@ -23,8 +23,8 @@ namespace DACNPM.Library_Control
                 cbb_Driver.Items.Add(i);
             }
 
-            cbb_Type_Vehicle.SelectedIndex = 0;
-            cbb_Driver.SelectedIndex = 0;
+            cbb_Type_Vehicle.SelectedIndex = -1;
+            cbb_Driver.SelectedIndex = -1;
 
             DGV_QLXe.DataSource = BLL.QLXe_BLL.Instance.getVehicles_BLL();
         }
