@@ -30,33 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_Vehicle));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_MaXe = new System.Windows.Forms.TextBox();
             this.txt_BS = new System.Windows.Forms.TextBox();
             this.txt_Gia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cbb_Type_Vehicle = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
-            this.TXT_Search = new System.Windows.Forms.TextBox();
+            this.txt_Search = new System.Windows.Forms.TextBox();
             this.status = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.DGV_QLXe = new System.Windows.Forms.DataGridView();
+            this.cbb_Driver = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_QLXe)).BeginInit();
@@ -73,21 +68,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ XE";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã xe :";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 120);
+            this.label4.Location = new System.Drawing.Point(14, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 24);
             this.label4.TabIndex = 0;
@@ -97,37 +82,30 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 181);
+            this.label3.Location = new System.Drawing.Point(38, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Giá :";
             // 
-            // txt_MaXe
-            // 
-            this.txt_MaXe.Location = new System.Drawing.Point(99, 58);
-            this.txt_MaXe.Name = "txt_MaXe";
-            this.txt_MaXe.Size = new System.Drawing.Size(119, 35);
-            this.txt_MaXe.TabIndex = 1;
-            // 
             // txt_BS
             // 
-            this.txt_BS.Location = new System.Drawing.Point(99, 116);
+            this.txt_BS.Location = new System.Drawing.Point(103, 62);
             this.txt_BS.Name = "txt_BS";
-            this.txt_BS.Size = new System.Drawing.Size(119, 35);
+            this.txt_BS.Size = new System.Drawing.Size(156, 35);
             this.txt_BS.TabIndex = 1;
             // 
             // txt_Gia
             // 
-            this.txt_Gia.Location = new System.Drawing.Point(99, 177);
+            this.txt_Gia.Location = new System.Drawing.Point(103, 123);
             this.txt_Gia.Name = "txt_Gia";
-            this.txt_Gia.Size = new System.Drawing.Size(119, 35);
+            this.txt_Gia.Size = new System.Drawing.Size(156, 35);
             this.txt_Gia.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(359, 24);
+            this.label5.Location = new System.Drawing.Point(359, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 30);
             this.label5.TabIndex = 2;
@@ -135,9 +113,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(321, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(279, 62);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(222, 143);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -151,73 +129,37 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Loại xe :";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(483, 124);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 24);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Số chỗ ngồi :";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(522, 178);
+            this.label6.Location = new System.Drawing.Point(520, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 24);
+            this.label6.Size = new System.Drawing.Size(72, 24);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Màu xe :";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(611, 58);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(119, 35);
-            this.textBox6.TabIndex = 9;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(611, 120);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(119, 35);
-            this.textBox5.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(611, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 35);
-            this.textBox4.TabIndex = 7;
+            this.label6.Text = "Tài xế :";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.cbb_Driver);
+            this.groupBox1.Controls.Add(this.cbb_Type_Vehicle);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.btn_reset);
             this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.btn_edit);
             this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.TXT_Search);
+            this.groupBox1.Controls.Add(this.txt_Search);
             this.groupBox1.Controls.Add(this.status);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_Gia);
             this.groupBox1.Controls.Add(this.txt_BS);
-            this.groupBox1.Controls.Add(this.txt_MaXe);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(43, 79);
             this.groupBox1.Name = "groupBox1";
@@ -225,22 +167,13 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // button3
+            // cbb_Type_Vehicle
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Info;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(424, 344);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(144, 48);
-            this.button3.TabIndex = 74;
-            this.button3.Text = "Lưu";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.cbb_Type_Vehicle.FormattingEnabled = true;
+            this.cbb_Type_Vehicle.Location = new System.Drawing.Point(609, 58);
+            this.cbb_Type_Vehicle.Name = "cbb_Type_Vehicle";
+            this.cbb_Type_Vehicle.Size = new System.Drawing.Size(265, 38);
+            this.cbb_Type_Vehicle.TabIndex = 75;
             // 
             // button2
             // 
@@ -249,32 +182,33 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(616, 343);
+            this.button2.Location = new System.Drawing.Point(424, 344);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(172, 49);
+            this.button2.Size = new System.Drawing.Size(144, 49);
             this.button2.TabIndex = 73;
-            this.button2.Text = "    Sort Name";
+            this.button2.Text = "    Sort";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_Search
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Info;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(424, 273);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(144, 49);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "  Tìm Kiếm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Search.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Search.Location = new System.Drawing.Point(424, 273);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.btn_Search.Size = new System.Drawing.Size(144, 49);
+            this.btn_Search.TabIndex = 72;
+            this.btn_Search.Text = "  Tìm Kiếm";
+            this.btn_Search.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_reset
             // 
@@ -292,6 +226,7 @@
             this.btn_reset.Text = "         Nhập Lại";
             this.btn_reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // btn_delete
             // 
@@ -310,6 +245,7 @@
             this.btn_delete.Text = "         Xóa";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_edit
             // 
@@ -326,6 +262,7 @@
             this.btn_edit.Text = "        Sửa Thông Tin";
             this.btn_edit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_add
             // 
@@ -343,17 +280,18 @@
             this.btn_add.Text = "         Thêm Mới";
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // TXT_Search
+            // txt_Search
             // 
-            this.TXT_Search.BackColor = System.Drawing.Color.White;
-            this.TXT_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_Search.Location = new System.Drawing.Point(616, 277);
-            this.TXT_Search.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_Search.Multiline = true;
-            this.TXT_Search.Name = "TXT_Search";
-            this.TXT_Search.Size = new System.Drawing.Size(319, 40);
-            this.TXT_Search.TabIndex = 67;
+            this.txt_Search.BackColor = System.Drawing.Color.White;
+            this.txt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.Location = new System.Drawing.Point(616, 277);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Search.Multiline = true;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(319, 40);
+            this.txt_Search.TabIndex = 67;
             // 
             // status
             // 
@@ -361,7 +299,7 @@
             this.status.Checked = true;
             this.status.CheckState = System.Windows.Forms.CheckState.Checked;
             this.status.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status.Location = new System.Drawing.Point(528, 215);
+            this.status.Location = new System.Drawing.Point(341, 211);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(96, 24);
             this.status.TabIndex = 56;
@@ -403,6 +341,15 @@
             this.DGV_QLXe.RowTemplate.Height = 24;
             this.DGV_QLXe.Size = new System.Drawing.Size(988, 150);
             this.DGV_QLXe.TabIndex = 76;
+            this.DGV_QLXe.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLXe_RowHeaderMouseClick);
+            // 
+            // cbb_Driver
+            // 
+            this.cbb_Driver.FormattingEnabled = true;
+            this.cbb_Driver.Location = new System.Drawing.Point(609, 112);
+            this.cbb_Driver.Name = "cbb_Driver";
+            this.cbb_Driver.Size = new System.Drawing.Size(265, 38);
+            this.cbb_Driver.TabIndex = 75;
             // 
             // QL_Vehicle
             // 
@@ -424,32 +371,27 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_MaXe;
         private System.Windows.Forms.TextBox txt_BS;
         private System.Windows.Forms.TextBox txt_Gia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox status;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.TextBox TXT_Search;
+        private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView DGV_QLXe;
+        private System.Windows.Forms.ComboBox cbb_Type_Vehicle;
+        private System.Windows.Forms.ComboBox cbb_Driver;
     }
 }

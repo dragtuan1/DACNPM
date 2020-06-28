@@ -16,7 +16,7 @@ namespace DACNPM.Entities
         public int Price { get; set; }
         public int ID_Type_Vehicle { get; set; }
         public int ID_Driver { get; set; }
-        public int Vehicle_State { get; set; }
+        public bool Vehicle_State { get; set; }
         public virtual ICollection<Detail_Contract> Detail_Contracts { get; set; }
         public virtual ICollection<Image> Images { get; set; }
         [ForeignKey("ID_Driver")]

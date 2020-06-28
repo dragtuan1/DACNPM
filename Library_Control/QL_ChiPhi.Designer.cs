@@ -252,6 +252,10 @@
             this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
             this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(182, 37);
             this.txtTongLuong_QLChiPhi.TabIndex = 50;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 86342efede731113ba1845b06820dc1f33ef68e1
             // 
             // button4
             // 
@@ -259,7 +263,16 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
+
+            this.button4.Location = new System.Drawing.Point(97, 293);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.button4.Location = new System.Drawing.Point(143, 242);
+
+=======
             this.button4.Location = new System.Drawing.Point(148, 230);
+>>>>>>> 86342efede731113ba1845b06820dc1f33ef68e1
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(110, 40);
@@ -369,6 +382,34 @@
             this.gw_chitiethoadon.TabIndex = 23;
             this.gw_chitiethoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_chitiethoadon_RowHeaderMouseClick);
             // 
+<<<<<<< HEAD
+
+            // txtTongLuong_QLChiPhi
+            // 
+            this.txtTongLuong_QLChiPhi.BackColor = System.Drawing.Color.White;
+            this.txtTongLuong_QLChiPhi.Enabled = false;
+            this.txtTongLuong_QLChiPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongLuong_QLChiPhi.Location = new System.Drawing.Point(156, 218);
+            this.txtTongLuong_QLChiPhi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTongLuong_QLChiPhi.Multiline = true;
+            this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
+            this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(241, 45);
+            this.txtTongLuong_QLChiPhi.TabIndex = 50;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(9, 229);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Tổng lương";
+            // 
+=======
+>>>>>>> 86342efede731113ba1845b06820dc1f33ef68e1
             // QL_ChiPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
