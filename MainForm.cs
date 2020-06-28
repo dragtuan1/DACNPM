@@ -200,7 +200,6 @@ namespace DACNPM
         private void RoleLoad()
         {
             Entities.Account acc = BLL.QLNhanVien_BLL.Instance.getAccountByUsername_BLL(Username);
-            MessageBox.Show(acc.ID_Type_Account.ToString());
             if (acc.ID_Type_Account == 1) 
             {
 
@@ -213,6 +212,8 @@ namespace DACNPM
                 btnTK_DT.Visible = false;
                 btnTK_HD.Visible = false;
                 btnTK_LNV.Visible = false;
+                panelQuanLySubmenu.Height = 200;
+                panelThongKeSubmenu.Height = 0;
             }
             if (acc.ID_Type_Account == 3) 
             {

@@ -36,13 +36,13 @@
             this.btnTK_DT = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.panelQuanLySubmenu = new System.Windows.Forms.Panel();
-            this.btnQL_TK = new System.Windows.Forms.Button();
             this.btnQL_NhanVien = new System.Windows.Forms.Button();
             this.btnQL_ChiPhi = new System.Windows.Forms.Button();
             this.btnQL_Car = new System.Windows.Forms.Button();
             this.btnQL_HD = new System.Windows.Forms.Button();
             this.btnQL_KH = new System.Windows.Forms.Button();
             this.btnQL_TaiXe = new System.Windows.Forms.Button();
+            this.btnQL_TK = new System.Windows.Forms.Button();
             this.btnQuanLy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_Name = new System.Windows.Forms.Label();
@@ -101,7 +101,7 @@
             this.panelThongKeSubmenu.Controls.Add(this.btnTK_HD);
             this.panelThongKeSubmenu.Controls.Add(this.btnTK_DT);
             this.panelThongKeSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelThongKeSubmenu.Location = new System.Drawing.Point(0, 563);
+            this.panelThongKeSubmenu.Location = new System.Drawing.Point(0, 560);
             this.panelThongKeSubmenu.Name = "panelThongKeSubmenu";
             this.panelThongKeSubmenu.Size = new System.Drawing.Size(200, 150);
             this.panelThongKeSubmenu.TabIndex = 8;
@@ -175,7 +175,7 @@
             this.btnThongKe.Font = new System.Drawing.Font("Consolas", 16F);
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 504);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 501);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(200, 59);
             this.btnThongKe.TabIndex = 7;
@@ -196,8 +196,131 @@
             this.panelQuanLySubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQuanLySubmenu.Location = new System.Drawing.Point(0, 151);
             this.panelQuanLySubmenu.Name = "panelQuanLySubmenu";
-            this.panelQuanLySubmenu.Size = new System.Drawing.Size(200, 353);
+            this.panelQuanLySubmenu.Size = new System.Drawing.Size(200, 350);
             this.panelQuanLySubmenu.TabIndex = 6;
+            // 
+            // btnQL_NhanVien
+            // 
+            this.btnQL_NhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_NhanVien.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_NhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_NhanVien.FlatAppearance.BorderSize = 0;
+            this.btnQL_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_NhanVien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_NhanVien.ForeColor = System.Drawing.Color.White;
+            this.btnQL_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_NhanVien.Image")));
+            this.btnQL_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQL_NhanVien.Location = new System.Drawing.Point(0, 300);
+            this.btnQL_NhanVien.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_NhanVien.Name = "btnQL_NhanVien";
+            this.btnQL_NhanVien.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_NhanVien.TabIndex = 4;
+            this.btnQL_NhanVien.Text = "       Quản lý nhân viên";
+            this.btnQL_NhanVien.UseVisualStyleBackColor = false;
+            this.btnQL_NhanVien.Click += new System.EventHandler(this.btnQL_NhanVien_Click);
+            // 
+            // btnQL_ChiPhi
+            // 
+            this.btnQL_ChiPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_ChiPhi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_ChiPhi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_ChiPhi.FlatAppearance.BorderSize = 0;
+            this.btnQL_ChiPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_ChiPhi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_ChiPhi.ForeColor = System.Drawing.Color.White;
+            this.btnQL_ChiPhi.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_ChiPhi.Image")));
+            this.btnQL_ChiPhi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQL_ChiPhi.Location = new System.Drawing.Point(0, 250);
+            this.btnQL_ChiPhi.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_ChiPhi.Name = "btnQL_ChiPhi";
+            this.btnQL_ChiPhi.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_ChiPhi.TabIndex = 5;
+            this.btnQL_ChiPhi.Text = "   Quản lý chi phí";
+            this.btnQL_ChiPhi.UseVisualStyleBackColor = false;
+            this.btnQL_ChiPhi.Click += new System.EventHandler(this.btnQL_ChiPhi_Click);
+            // 
+            // btnQL_Car
+            // 
+            this.btnQL_Car.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_Car.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_Car.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_Car.FlatAppearance.BorderSize = 0;
+            this.btnQL_Car.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_Car.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_Car.ForeColor = System.Drawing.Color.White;
+            this.btnQL_Car.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_Car.Image")));
+            this.btnQL_Car.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQL_Car.Location = new System.Drawing.Point(0, 200);
+            this.btnQL_Car.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_Car.Name = "btnQL_Car";
+            this.btnQL_Car.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_Car.TabIndex = 6;
+            this.btnQL_Car.Text = "          Quản lý xe";
+            this.btnQL_Car.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQL_Car.UseVisualStyleBackColor = false;
+            this.btnQL_Car.Click += new System.EventHandler(this.btnQL_Car_Click);
+            // 
+            // btnQL_HD
+            // 
+            this.btnQL_HD.AllowDrop = true;
+            this.btnQL_HD.AutoSize = true;
+            this.btnQL_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_HD.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_HD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_HD.FlatAppearance.BorderSize = 0;
+            this.btnQL_HD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_HD.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_HD.ForeColor = System.Drawing.Color.White;
+            this.btnQL_HD.Image = global::DACNPM.Properties.Resources.fileboard___1801_;
+            this.btnQL_HD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQL_HD.Location = new System.Drawing.Point(0, 150);
+            this.btnQL_HD.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_HD.Name = "btnQL_HD";
+            this.btnQL_HD.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_HD.TabIndex = 8;
+            this.btnQL_HD.Text = "       Quản lý hợp đồng";
+            this.btnQL_HD.UseVisualStyleBackColor = false;
+            this.btnQL_HD.Click += new System.EventHandler(this.btnQL_HD_Click);
+            // 
+            // btnQL_KH
+            // 
+            this.btnQL_KH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_KH.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_KH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_KH.FlatAppearance.BorderSize = 0;
+            this.btnQL_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_KH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_KH.ForeColor = System.Drawing.Color.White;
+            this.btnQL_KH.Image = global::DACNPM.Properties.Resources.emoji_happy_circle___540_;
+            this.btnQL_KH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQL_KH.Location = new System.Drawing.Point(0, 100);
+            this.btnQL_KH.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_KH.Name = "btnQL_KH";
+            this.btnQL_KH.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_KH.TabIndex = 2;
+            this.btnQL_KH.Text = "        Quản lý khách hàng";
+            this.btnQL_KH.UseVisualStyleBackColor = false;
+            this.btnQL_KH.Click += new System.EventHandler(this.btnQL_KH_Click);
+            // 
+            // btnQL_TaiXe
+            // 
+            this.btnQL_TaiXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
+            this.btnQL_TaiXe.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnQL_TaiXe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQL_TaiXe.FlatAppearance.BorderSize = 0;
+            this.btnQL_TaiXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQL_TaiXe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQL_TaiXe.ForeColor = System.Drawing.Color.White;
+            this.btnQL_TaiXe.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_TaiXe.Image")));
+            this.btnQL_TaiXe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQL_TaiXe.Location = new System.Drawing.Point(0, 50);
+            this.btnQL_TaiXe.Margin = new System.Windows.Forms.Padding(0);
+            this.btnQL_TaiXe.Name = "btnQL_TaiXe";
+            this.btnQL_TaiXe.Size = new System.Drawing.Size(200, 50);
+            this.btnQL_TaiXe.TabIndex = 3;
+            this.btnQL_TaiXe.Text = " Quản lý tài xế";
+            this.btnQL_TaiXe.UseVisualStyleBackColor = false;
+            this.btnQL_TaiXe.Click += new System.EventHandler(this.btnQL_TaiXe_Click);
             // 
             // btnQL_TK
             // 
@@ -218,129 +341,6 @@
             this.btnQL_TK.Text = "       Quản lý tài khoản";
             this.btnQL_TK.UseVisualStyleBackColor = false;
             this.btnQL_TK.Click += new System.EventHandler(this.btnQL_TK_Click);
-            // 
-            // btnQL_NhanVien
-            // 
-            this.btnQL_NhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnQL_NhanVien.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnQL_NhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQL_NhanVien.FlatAppearance.BorderSize = 0;
-            this.btnQL_NhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQL_NhanVien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQL_NhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnQL_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_NhanVien.Image")));
-            this.btnQL_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_NhanVien.Location = new System.Drawing.Point(0, 302);
-            this.btnQL_NhanVien.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQL_NhanVien.Name = "btnQL_NhanVien";
-            this.btnQL_NhanVien.Size = new System.Drawing.Size(200, 52);
-            this.btnQL_NhanVien.TabIndex = 4;
-            this.btnQL_NhanVien.Text = "       Quản lý nhân viên";
-            this.btnQL_NhanVien.UseVisualStyleBackColor = false;
-            this.btnQL_NhanVien.Click += new System.EventHandler(this.btnQL_NhanVien_Click);
-            // 
-            // btnQL_ChiPhi
-            // 
-            this.btnQL_ChiPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnQL_ChiPhi.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnQL_ChiPhi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQL_ChiPhi.FlatAppearance.BorderSize = 0;
-            this.btnQL_ChiPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQL_ChiPhi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQL_ChiPhi.ForeColor = System.Drawing.Color.White;
-            this.btnQL_ChiPhi.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_ChiPhi.Image")));
-            this.btnQL_ChiPhi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_ChiPhi.Location = new System.Drawing.Point(0, 252);
-            this.btnQL_ChiPhi.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQL_ChiPhi.Name = "btnQL_ChiPhi";
-            this.btnQL_ChiPhi.Size = new System.Drawing.Size(200, 50);
-            this.btnQL_ChiPhi.TabIndex = 5;
-            this.btnQL_ChiPhi.Text = "   Quản lý chi phí";
-            this.btnQL_ChiPhi.UseVisualStyleBackColor = false;
-            this.btnQL_ChiPhi.Click += new System.EventHandler(this.btnQL_ChiPhi_Click);
-            // 
-            // btnQL_Car
-            // 
-            this.btnQL_Car.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnQL_Car.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnQL_Car.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQL_Car.FlatAppearance.BorderSize = 0;
-            this.btnQL_Car.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQL_Car.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQL_Car.ForeColor = System.Drawing.Color.White;
-            this.btnQL_Car.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_Car.Image")));
-            this.btnQL_Car.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_Car.Location = new System.Drawing.Point(0, 206);
-            this.btnQL_Car.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQL_Car.Name = "btnQL_Car";
-            this.btnQL_Car.Size = new System.Drawing.Size(200, 46);
-            this.btnQL_Car.TabIndex = 6;
-            this.btnQL_Car.Text = "          Quản lý xe";
-            this.btnQL_Car.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_Car.UseVisualStyleBackColor = false;
-            this.btnQL_Car.Click += new System.EventHandler(this.btnQL_Car_Click);
-            // 
-            // btnQL_HD
-            // 
-            this.btnQL_HD.AllowDrop = true;
-            this.btnQL_HD.AutoSize = true;
-            this.btnQL_HD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnQL_HD.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnQL_HD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQL_HD.FlatAppearance.BorderSize = 0;
-            this.btnQL_HD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQL_HD.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQL_HD.ForeColor = System.Drawing.Color.White;
-            this.btnQL_HD.Image = global::DACNPM.Properties.Resources.fileboard___1801_;
-            this.btnQL_HD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_HD.Location = new System.Drawing.Point(0, 160);
-            this.btnQL_HD.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQL_HD.Name = "btnQL_HD";
-            this.btnQL_HD.Size = new System.Drawing.Size(200, 46);
-            this.btnQL_HD.TabIndex = 8;
-            this.btnQL_HD.Text = "       Quản lý hợp đồng";
-            this.btnQL_HD.UseVisualStyleBackColor = false;
-            this.btnQL_HD.Click += new System.EventHandler(this.btnQL_HD_Click);
-            // 
-            // btnQL_KH
-            // 
-            this.btnQL_KH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnQL_KH.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnQL_KH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQL_KH.FlatAppearance.BorderSize = 0;
-            this.btnQL_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQL_KH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQL_KH.ForeColor = System.Drawing.Color.White;
-            this.btnQL_KH.Image = global::DACNPM.Properties.Resources.emoji_happy_circle___540_;
-            this.btnQL_KH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_KH.Location = new System.Drawing.Point(0, 105);
-            this.btnQL_KH.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQL_KH.Name = "btnQL_KH";
-            this.btnQL_KH.Size = new System.Drawing.Size(200, 55);
-            this.btnQL_KH.TabIndex = 2;
-            this.btnQL_KH.Text = "        Quản lý khách hàng";
-            this.btnQL_KH.UseVisualStyleBackColor = false;
-            this.btnQL_KH.Click += new System.EventHandler(this.btnQL_KH_Click);
-            // 
-            // btnQL_TaiXe
-            // 
-            this.btnQL_TaiXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnQL_TaiXe.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnQL_TaiXe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQL_TaiXe.FlatAppearance.BorderSize = 0;
-            this.btnQL_TaiXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQL_TaiXe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQL_TaiXe.ForeColor = System.Drawing.Color.White;
-            this.btnQL_TaiXe.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_TaiXe.Image")));
-            this.btnQL_TaiXe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_TaiXe.Location = new System.Drawing.Point(0, 50);
-            this.btnQL_TaiXe.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQL_TaiXe.Name = "btnQL_TaiXe";
-            this.btnQL_TaiXe.Size = new System.Drawing.Size(200, 55);
-            this.btnQL_TaiXe.TabIndex = 3;
-            this.btnQL_TaiXe.Text = " Quản lý tài xế";
-            this.btnQL_TaiXe.UseVisualStyleBackColor = false;
-            this.btnQL_TaiXe.Click += new System.EventHandler(this.btnQL_TaiXe_Click);
             // 
             // btnQuanLy
             // 

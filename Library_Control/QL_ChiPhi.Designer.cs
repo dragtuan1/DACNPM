@@ -237,6 +237,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label1.Location = new System.Drawing.Point(7, 186);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 51;
@@ -248,11 +249,11 @@
             this.txtTongLuong_QLChiPhi.Enabled = false;
             this.txtTongLuong_QLChiPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongLuong_QLChiPhi.Location = new System.Drawing.Point(117, 177);
+            this.txtTongLuong_QLChiPhi.Margin = new System.Windows.Forms.Padding(4);
             this.txtTongLuong_QLChiPhi.Multiline = true;
             this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
-            this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(182, 37);
+            this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(241, 45);
             this.txtTongLuong_QLChiPhi.TabIndex = 50;
-
             // 
             // button4
             // 
@@ -260,16 +261,8 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-
-
-            this.button4.Location = new System.Drawing.Point(97, 293);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-
-            this.button4.Location = new System.Drawing.Point(143, 242);
-
-
-            this.button4.Location = new System.Drawing.Point(148, 230);
-
+            this.button4.Location = new System.Drawing.Point(117, 230);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(110, 40);
@@ -379,40 +372,13 @@
             this.gw_chitiethoadon.TabIndex = 23;
             this.gw_chitiethoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_chitiethoadon_RowHeaderMouseClick);
             // 
-
-
-            // txtTongLuong_QLChiPhi
-            // 
-            this.txtTongLuong_QLChiPhi.BackColor = System.Drawing.Color.White;
-            this.txtTongLuong_QLChiPhi.Enabled = false;
-            this.txtTongLuong_QLChiPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongLuong_QLChiPhi.Location = new System.Drawing.Point(156, 218);
-            this.txtTongLuong_QLChiPhi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTongLuong_QLChiPhi.Multiline = true;
-            this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
-            this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(241, 45);
-            this.txtTongLuong_QLChiPhi.TabIndex = 50;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(9, 229);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Tổng lương";
-            // 
-
             // QL_ChiPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pn_chitiet);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QL_ChiPhi";
             this.Size = new System.Drawing.Size(1100, 700);
             this.panel3.ResumeLayout(false);
