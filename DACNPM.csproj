@@ -63,9 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\QLChiPhi_BLL.cs" />
+<<<<<<< HEAD
     <Compile Include="BLL\QLNhanVien_BLL.cs" />
     <Compile Include="BLL\QLTaiXe_BLL.cs" />
     <Compile Include="BLL\QLXe_BLL.cs" />
+=======
+    <Compile Include="BLL\QLHopDong_BLL.cs" />
+    <Compile Include="BLL\QLNhanVien_BLL.cs" />
+    <Compile Include="BLL\QLTaiXe_BLL.cs" />
+>>>>>>> 86342efede731113ba1845b06820dc1f33ef68e1
     <Compile Include="BLL_QLKH.cs" />
     <Compile Include="BLL_QLNV.cs" />
     <Compile Include="BLL_QLVehicle.cs" />
