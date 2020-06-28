@@ -17,6 +17,7 @@ namespace DACNPM.Library_Control
         public QL_KhachHang()
         {
             InitializeComponent();
+            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
         }
         private void btn_add_Click(object sender, EventArgs e)
         {           
@@ -92,8 +93,7 @@ namespace DACNPM.Library_Control
         private void button1_Click(object sender, EventArgs e)
         {
             string StringSeach = TXT_Search.Text;
-            DGV_QLKH.DataSource = BLL_QLKH.Instance.SearchKH_BLL(StringSeach);
-           
+            DGV_QLKH.DataSource = BLL_QLKH.Instance.SearchKH_BLL(StringSeach);     
         }
         private void DGV_QLKH_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {

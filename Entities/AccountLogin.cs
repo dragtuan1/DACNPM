@@ -39,4 +39,5 @@ namespace DACNPM.Entities
             this.Pass = pass;
         }
     }
+    //Aádasdasd
 }

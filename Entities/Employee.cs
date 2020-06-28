@@ -16,7 +16,6 @@ namespace DACNPM.Entities
         public int ID_Employee { get; set; }
         public string Name_Employee { get; set; }
         public string Email { get; set; }
-        public string Position { get; set; }
         public string Phone { get; set; }
         public int ID_Account { get; set; }
         [ForeignKey("ID_Account")]

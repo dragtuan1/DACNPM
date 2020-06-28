@@ -18,11 +18,10 @@ namespace DACNPM
         public MainForm(string username)
         {
             InitializeComponent();
-            this.Username = username;
+            Username = username;
             loadUserData();
             customDesign();
-            showSubmenu(panelQuanLySubmenu);
-            showSubmenu(panelThongKeSubmenu);
+            RoleLoad();
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -32,12 +31,11 @@ namespace DACNPM
 
         private void loadUserData()
         {
-            DACNPM db = new DACNPM();
-            Entities.Account list = db.Accounts.Where(p => p.Username == Username).FirstOrDefault();          
-            Lb_ChucVu.Text = list.Type_Account.Name_Type;
-            ID_NV = list.ID_Account;
-            Entities.Employee List = db.Employees.Where(p => p.ID_Account == ID_NV).FirstOrDefault();
-            lb_Name.Text = List.Name_Employee;
+            Entities.Account acc = BLL.QLNhanVien_BLL.Instance.getAccountByUsername_BLL(Username);        
+            Lb_ChucVu.Text = acc.Type_Account.Name_Type;
+            ID_NV = acc.ID_Account;
+            Entities.Employee emp = BLL.QLNhanVien_BLL.Instance.getNhanVienByID_BLL(ID_NV);
+            lb_Name.Text = emp.Name_Employee;
         }
         private void customDesign()
         {
@@ -46,10 +44,10 @@ namespace DACNPM
         }
         private void HideSubmenu()
         {
-            //if (panelQuanLySubmenu.Visible == true)
-            //    panelQuanLySubmenu.Visible = false;
-            //if (panelThongKeSubmenu.Visible == true)
-              //  panelThongKeSubmenu.Visible = false;
+            if (panelQuanLySubmenu.Visible == true)
+                panelQuanLySubmenu.Visible = false;
+            if (panelThongKeSubmenu.Visible == true)
+                panelThongKeSubmenu.Visible = false;
         }
         private void showSubmenu(Panel subMenu)
         {
@@ -111,7 +109,11 @@ namespace DACNPM
                 this.Close();
             }
         }
-
+        private void btnQL_Car_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.QL_Vehicle());
+        }
         private void btnQL_ChiPhi_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
@@ -182,16 +184,39 @@ namespace DACNPM
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             showSubmenu(panelThongKeSubmenu);
-        }
+        } 
+        
 
         private void lbName_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnQL_Car_Click(object sender, EventArgs e)
+        private void BtnQL_Car_Click(object sender, EventArgs e)
         {
 
+        }
+        private void RoleLoad()
+        {
+            Entities.Account acc = BLL.QLNhanVien_BLL.Instance.getAccountByUsername_BLL(Username);
+            MessageBox.Show(acc.ID_Type_Account.ToString());
+            if (acc.ID_Type_Account == 1) 
+            {
+
+            }
+            if (acc.ID_Type_Account == 2) 
+            {
+                btnQL_TK.Visible = false;
+                btnQL_ChiPhi.Visible = false;
+                btnQL_NhanVien.Visible = false;
+                btnTK_DT.Visible = false;
+                btnTK_HD.Visible = false;
+                btnTK_LNV.Visible = false;
+            }
+            if (acc.ID_Type_Account == 3) 
+            {
+
+            }
         }
     }
 }
