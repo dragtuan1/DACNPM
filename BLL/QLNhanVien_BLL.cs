@@ -28,9 +28,9 @@ namespace DACNPM.BLL
             db = new DACNPM();
         }
 
-        public Object getEmployees_BLL()
+        public object getEmployees_BLL()
         {
-            var list = db.Employees.Select(p => new { p.ID_Employee, p.Account.Username,p.Account.UserPassword, p.Name_Employee, p.Account.Type_Account.Name_Type, p.Email, p.Phone, p.Account.Type_Account.Salary });
+            var list = db.Employees.Select(p => new { p.ID_Employee, p.Account.Username, p.Account.UserPassword, p.Name_Employee, p.Account.Type_Account.Name_Type, p.Email, p.Phone, p.Account.Type_Account.Salary });
             return list.ToList();
         }
         public List<Entities.Type_Account> getTypeAcounts_BLL()
@@ -40,6 +40,10 @@ namespace DACNPM.BLL
         public Entities.Account getAccountByID_BLL(int ID)
         {
             return (db.Accounts.Where(p => p.Type_Account.ID_Type_Account == ID).FirstOrDefault());
+        }
+        public Entities.Account getAccountByUsername_BLL(string username)
+        {
+            return (db.Accounts.Where(p => p.Username == username).FirstOrDefault());
         }
         public Entities.Employee getNhanVienByID_BLL(int id)
         {
@@ -89,17 +93,24 @@ namespace DACNPM.BLL
                 Entities.Account a = getAccountByID_BLL(Convert.ToInt32(acc.ID_Type_Account.ToString()));
                 a.UserPassword = acc.UserPassword;
                 a.ID_Type_Account = acc.ID_Type_Account;
-                Entities.Employee e = getNhanVienByID_BLL(Convert.ToInt32(emp.ID_Employee.ToString()));          
+                Entities.Employee e = getNhanVienByID_BLL(Convert.ToInt32(emp.ID_Employee.ToString()));
                 e.Name_Employee = emp.Name_Employee;
                 e.Email = emp.Email;
                 e.Phone = emp.Phone;
                 db.SaveChanges();
                 return true;
             }
-            catch (Exception e )
+            catch (Exception)
             {
                 return false;
             }
+        }
+        public object SearchNV_BLL(string StrSearch)
+        {
+            var list = db.Employees.Where(p => p.Account.Username.Contains(StrSearch) || p.Name_Employee.Contains(StrSearch)
+                || p.Email.Contains(StrSearch) || p.Phone.Contains(StrSearch))
+                .Select(p => new { p.ID_Employee, p.Account.Username, p.Account.UserPassword, p.Name_Employee, p.Account.Type_Account.Name_Type, p.Email, p.Phone, p.Account.Type_Account.Salary });
+            return list.ToList();
         }
     }
 }

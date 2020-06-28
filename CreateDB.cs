@@ -109,11 +109,11 @@ namespace DACNPM
             });
             context.Vehicles.Add(new Entities.Vehicle { 
                 ID_Vehicle = 1,
-                License_Plate = " 75M 20712",
+                License_Plate = "75M 20712",
                 ID_Type_Vehicle = 1,
                 ID_Driver = 1,
                 Price = 80000,
-                Vehicle_State = 0,
+                Vehicle_State = false
             });
             context.Vehicles.Add(new Entities.Vehicle
             {
@@ -122,7 +122,7 @@ namespace DACNPM
                 ID_Type_Vehicle = 2,
                 ID_Driver = 2,
                 Price = 90000,
-                Vehicle_State = 1,
+                Vehicle_State = true
             });
             context.Vehicles.Add(new Entities.Vehicle
             {
@@ -131,7 +131,7 @@ namespace DACNPM
                 ID_Type_Vehicle = 3,
                 ID_Driver = 3,
                 Price = 100000,
-                Vehicle_State = 0
+                Vehicle_State = false
             });
             context.Type_Vehicles.Add(new Entities.Type_Vehicle
             {

@@ -35,10 +35,8 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btn_Sort = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cbb_Search = new System.Windows.Forms.ComboBox();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.txt_LuongNV = new System.Windows.Forms.TextBox();
@@ -73,10 +71,8 @@
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.btn_Sort);
             this.groupBox1.Controls.Add(this.txtSearch);
-            this.groupBox1.Controls.Add(this.cbb_Search);
             this.groupBox1.Controls.Add(this.btn_Reset);
             this.groupBox1.Controls.Add(this.btn_Delete);
-            this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.btn_Edit);
             this.groupBox1.Controls.Add(this.btn_Add);
             this.groupBox1.Controls.Add(this.txt_LuongNV);
@@ -119,7 +115,7 @@
             this.btn_Search.FlatAppearance.BorderSize = 0;
             this.btn_Search.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search.Location = new System.Drawing.Point(467, 319);
+            this.btn_Search.Location = new System.Drawing.Point(316, 322);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -134,10 +130,10 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(617, 381);
+            this.comboBox2.Location = new System.Drawing.Point(434, 387);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(367, 32);
+            this.comboBox2.Size = new System.Drawing.Size(230, 32);
             this.comboBox2.TabIndex = 50;
             // 
             // btn_Sort
@@ -160,22 +156,12 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(795, 319);
+            this.txtSearch.Location = new System.Drawing.Point(434, 322);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(189, 32);
+            this.txtSearch.Size = new System.Drawing.Size(230, 40);
             this.txtSearch.TabIndex = 42;
-            // 
-            // cbb_Search
-            // 
-            this.cbb_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_Search.FormattingEnabled = true;
-            this.cbb_Search.Location = new System.Drawing.Point(615, 319);
-            this.cbb_Search.Margin = new System.Windows.Forms.Padding(4);
-            this.cbb_Search.Name = "cbb_Search";
-            this.cbb_Search.Size = new System.Drawing.Size(171, 32);
-            this.cbb_Search.TabIndex = 41;
             // 
             // btn_Reset
             // 
@@ -183,7 +169,7 @@
             this.btn_Reset.FlatAppearance.BorderSize = 0;
             this.btn_Reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_Reset.Image")));
             this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Reset.Location = new System.Drawing.Point(168, 386);
+            this.btn_Reset.Location = new System.Drawing.Point(38, 384);
             this.btn_Reset.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -201,7 +187,7 @@
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(316, 321);
+            this.btn_Delete.Location = new System.Drawing.Point(168, 384);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -211,22 +197,6 @@
             this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Delete.UseVisualStyleBackColor = false;
             this.btn_Delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_save
-            // 
-            this.btn_save.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_save.FlatAppearance.BorderSize = 0;
-            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save.Location = new System.Drawing.Point(38, 388);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btn_save.Size = new System.Drawing.Size(110, 40);
-            this.btn_save.TabIndex = 37;
-            this.btn_save.Text = "          Lưu Lại";
-            this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save.UseVisualStyleBackColor = false;
             // 
             // btn_Edit
             // 
@@ -509,10 +479,8 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btn_Sort;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.ComboBox cbb_Search;
         private System.Windows.Forms.Button btn_Reset;
         private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.TextBox txt_LuongNV;

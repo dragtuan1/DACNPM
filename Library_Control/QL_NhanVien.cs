@@ -31,7 +31,7 @@ namespace DACNPM.Library_Control
         private void btn_add_Click(object sender, EventArgs e)
         {
             if(txt_NameTK.Text == "" || txt_Password.Text == "" || txt_NameNV.Text == "" || 
-                txt_Email.Text == "" || txt_Phone.Text == "" || cbb_roleNV.SelectedIndex != -1)
+                txt_Email.Text == "" || txt_Phone.Text == "" || cbb_roleNV.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui long nhap day du thong tin");
             }
@@ -52,6 +52,7 @@ namespace DACNPM.Library_Control
                 };
                 BLL_QLNV.Instance.AddNV_BLL(acc, emp);
                 DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
+                Reset();
             }        
         }
 
@@ -68,6 +69,7 @@ namespace DACNPM.Library_Control
                 }
                 BLL_QLNV.Instance.DelNV_BLL(List_ID);
                 DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
+                Reset();
             }
             else
             {
@@ -77,14 +79,7 @@ namespace DACNPM.Library_Control
 
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            txt_NameTK.Enabled = true;
-            txt_NameTK.Text = null;
-            txt_Password.Text = null;
-            txt_NameNV.Text = null;
-            txt_Email.Text = null;
-            txt_Phone.Text = null;
-            cbb_roleNV.SelectedIndex = -1;
-            txt_LuongNV.Text = null;
+            Reset();
         }
 
         private void DGV_QLNV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -109,8 +104,8 @@ namespace DACNPM.Library_Control
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            if (txt_NameTK.Text == "" || txt_Password.Text == "" || txt_NameNV.Text == "" ||
-                txt_Email.Text == "" || txt_Phone.Text == "" || cbb_roleNV.SelectedIndex != -1)
+            if (txt_Password.Text == "" || txt_NameNV.Text == "" || txt_Email.Text == "" || 
+                txt_Phone.Text == "" || cbb_roleNV.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui long nhap day du thong tin");
             }
@@ -135,6 +130,7 @@ namespace DACNPM.Library_Control
                     {
                         MessageBox.Show("Update Thành Công ");
                         DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
+                        Reset();
                     }
                     else
                     {
@@ -150,7 +146,21 @@ namespace DACNPM.Library_Control
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-
+            string search = txtSearch.Text;
+            DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.SearchNV_BLL(search);
+            Reset();
+        }
+        private void Reset()
+        {
+            txt_NameTK.Enabled = true;
+            txt_NameTK.Text = null;
+            txt_Password.Text = null;
+            txt_NameNV.Text = null;
+            txt_Email.Text = null;
+            txt_Phone.Text = null;
+            cbb_roleNV.SelectedIndex = -1;
+            txt_LuongNV.Text = null;
+            txtSearch.Text = null;
         }
     }
 }
