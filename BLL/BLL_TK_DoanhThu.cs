@@ -8,7 +8,7 @@ using DACNPM.Entities;
 
 namespace DACNPM
 {
-    class BLL_TK_DoanhThu
+   public class BLL_TK_DoanhThu
     {
         private static BLL_TK_DoanhThu _Instance;
         public static BLL_TK_DoanhThu Instance

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using DACNPM.Entities;
 
 namespace DACNPM
 {
@@ -94,9 +95,8 @@ namespace DACNPM
             {
                 if (txtPass.Text != "PASSWORD")
                 {
-                    DACNPM db = new DACNPM();
-                    var list = db.Accounts.Where(p => p.Username == txtUser.Text && p.UserPassword == txtPass.Text)
-                        .Select(p => p);
+                    List<Account> list = BLL_QLTaiKhoan.Instance.GetACC_ByUserNameandPass(txtUser.Text, txtPass.Text);
+
                     if (list.ToList().Count != 0)
                     {
                         this.Hide();

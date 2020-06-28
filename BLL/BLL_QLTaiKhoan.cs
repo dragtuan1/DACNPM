@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace DACNPM
 {
-    class BLL_QLTaiKhoan
+    public class BLL_QLTaiKhoan
     {
         private static BLL_QLTaiKhoan _Instance;
         public static BLL_QLTaiKhoan Instance
@@ -39,6 +39,12 @@ namespace DACNPM
             DACNPM DB = new DACNPM();
             Account acc = DB.Accounts.Where(p => p.Username == username).FirstOrDefault();
             return acc;
+        }
+        public List<Account> GetACC_ByUserNameandPass(string username,string pass)
+        {
+            DACNPM DB = new DACNPM();
+            var list = DB.Accounts.Where(p => p.Username == username && p.UserPassword == pass).ToList();
+            return list;
         }
         public bool UpdateIn4_BLL(int ID, string TK, string Ten, string SDT, string MK, string Email)
         {

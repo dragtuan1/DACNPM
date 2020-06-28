@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DACNPM
 {   
-
-    class BLL_TK_HopDong { 
+    
+    public class BLL_TK_HopDong { 
         private static BLL_TK_HopDong _Instance;
     public static BLL_TK_HopDong Instance
     {

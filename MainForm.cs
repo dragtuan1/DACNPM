@@ -45,10 +45,10 @@ namespace DACNPM
         }
         private void HideSubmenu()
         {
-            if (panelQuanLySubmenu.Visible == true)
-                panelQuanLySubmenu.Visible = false;
-            if (panelThongKeSubmenu.Visible == true)
-                panelThongKeSubmenu.Visible = false;
+          //  if (panelQuanLySubmenu.Visible == true)
+         //       panelQuanLySubmenu.Visible = false;
+         //   if (panelThongKeSubmenu.Visible == true)
+           //     panelThongKeSubmenu.Visible = false;
         }
         private void showSubmenu(Panel subMenu)
         {

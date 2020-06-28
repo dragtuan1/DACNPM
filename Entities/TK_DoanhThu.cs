@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DACNPM.Entities
 {
-    class TK_DoanhThu
+    public class TK_DoanhThu
     {
        public int Thang1 { get; set; }
        public int Thang2 { get; set; }

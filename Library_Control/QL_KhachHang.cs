@@ -17,7 +17,7 @@ namespace DACNPM.Library_Control
         public QL_KhachHang()
         {
             InitializeComponent();
-            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
+            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM().Select(p => new { p.CMND, p.Customer_Address, p.Customer_Name, p.ID_Customer }).ToList(); 
         }
         private void btn_add_Click(object sender, EventArgs e)
         {           
@@ -86,7 +86,6 @@ namespace DACNPM.Library_Control
         {
             Txt_CMND.Text = null;
             Txt_DiaChi.Text = null;
-            //   Txt_MaKH.Text   = null;
             Txt_Phone.Text = null;
             Txt_TenKH.Text = null;
         }
@@ -118,6 +117,11 @@ namespace DACNPM.Library_Control
             Txt_DiaChi.Text = r[0].Cells["Customer_Address"].Value.ToString();
             Txt_Phone.Text = r[0].Cells["Phone"].Value.ToString();
             Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
+        }
+
+        private void QL_KhachHang_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
