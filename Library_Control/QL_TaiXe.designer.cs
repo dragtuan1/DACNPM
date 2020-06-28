@@ -32,15 +32,8 @@
             this.gw_taixe = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-=======
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.cbbType = new System.Windows.Forms.ComboBox();
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.status = new System.Windows.Forms.CheckBox();
             this.txtBangLai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdTaiXe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gw_taixe)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -95,16 +87,8 @@
             // 
             // groupBox1
             // 
-<<<<<<< HEAD
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox3);
-=======
             this.groupBox1.Controls.Add(this.txtSearch);
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.cbbType);
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
             this.groupBox1.Controls.Add(this.status);
             this.groupBox1.Controls.Add(this.txtBangLai);
             this.groupBox1.Controls.Add(this.label4);
@@ -132,93 +116,33 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             // 
-<<<<<<< HEAD
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Còn Bảo Hành",
-            "Hết Bảo Hành"});
-            this.comboBox1.Location = new System.Drawing.Point(686, 338);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(312, 40);
-            this.comboBox1.TabIndex = 47;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(497, 338);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(140, 49);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "     Sort";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(497, 274);
+            this.button1.Location = new System.Drawing.Point(201, 344);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(140, 49);
+            this.button1.Size = new System.Drawing.Size(155, 49);
             this.button1.TabIndex = 45;
             this.button1.Text = "Tìm Kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox3
+            // txtSearch
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(847, 278);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 40);
-            this.textBox3.TabIndex = 42;
-=======
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.Info;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(82, 326);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(155, 49);
-            this.btnSearch.TabIndex = 45;
-            this.btnSearch.Text = "Tìm Kiếm";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // cbbType
-            // 
-            this.cbbType.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbType.FormattingEnabled = true;
-            this.cbbType.Items.AddRange(new object[] {
-            "CMND",
-            "Ten"});
-            this.cbbType.Location = new System.Drawing.Point(266, 336);
-            this.cbbType.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbType.Name = "cbbType";
-            this.cbbType.Size = new System.Drawing.Size(146, 33);
-            this.cbbType.TabIndex = 43;
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(385, 344);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(324, 45);
+            this.txtSearch.TabIndex = 48;
             // 
             // status
             // 
@@ -345,7 +269,7 @@
             this.btn_delete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(437, 271);
+            this.btn_delete.Location = new System.Drawing.Point(556, 278);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -362,7 +286,7 @@
             this.btn_edit.FlatAppearance.BorderSize = 0;
             this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
             this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit.Location = new System.Drawing.Point(266, 272);
+            this.btn_edit.Location = new System.Drawing.Point(385, 279);
             this.btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(147, 49);
@@ -378,7 +302,7 @@
             this.btn_add.FlatAppearance.BorderSize = 0;
             this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
             this.btn_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_add.Location = new System.Drawing.Point(82, 269);
+            this.btn_add.Location = new System.Drawing.Point(201, 278);
             this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -436,17 +360,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Tài Xế:";
             // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.White;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(437, 330);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(153, 45);
-            this.txtSearch.TabIndex = 48;
-            // 
             // QL_TaiXe
             // 
             this.Controls.Add(this.gw_taixe);
@@ -467,15 +380,11 @@
         private System.Windows.Forms.DataGridView gw_taixe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-<<<<<<< HEAD
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-=======
-        private System.Windows.Forms.Button btnSearch;
+
+ //       private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cbbType;
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+
         private System.Windows.Forms.CheckBox status;
         private System.Windows.Forms.TextBox txtBangLai;
         private System.Windows.Forms.Label label4;

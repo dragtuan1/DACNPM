@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DACNPM.Entities;
+using DACNPM.BLL;
 
 namespace DACNPM.Library_Control
 {
@@ -50,7 +51,7 @@ namespace DACNPM.Library_Control
                     ID_Account = acc.ID_Account,
                     Phone = txt_Phone.Text
                 };
-                BLL_QLNV.Instance.AddNV_BLL(acc, emp);
+                BLL.QLNhanVien_BLL.Instance.AddNV_BLL(acc, emp);
                 DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
                 Reset();
             }        
@@ -67,7 +68,7 @@ namespace DACNPM.Library_Control
                 {
                     List_ID.Add((int)j.Cells["ID_Employee"].Value);
                 }
-                BLL_QLNV.Instance.DelNV_BLL(List_ID);
+                BLL.QLNhanVien_BLL.Instance.DelNV_BLL(List_ID);
                 DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
                 Reset();
             }

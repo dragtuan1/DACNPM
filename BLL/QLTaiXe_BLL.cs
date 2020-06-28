@@ -81,6 +81,13 @@ namespace DACNPM.BLL
         {
             return db.Drivers.Where(p => p.CMND == cmnd).Select(p => new { p.ID_Driver, p.Name_Driver, p.Driver_Address, p.Phone, p.CMND, p.License }).ToList();
         }
-
+        public object SearchKH_BLL(string StrSeach)
+        {
+            DACNPM DB = new DACNPM();
+            var List = DB.Drivers.Where(c => c.CMND.Contains(StrSeach) || c.Name_Driver.Contains(StrSeach) )
+                       .Select(c => new { c.ID_Driver, c.CMND, c.Driver_Address, c.Name_Driver, c.Phone });
+            
+            return List.ToList();
+        }
     }
 }

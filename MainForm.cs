@@ -21,6 +21,7 @@ namespace DACNPM
             Username = username;
             loadUserData();
             customDesign();
+            btnTK_LNV.Visible = false;
             RoleLoad();
         }
 
@@ -199,7 +200,6 @@ namespace DACNPM
         private void RoleLoad()
         {
             Entities.Account acc = BLL.QLNhanVien_BLL.Instance.getAccountByUsername_BLL(Username);
-            MessageBox.Show(acc.ID_Type_Account.ToString());
             if (acc.ID_Type_Account == 1) 
             {
 

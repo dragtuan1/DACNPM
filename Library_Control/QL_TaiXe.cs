@@ -129,5 +129,11 @@ namespace DACNPM.Library_Control
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string search = txtSearch.Text;
+            gw_taixe.DataSource = BLL.QLTaiXe_BLL.Instance.SearchKH_BLL(search);
+        }
     }
 }

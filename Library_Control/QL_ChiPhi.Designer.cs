@@ -231,14 +231,11 @@
             this.pn_chitiet.Size = new System.Drawing.Size(1100, 350);
             this.pn_chitiet.TabIndex = 7;
             // 
-<<<<<<< HEAD
 
             // button2
             // 
             
 
-=======
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
             // label1
             // 
             this.label1.AutoSize = true;
@@ -260,14 +257,11 @@
             this.txtTongLuong_QLChiPhi.Name = "txtTongLuong_QLChiPhi";
             this.txtTongLuong_QLChiPhi.Size = new System.Drawing.Size(182, 37);
             this.txtTongLuong_QLChiPhi.TabIndex = 50;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 86342efede731113ba1845b06820dc1f33ef68e1
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+
+
+
             // 
             // button4
             // 
@@ -275,22 +269,16 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+
 
             this.button4.Location = new System.Drawing.Point(97, 293);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 
             this.button4.Location = new System.Drawing.Point(143, 242);
 
-<<<<<<< HEAD
-=======
-=======
+
             this.button4.Location = new System.Drawing.Point(148, 230);
->>>>>>> 86342efede731113ba1845b06820dc1f33ef68e1
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(110, 40);
@@ -400,10 +388,7 @@
             this.gw_chitiethoadon.TabIndex = 23;
             this.gw_chitiethoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_chitiethoadon_RowHeaderMouseClick);
             // 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+
 
             // txtTongLuong_QLChiPhi
             // 
@@ -429,13 +414,9 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Tổng lương";
             // 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 86342efede731113ba1845b06820dc1f33ef68e1
->>>>>>> 8311733430d1b39052ffb95830361dcba78b87a7
+
             // QL_ChiPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
