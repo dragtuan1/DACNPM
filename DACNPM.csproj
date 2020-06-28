@@ -63,12 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\QLChiPhi_BLL.cs" />
+    <Compile Include="BLL\QLTaiXe_BLL.cs" />
     <Compile Include="BLL_QLKH.cs" />
     <Compile Include="BLL_QLTaiKhoan.cs" />
     <Compile Include="BLL_TK_DoanhThu.cs" />
+    <Compile Include="BLL_TK_HopDong.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="DACNPM.cs" />
     <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\AccountLogin.cs" />
     <Compile Include="Entities\Contract.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Detail_Contract.cs" />
@@ -76,6 +79,7 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Image.cs" />
     <Compile Include="Entities\MN_Salary.cs" />
+    <Compile Include="Entities\TK_DoanhThu.cs" />
     <Compile Include="Entities\Type_Account.cs" />
     <Compile Include="Entities\Type_Vehicle.cs" />
     <Compile Include="Entities\Vehicle.cs" />

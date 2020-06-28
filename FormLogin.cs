@@ -102,6 +102,7 @@ namespace DACNPM
                         this.Hide();
                         //FormWellcome wellcome = new FormWellcome();
                         //wellcome.ShowDialog();
+                        Entities.AccountLogin.setInstance(new Entities.AccountLogin(txtUser.Text, txtPass.Text));
                         MainForm mainForm = new MainForm(txtUser.Text);
                         mainForm.Show();
                         mainForm.FormClosed += Logout;

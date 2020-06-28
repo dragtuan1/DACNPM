@@ -21,5 +21,43 @@ namespace DACNPM.Library_Control
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime DayStart = Ngay_BD.Value;
+            DateTime DayEnd = Ngay_KT.Value;
+            if(DayStart > DayEnd)
+            {
+                MessageBox.Show("Vui lòng nhập ngày đúng khoảng thời gian");
+
+            }
+            else if(DayStart > DateTime.Now || DayEnd > DateTime.Now)
+            {
+                MessageBox.Show("Ngày làm hợp đồng không thể quá ngày hiện tại");
+            }    
+            else
+            {
+                dataGridView1.DataSource = BLL_TK_HopDong.Instance.GetContract_ByTime(DayStart, DayEnd);
+             //   textBox1.Text = BLL_TK_HopDong.Instance.GetContract_ByTime(DayStart, DayEnd);
+            }
+
+           
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

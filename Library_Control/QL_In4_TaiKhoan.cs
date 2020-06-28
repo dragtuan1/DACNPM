@@ -35,6 +35,7 @@ namespace DACNPM.Library_Control
                 MessageBox.Show("Chỉnh sửa thành công");
             else
                 MessageBox.Show("Error Database");
+            MessageBox.Show(Entities.AccountLogin.getInstance().Pass);
         }
         public void LoadData()
         {
