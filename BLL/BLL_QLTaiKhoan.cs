@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,8 +43,19 @@ namespace DACNPM
         }
         public List<Account> GetACC_ByUserNameandPass(string username,string pass)
         {
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(pass);
+            //mang ket qua 
+            byte[] hash = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+            String hashpass = "";
+
+            foreach (byte i in hash)
+            {
+                hashpass += i;
+            }
+
             DACNPM DB = new DACNPM();
-            var list = DB.Accounts.Where(p => p.Username == username && p.UserPassword == pass).ToList();
+            var list = DB.Accounts.Where(p => p.Username == username && p.UserPassword == hashpass).ToList();
             return list;
         }
         public bool UpdateIn4_BLL(int ID, string TK, string Ten, string SDT, string MK, string Email)
