@@ -114,7 +114,7 @@ namespace DACNPM.BLL
 
         public Object getHopDongByName_BLL(String name)
         {
-            var hopdong = db.Contracts.Where(p => p.Customer.Customer_Name.StartsWith(name))
+            var hopdong = db.Contracts.Where(p => p.Customer.Customer_Name.Contains(name))
                 .Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill })
                 .ToList();
             return hopdong;
