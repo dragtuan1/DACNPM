@@ -43,6 +43,7 @@ namespace DACNPM
         }
         public List<Account> GetACC_ByUserNameandPass(string username,string pass)
         {
+
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(pass);
             //mang ket qua 
             byte[] hash = new MD5CryptoServiceProvider().ComputeHash(temp);
