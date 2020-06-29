@@ -86,6 +86,12 @@
     <Compile Include="Entities\Type_Account.cs" />
     <Compile Include="Entities\Type_Vehicle.cs" />
     <Compile Include="Entities\Vehicle.cs" />
+    <Compile Include="Form_ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ForgetPassword.Designer.cs">
+      <DependentUpon>Form_ForgetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormWellcome.resx">
       <DependentUpon>FormWellcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ForgetPassword.resx">
+      <DependentUpon>Form_ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_Vehicle.resx">
       <DependentUpon>QL_Vehicle.cs</DependentUpon>

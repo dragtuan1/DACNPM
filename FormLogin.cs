@@ -134,5 +134,16 @@ namespace DACNPM
             this.Show();
             txtUser.Focus();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form_ForgetPassword form = new Form_ForgetPassword();
+            form.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

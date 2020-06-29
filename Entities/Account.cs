@@ -16,6 +16,9 @@ namespace DACNPM.Entities
         public string Username { get; set; }
         public string UserPassword { get; set; }
         public int ID_Type_Account { get; set; }
+        public string Question1 { get; set; }
+        public string Question2 { get; set; }
+
 
         [ForeignKey("ID_Type_Account")]
         public virtual Type_Account Type_Account { get; set; }

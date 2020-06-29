@@ -66,6 +66,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -101,7 +102,7 @@
             this.comboBox2.Location = new System.Drawing.Point(630, 288);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(369, 32);
+            this.comboBox2.Size = new System.Drawing.Size(369, 37);
             this.comboBox2.TabIndex = 48;
             // 
             // button2
@@ -154,7 +155,7 @@
             this.comboBox1.Location = new System.Drawing.Point(630, 216);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 32);
+            this.comboBox1.Size = new System.Drawing.Size(168, 37);
             this.comboBox1.TabIndex = 44;
             // 
             // textBox1
@@ -176,7 +177,7 @@
             this.label7.Location = new System.Drawing.Point(518, 128);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 16);
+            this.label7.Size = new System.Drawing.Size(118, 20);
             this.label7.TabIndex = 33;
             this.label7.Text = "Tên nhân viên:";
             // 
@@ -187,7 +188,7 @@
             this.quyen_nv.Location = new System.Drawing.Point(660, 60);
             this.quyen_nv.Margin = new System.Windows.Forms.Padding(4);
             this.quyen_nv.Name = "quyen_nv";
-            this.quyen_nv.Size = new System.Drawing.Size(339, 32);
+            this.quyen_nv.Size = new System.Drawing.Size(339, 37);
             this.quyen_nv.TabIndex = 32;
             this.quyen_nv.SelectedIndexChanged += new System.EventHandler(this.quyen_nv_SelectedIndexChanged);
             // 
@@ -199,7 +200,7 @@
             this.label4.Location = new System.Drawing.Point(518, 62);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 18;
             this.label4.Text = "Chức vụ:";
             // 
@@ -211,7 +212,7 @@
             this.label5.Location = new System.Drawing.Point(8, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 21);
+            this.label5.Size = new System.Drawing.Size(192, 28);
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông tin tài khoản";
             // 
@@ -298,7 +299,7 @@
             this.label3.Location = new System.Drawing.Point(5, 136);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu:s";
             // 
@@ -321,7 +322,7 @@
             this.label2.Location = new System.Drawing.Point(5, 70);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 16);
+            this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên tài Khoản:";
             // 
@@ -393,12 +394,13 @@
             this.label6.Location = new System.Drawing.Point(8, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 21);
+            this.label6.Size = new System.Drawing.Size(265, 28);
             this.label6.TabIndex = 18;
             this.label6.Text = "Danh sách chi tiết tài khoản";
             // 
             // panel1
             // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox2);
@@ -418,7 +420,7 @@
             this.label1.Location = new System.Drawing.Point(379, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 37);
+            this.label1.Size = new System.Drawing.Size(355, 46);
             this.label1.TabIndex = 40;
             this.label1.Text = "QUẢN LÍ TÀI KHOẢN";
             // 

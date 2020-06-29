@@ -123,5 +123,10 @@ namespace DACNPM.Library_Control
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

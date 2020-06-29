@@ -17,6 +17,7 @@ namespace DACNPM
                 Name_Type = "Admin",
                 Day_Update = DateTime.Now,
                 Salary = 100
+               
             });
             context.Type_Accounts.Add(new Entities.Type_Account
             {
@@ -37,21 +38,28 @@ namespace DACNPM
                 ID_Account = 1,
                 Username = "anhtuan",
                 UserPassword = "123456",
-                ID_Type_Account = 1
+                ID_Type_Account = 1,
+                Question1 = "Dog",
+                Question2 = "Yet"
+
             });
             context.Accounts.Add(new Entities.Account
             {
                 ID_Account = 2,
                 Username = "quangtruong",
                 UserPassword = "123456",
-                ID_Type_Account = 2
+                ID_Type_Account = 2,
+                Question1 = "Cat",
+                Question2 = "Alone"
             });
             context.Accounts.Add(new Entities.Account
             {
                 ID_Account = 3,
                 Username = "truongsanh",
                 UserPassword = "123456",
-                ID_Type_Account = 3
+                ID_Type_Account = 3,
+                Question1 = "Dog",
+                Question2 = "Yet"
             });
             context.Customers.Add(new Entities.Customer
             {

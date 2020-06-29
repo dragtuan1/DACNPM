@@ -22,6 +22,7 @@ namespace DACNPM
             loadUserData();
             customDesign();
             btnTK_LNV.Visible = false;
+        //    btnMaximum.Visible = false;
             RoleLoad();
         }
 

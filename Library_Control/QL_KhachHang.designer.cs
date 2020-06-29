@@ -32,7 +32,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DGV_QLKH = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_TenKH = new System.Windows.Forms.TextBox();
@@ -58,12 +57,13 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(52, 458);
+            this.label6.Location = new System.Drawing.Point(423, 495);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(299, 28);
             this.label6.TabIndex = 22;
             this.label6.Text = "Danh Sách Chi Tiết Khách Hàng";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
@@ -83,21 +83,14 @@
             this.DGV_QLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.DGV_QLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_QLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.DGV_QLKH.Location = new System.Drawing.Point(57, 508);
+            this.DGV_QLKH.Location = new System.Drawing.Point(199, 545);
             this.DGV_QLKH.Name = "DGV_QLKH";
             this.DGV_QLKH.RowHeadersWidth = 51;
             this.DGV_QLKH.RowTemplate.Height = 24;
-            this.DGV_QLKH.Size = new System.Drawing.Size(988, 150);
+            this.DGV_QLKH.Size = new System.Drawing.Size(1027, 209);
             this.DGV_QLKH.TabIndex = 42;
             this.DGV_QLKH.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseClick);
             this.DGV_QLKH.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseDoubleClick_2);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(471, 527);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 65;
             // 
             // label5
             // 
@@ -318,7 +311,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox1.Location = new System.Drawing.Point(44, 69);
+            this.groupBox1.Location = new System.Drawing.Point(196, 99);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -328,14 +321,12 @@
             // 
             // QL_KhachHang
             // 
-            this.AllowDrop = true;
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.DGV_QLKH);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Name = "QL_KhachHang";
-            this.Size = new System.Drawing.Size(1120, 726);
+            this.Size = new System.Drawing.Size(1375, 782);
             this.Load += new System.EventHandler(this.QL_KhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_QLKH)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -350,7 +341,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView DGV_QLKH;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_TenKH;
