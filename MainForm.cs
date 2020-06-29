@@ -24,6 +24,7 @@ namespace DACNPM
             btnTK_LNV.Visible = false;
         //    btnMaximum.Visible = false;
             RoleLoad();
+            (new BLL.InitForm_BLL()).ReloadState();
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]

@@ -34,7 +34,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.status = new System.Windows.Forms.CheckBox();
             this.txtBangLai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
@@ -81,7 +80,7 @@
             this.label6.Location = new System.Drawing.Point(29, 441);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 28);
+            this.label6.Size = new System.Drawing.Size(190, 21);
             this.label6.TabIndex = 25;
             this.label6.Text = "Danh Sách Chi Tiết Tài Xế";
             // 
@@ -89,7 +88,6 @@
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtSearch);
-            this.groupBox1.Controls.Add(this.status);
             this.groupBox1.Controls.Add(this.txtBangLai);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtCMND);
@@ -144,20 +142,6 @@
             this.txtSearch.Size = new System.Drawing.Size(324, 45);
             this.txtSearch.TabIndex = 48;
             // 
-            // status
-            // 
-            this.status.AutoSize = true;
-            this.status.Checked = true;
-            this.status.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.status.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status.Location = new System.Drawing.Point(789, 33);
-            this.status.Margin = new System.Windows.Forms.Padding(4);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(128, 29);
-            this.status.TabIndex = 36;
-            this.status.Text = "Trạng Thái";
-            this.status.UseVisualStyleBackColor = true;
-            // 
             // txtBangLai
             // 
             this.txtBangLai.BackColor = System.Drawing.Color.White;
@@ -177,7 +161,7 @@
             this.label4.Location = new System.Drawing.Point(539, 222);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 34;
             this.label4.Text = "Bằng Lái:";
             // 
@@ -200,7 +184,7 @@
             this.label1.Location = new System.Drawing.Point(539, 154);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 32;
             this.label1.Text = "CMND:";
             // 
@@ -223,7 +207,7 @@
             this.label11.Location = new System.Drawing.Point(536, 92);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 20);
+            this.label11.Size = new System.Drawing.Size(96, 16);
             this.label11.TabIndex = 30;
             this.label11.Text = "Số Điện Thoại:";
             // 
@@ -235,7 +219,7 @@
             this.label8.Location = new System.Drawing.Point(31, 211);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 20);
+            this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 21;
             this.label8.Text = "Địa Chỉ:";
             // 
@@ -258,7 +242,7 @@
             this.label5.Location = new System.Drawing.Point(8, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 28);
+            this.label5.Size = new System.Drawing.Size(129, 21);
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông Tin Tài Xế";
             // 
@@ -332,7 +316,7 @@
             this.label3.Location = new System.Drawing.Point(28, 151);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên Tài Xế:";
             // 
@@ -356,7 +340,7 @@
             this.label2.Location = new System.Drawing.Point(28, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 20);
+            this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Tài Xế:";
             // 
@@ -384,8 +368,6 @@
 
  //       private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cbbType;
-
-        private System.Windows.Forms.CheckBox status;
         private System.Windows.Forms.TextBox txtBangLai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCMND;

@@ -46,7 +46,6 @@ namespace DACNPM.Library_Control
                     .ToInt32(data[0].Cells["ID_Vehicle"]
                     .Value.ToString())).Driver);
                 cbb_Driver.SelectedIndex = index2;
-                status.Checked = (bool)data[0].Cells["Vehicle_State"].Value;
             }
         }
 
@@ -64,7 +63,7 @@ namespace DACNPM.Library_Control
                     ID_Type_Vehicle = ((Type_Vehicle)cbb_Type_Vehicle.SelectedItem).ID_Type_Vehicle,
                     ID_Driver = Convert.ToInt32(BLL.QLXe_BLL.Instance.getDriverByID_BLL(((Driver)cbb_Driver.SelectedItem).ID_Driver).ID_Driver),
                     Price = Convert.ToInt32(txt_Gia.Text),
-                    Vehicle_State = status.Checked
+                    Vehicle_State = false
                 };
                 BLL.QLXe_BLL.Instance.AddVehicle_BLL(veh);
                 DGV_QLXe.DataSource = BLL.QLXe_BLL.Instance.getVehicles_BLL();
@@ -124,7 +123,7 @@ namespace DACNPM.Library_Control
                         ID_Type_Vehicle = ((Type_Vehicle)cbb_Type_Vehicle.SelectedItem).ID_Type_Vehicle,
                         ID_Driver = Convert.ToInt32(BLL.QLXe_BLL.Instance.getDriverByID_BLL(((Driver)cbb_Driver.SelectedItem).ID_Driver).ID_Driver),
                         Price = Convert.ToInt32(txt_Gia.Text),
-                        Vehicle_State = status.Checked
+                        Vehicle_State = false
                     };
                     if (BLL.QLXe_BLL.Instance.UpdateVehicle_BLL(veh))
                     {

@@ -39,6 +39,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbb_Driver = new System.Windows.Forms.ComboBox();
             this.cbb_Type_Vehicle = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
@@ -47,11 +48,9 @@
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.txt_Search = new System.Windows.Forms.TextBox();
-            this.status = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.DGV_QLXe = new System.Windows.Forms.DataGridView();
-            this.cbb_Driver = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_QLXe)).BeginInit();
@@ -150,7 +149,6 @@
             this.groupBox1.Controls.Add(this.btn_edit);
             this.groupBox1.Controls.Add(this.btn_add);
             this.groupBox1.Controls.Add(this.txt_Search);
-            this.groupBox1.Controls.Add(this.status);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
@@ -166,6 +164,14 @@
             this.groupBox1.Size = new System.Drawing.Size(1024, 413);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // cbb_Driver
+            // 
+            this.cbb_Driver.FormattingEnabled = true;
+            this.cbb_Driver.Location = new System.Drawing.Point(609, 112);
+            this.cbb_Driver.Name = "cbb_Driver";
+            this.cbb_Driver.Size = new System.Drawing.Size(265, 38);
+            this.cbb_Driver.TabIndex = 75;
             // 
             // cbb_Type_Vehicle
             // 
@@ -293,19 +299,6 @@
             this.txt_Search.Size = new System.Drawing.Size(319, 40);
             this.txt_Search.TabIndex = 67;
             // 
-            // status
-            // 
-            this.status.AutoSize = true;
-            this.status.Checked = true;
-            this.status.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.status.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status.Location = new System.Drawing.Point(341, 211);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(96, 24);
-            this.status.TabIndex = 56;
-            this.status.Text = "Kích Hoạt";
-            this.status.UseVisualStyleBackColor = true;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -343,14 +336,6 @@
             this.DGV_QLXe.TabIndex = 76;
             this.DGV_QLXe.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLXe_RowHeaderMouseClick);
             // 
-            // cbb_Driver
-            // 
-            this.cbb_Driver.FormattingEnabled = true;
-            this.cbb_Driver.Location = new System.Drawing.Point(609, 112);
-            this.cbb_Driver.Name = "cbb_Driver";
-            this.cbb_Driver.Size = new System.Drawing.Size(265, 38);
-            this.cbb_Driver.TabIndex = 75;
-            // 
             // QL_Vehicle
             // 
             this.Controls.Add(this.DGV_QLXe);
@@ -380,7 +365,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox status;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Search;

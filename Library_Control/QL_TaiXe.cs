@@ -23,7 +23,7 @@ namespace DACNPM.Library_Control
             try
             {
                 BLL.QLTaiXe_BLL.Instance.addTaiXe(txtDiaChi.Text, txtCMND.Text,
-                    txtName.Text, txtSdt.Text, txtBangLai.Text, true);
+                    txtName.Text, txtSdt.Text, txtBangLai.Text, false);
 
                 gw_taixe.DataSource = BLL.QLTaiXe_BLL.Instance.getAllTaiXe_BLL();
             }
