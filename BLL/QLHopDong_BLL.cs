@@ -163,6 +163,11 @@ namespace DACNPM.BLL
         public void deleteHopDongByID(int id)
         {
             Entities.Contract contract = db.Contracts.Where(p => p.ID_Contract == id).FirstOrDefault();
+            foreach(Entities.Detail_Contract item in contract.Detail_Contracts)
+            {
+                item.Vehicle.Vehicle_State = false;
+                item.Vehicle.Driver.Driver_State = false;
+            }
             db.Contracts.Remove(contract);
             db.SaveChanges();
         }

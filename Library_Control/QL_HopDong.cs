@@ -48,27 +48,30 @@ namespace DACNPM.Library_Control
             if(ngaythem.Value >= ngaytra.Value)
             {
                 MessageBox.Show("Lỗi ngày thực thi hợp đồng");
-            }
-            try
+            } else
             {
-                BLL.QLHopDong_BLL.Instance.addHopDong_BLL(
-                (BLL.QLHopDong_BLL.Instance.getAcountByUserName_BLL(Entities.AccountLogin.getInstance().User).Employees.ToList())[0].ID_Employee,
-                (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer,
-                ngaythem.Value,
-                ngaytra.Value,
-                0,
-                true
-                );
+                try
+                {
+                    BLL.QLHopDong_BLL.Instance.addHopDong_BLL(
+                    (BLL.QLHopDong_BLL.Instance.getAcountByUserName_BLL(Entities.AccountLogin.getInstance().User).Employees.ToList())[0].ID_Employee,
+                    (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer,
+                    ngaythem.Value,
+                    ngaytra.Value,
+                    0,
+                    true
+                    );
 
-                MessageBox.Show("Them Thanh Cong");
+                    MessageBox.Show("Them Thanh Cong");
 
-                gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
-                  
+                    gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
+
+                }
+                catch
+                {
+                    MessageBox.Show("Error");
+                }
             }
-            catch
-            {
-                MessageBox.Show("Error");
-            }
+            
 
             
         }
@@ -139,7 +142,7 @@ namespace DACNPM.Library_Control
                             BLL.QLHopDong_BLL.Instance.deleteHopDongByID(id);
                         }
                         MessageBox.Show("Xóa thành công");
-
+                        SetView();
                         gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
                     }
                     catch
