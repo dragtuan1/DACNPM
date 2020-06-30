@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_HopDong));
             this.pn_chitiet = new System.Windows.Forms.Panel();
-            this.txtBienSo = new System.Windows.Forms.TextBox();
+            this.cbbXe = new System.Windows.Forms.ComboBox();
+            this.cbbLoaiXe = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.xoa_ct = new System.Windows.Forms.Button();
             this.them_ct = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             this.them_hd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.gw_hoadon = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.pn_chitiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gw_chitiethoadon)).BeginInit();
             this.panel3.SuspendLayout();
@@ -62,7 +64,8 @@
             // 
             // pn_chitiet
             // 
-            this.pn_chitiet.Controls.Add(this.txtBienSo);
+            this.pn_chitiet.Controls.Add(this.cbbXe);
+            this.pn_chitiet.Controls.Add(this.cbbLoaiXe);
             this.pn_chitiet.Controls.Add(this.label14);
             this.pn_chitiet.Controls.Add(this.xoa_ct);
             this.pn_chitiet.Controls.Add(this.them_ct);
@@ -75,15 +78,22 @@
             this.pn_chitiet.Size = new System.Drawing.Size(1019, 295);
             this.pn_chitiet.TabIndex = 8;
             // 
-            // txtBienSo
+            // cbbXe
             // 
-            this.txtBienSo.BackColor = System.Drawing.Color.White;
-            this.txtBienSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBienSo.Location = new System.Drawing.Point(117, 104);
-            this.txtBienSo.Multiline = true;
-            this.txtBienSo.Name = "txtBienSo";
-            this.txtBienSo.Size = new System.Drawing.Size(215, 25);
-            this.txtBienSo.TabIndex = 43;
+            this.cbbXe.FormattingEnabled = true;
+            this.cbbXe.Location = new System.Drawing.Point(220, 113);
+            this.cbbXe.Name = "cbbXe";
+            this.cbbXe.Size = new System.Drawing.Size(112, 21);
+            this.cbbXe.TabIndex = 45;
+            // 
+            // cbbLoaiXe
+            // 
+            this.cbbLoaiXe.FormattingEnabled = true;
+            this.cbbLoaiXe.Location = new System.Drawing.Point(116, 113);
+            this.cbbLoaiXe.Name = "cbbLoaiXe";
+            this.cbbLoaiXe.Size = new System.Drawing.Size(98, 21);
+            this.cbbLoaiXe.TabIndex = 44;
+            this.cbbLoaiXe.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiXe_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -134,11 +144,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(37, 108);
+            this.label8.Location = new System.Drawing.Point(25, 113);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 16);
+            this.label8.Size = new System.Drawing.Size(59, 16);
             this.label8.TabIndex = 27;
-            this.label8.Text = "Biển số xe:";
+            this.label8.Text = "Chọn xe:";
             // 
             // txtma_hd_2
             // 
@@ -173,10 +183,10 @@
             this.gw_chitiethoadon.ReadOnly = true;
             this.gw_chitiethoadon.Size = new System.Drawing.Size(600, 246);
             this.gw_chitiethoadon.TabIndex = 23;
-            this.gw_chitiethoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_chitiethoadon_RowHeaderMouseClick);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtCMND_QLHopDong);
             this.panel3.Controls.Add(this.txtSearch);
@@ -210,7 +220,6 @@
             // txtCMND_QLHopDong
             // 
             this.txtCMND_QLHopDong.BackColor = System.Drawing.Color.White;
-            this.txtCMND_QLHopDong.Enabled = false;
             this.txtCMND_QLHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND_QLHopDong.Location = new System.Drawing.Point(128, 54);
             this.txtCMND_QLHopDong.Multiline = true;
@@ -222,10 +231,10 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(243, 252);
+            this.txtSearch.Location = new System.Drawing.Point(243, 210);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(156, 32);
+            this.txtSearch.Size = new System.Drawing.Size(146, 32);
             this.txtSearch.TabIndex = 57;
             // 
             // ngaytra
@@ -280,7 +289,7 @@
             this.cbbType.Items.AddRange(new object[] {
             "SĐT",
             "Tên khách hàng"});
-            this.cbbType.Location = new System.Drawing.Point(117, 253);
+            this.cbbType.Location = new System.Drawing.Point(117, 211);
             this.cbbType.Name = "cbbType";
             this.cbbType.Size = new System.Drawing.Size(120, 33);
             this.cbbType.TabIndex = 44;
@@ -334,7 +343,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(11, 249);
+            this.button1.Location = new System.Drawing.Point(11, 207);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(100, 40);
@@ -385,6 +394,22 @@
             this.gw_hoadon.TabIndex = 0;
             this.gw_hoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_hoadon_RowHeaderMouseClick);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Info;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 266);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(181, 40);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "         Thêm mới khách hàng";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // QL_HopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,9 +450,11 @@
         private System.Windows.Forms.Button them_hd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView gw_hoadon;
-        private System.Windows.Forms.TextBox txtBienSo;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.TextBox txtCMND_QLHopDong;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbbXe;
+        private System.Windows.Forms.ComboBox cbbLoaiXe;
+        private System.Windows.Forms.Button button2;
     }
 }

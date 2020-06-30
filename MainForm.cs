@@ -24,7 +24,7 @@ namespace DACNPM
             btnTK_LNV.Visible = false;
         //    btnMaximum.Visible = false;
             RoleLoad();
-            (new BLL.InitForm_BLL()).ReloadState();
+            BLL.InitForm_BLL.Instance.ReloadState();
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -157,7 +157,9 @@ namespace DACNPM
         private void btnQL_HD_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_HopDong());
+            Library_Control.QL_HopDong ql = new Library_Control.QL_HopDong();
+            ql.del += new Library_Control.QL_HopDong.Mydel(showKhachHang);
+            panelMain.Controls.Add(ql);
         }
 
         private void btnTK_DT_Click(object sender, EventArgs e)
@@ -221,6 +223,11 @@ namespace DACNPM
             {
 
             }
+        }
+        public void showKhachHang()
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.QL_KhachHang());
         }
     }
 }
