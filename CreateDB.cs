@@ -37,7 +37,7 @@ namespace DACNPM
             {
                 ID_Account = 1,
                 Username = "anhtuan",
-                UserPassword = "123456",
+                UserPassword = BLL_QLTaiKhoan.Instance.hashPass("123456"),
                 ID_Type_Account = 1,
                 Question1 = "Dog",
                 Question2 = "Yet"
@@ -47,7 +47,7 @@ namespace DACNPM
             {
                 ID_Account = 2,
                 Username = "quangtruong",
-                UserPassword = "123456",
+                UserPassword = BLL_QLTaiKhoan.Instance.hashPass("123456"),
                 ID_Type_Account = 2,
                 Question1 = "Cat",
                 Question2 = "Alone"
@@ -56,7 +56,7 @@ namespace DACNPM
             {
                 ID_Account = 3,
                 Username = "truongsanh",
-                UserPassword = "123456",
+                UserPassword = BLL_QLTaiKhoan.Instance.hashPass("123456"),
                 ID_Type_Account = 3,
                 Question1 = "Dog",
                 Question2 = "Yet"

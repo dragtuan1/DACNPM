@@ -60,7 +60,7 @@
             this.label6.Location = new System.Drawing.Point(423, 495);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(299, 28);
+            this.label6.Size = new System.Drawing.Size(235, 21);
             this.label6.TabIndex = 22;
             this.label6.Text = "Danh Sách Chi Tiết Khách Hàng";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -73,7 +73,7 @@
             this.label4.Location = new System.Drawing.Point(380, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(397, 46);
+            this.label4.Size = new System.Drawing.Size(317, 37);
             this.label4.TabIndex = 41;
             this.label4.Text = "QUẢN LÍ KHÁCH HÀNG";
             // 
@@ -100,7 +100,7 @@
             this.label5.Location = new System.Drawing.Point(8, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(221, 28);
+            this.label5.Size = new System.Drawing.Size(174, 21);
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông Tin Khách Hàng";
             // 
@@ -112,7 +112,7 @@
             this.label3.Location = new System.Drawing.Point(47, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 20);
+            this.label3.Size = new System.Drawing.Size(111, 16);
             this.label3.TabIndex = 45;
             this.label3.Text = "Tên Khách Hàng:";
             // 
@@ -146,7 +146,7 @@
             this.label8.Location = new System.Drawing.Point(532, 79);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 20);
+            this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 48;
             this.label8.Text = "Địa Chỉ:";
             // 
@@ -158,7 +158,7 @@
             this.label11.Location = new System.Drawing.Point(529, 163);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 20);
+            this.label11.Size = new System.Drawing.Size(96, 16);
             this.label11.TabIndex = 49;
             this.label11.Text = "Số Điện Thoại:";
             // 
@@ -181,7 +181,7 @@
             this.label1.Location = new System.Drawing.Point(47, 162);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 51;
             this.label1.Text = "CMND:";
             // 
@@ -280,14 +280,15 @@
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(473, 241);
+            this.button1.Location = new System.Drawing.Point(481, 238);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(144, 49);
             this.button1.TabIndex = 64;
-            this.button1.Text = "  Tìm Kiếm";
+            this.button1.Text = "            Tìm Kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
