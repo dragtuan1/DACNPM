@@ -57,10 +57,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(423, 495);
+            this.label6.Location = new System.Drawing.Point(36, 495);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(299, 28);
+            this.label6.Size = new System.Drawing.Size(235, 21);
             this.label6.TabIndex = 22;
             this.label6.Text = "Danh Sách Chi Tiết Khách Hàng";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -73,7 +73,7 @@
             this.label4.Location = new System.Drawing.Point(380, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(397, 46);
+            this.label4.Size = new System.Drawing.Size(317, 37);
             this.label4.TabIndex = 41;
             this.label4.Text = "QUẢN LÍ KHÁCH HÀNG";
             // 
@@ -83,11 +83,11 @@
             this.DGV_QLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.DGV_QLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_QLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.DGV_QLKH.Location = new System.Drawing.Point(199, 545);
+            this.DGV_QLKH.Location = new System.Drawing.Point(40, 519);
             this.DGV_QLKH.Name = "DGV_QLKH";
             this.DGV_QLKH.RowHeadersWidth = 51;
             this.DGV_QLKH.RowTemplate.Height = 24;
-            this.DGV_QLKH.Size = new System.Drawing.Size(1027, 209);
+            this.DGV_QLKH.Size = new System.Drawing.Size(1027, 168);
             this.DGV_QLKH.TabIndex = 42;
             this.DGV_QLKH.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseClick);
             this.DGV_QLKH.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseDoubleClick_2);
@@ -100,7 +100,7 @@
             this.label5.Location = new System.Drawing.Point(8, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(221, 28);
+            this.label5.Size = new System.Drawing.Size(174, 21);
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông Tin Khách Hàng";
             // 
@@ -112,7 +112,7 @@
             this.label3.Location = new System.Drawing.Point(47, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 20);
+            this.label3.Size = new System.Drawing.Size(111, 16);
             this.label3.TabIndex = 45;
             this.label3.Text = "Tên Khách Hàng:";
             // 
@@ -146,7 +146,7 @@
             this.label8.Location = new System.Drawing.Point(532, 79);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 20);
+            this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 48;
             this.label8.Text = "Địa Chỉ:";
             // 
@@ -158,7 +158,7 @@
             this.label11.Location = new System.Drawing.Point(529, 163);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 20);
+            this.label11.Size = new System.Drawing.Size(96, 16);
             this.label11.TabIndex = 49;
             this.label11.Text = "Số Điện Thoại:";
             // 
@@ -181,7 +181,7 @@
             this.label1.Location = new System.Drawing.Point(47, 162);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 51;
             this.label1.Text = "CMND:";
             // 
@@ -311,11 +311,11 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox1.Location = new System.Drawing.Point(196, 99);
+            this.groupBox1.Location = new System.Drawing.Point(28, 97);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1046, 380);
+            this.groupBox1.Size = new System.Drawing.Size(1037, 371);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
@@ -326,7 +326,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Name = "QL_KhachHang";
-            this.Size = new System.Drawing.Size(1375, 782);
+            this.Size = new System.Drawing.Size(1100, 700);
             this.Load += new System.EventHandler(this.QL_KhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_QLKH)).EndInit();
             this.groupBox1.ResumeLayout(false);

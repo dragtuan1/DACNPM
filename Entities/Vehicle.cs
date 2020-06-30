@@ -30,5 +30,10 @@ namespace DACNPM.Entities
             this.Images = new HashSet<Image>();
         }
 
+        public override string ToString()
+        {
+            return License_Plate;
+        }
+
     }
 }

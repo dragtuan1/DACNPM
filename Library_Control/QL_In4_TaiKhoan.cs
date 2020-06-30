@@ -31,7 +31,7 @@ namespace DACNPM.Library_Control
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            if (BLL_QLTaiKhoan.Instance.UpdateIn4_BLL(ID_NV, Txt_Tk.Text, Txt_Ten.Text, Txt_SDT.Text, Txt_Mk.Text, Txt_Email.Text))
+            if (BLL.BLL_QLTaiKhoan.Instance.UpdateIn4_BLL(ID_NV, Txt_Tk.Text, Txt_Ten.Text, Txt_SDT.Text, Txt_Mk.Text, Txt_Email.Text))
                 MessageBox.Show("Chỉnh sửa thành công");
             else
                 MessageBox.Show("Error Database");
@@ -39,8 +39,8 @@ namespace DACNPM.Library_Control
         }
         public void LoadData()
         {
-            Account acc1 = BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username);
-            Employee e1 = BLL_QLTaiKhoan.Instance.GetNVBY_ID_BLL(ID_NV);
+            Account acc1 = BLL.BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username);
+            Employee e1 = BLL.BLL_QLTaiKhoan.Instance.GetNVBY_ID_BLL(ID_NV);
             Txt_ID.Text = e1.ID_Employee.ToString();
             Txt_ID.Enabled = false;
             Txt_Tk.Text = acc1.Username;

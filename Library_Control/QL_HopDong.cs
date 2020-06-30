@@ -17,8 +17,21 @@ namespace DACNPM.Library_Control
         {
             InitializeComponent();
             gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
+            SetView();
         }
 
+        public void SetView()
+        {
+            if(cbbXe.Items.Count != 0)
+            {
+                cbbXe.Items.Clear();
+            }
+            List<Entities.Vehicle> vehicles = BLL.QLHopDong_BLL.Instance.getCBBXE_BLL();
+            foreach(Entities.Vehicle i in vehicles)
+            {
+                cbbXe.Items.Add(i);
+            }
+        }
   
         private void them_hd_Click(object sender, EventArgs e)
         {
@@ -91,6 +104,8 @@ namespace DACNPM.Library_Control
                 BLL.QLHopDong_BLL.Instance.deleteHopDongByID(id);
 
                 gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
+                (new BLL.InitForm_BLL()).ReloadState();
+                SetView();
             }
             catch
             {
@@ -104,10 +119,12 @@ namespace DACNPM.Library_Control
         {
             try
             {
-                BLL.QLHopDong_BLL.Instance.addDetailHopDong_BLL(Convert.ToInt32(txtma_hd_2.Text), txtBienSo.Text);
-
+                
+                BLL.QLHopDong_BLL.Instance.addDetailHopDong_BLL(Convert.ToInt32(txtma_hd_2.Text), ((Entities.Vehicle)cbbXe.SelectedItem).License_Plate);
                 gw_chitiethoadon.DataSource = BLL.QLHopDong_BLL.Instance.getAllDetailHoaDon(Convert.ToInt32(txtma_hd_2.Text));
                 gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
+                SetView();
+
             }
             catch
             {
@@ -148,7 +165,7 @@ namespace DACNPM.Library_Control
             DataGridViewSelectedRowCollection data = gw_chitiethoadon.SelectedRows;
             if (data.Count == 1)
             {
-                txtBienSo.Text = data[0].Cells["License_Plate"].Value.ToString();
+                
             }
         }
     }

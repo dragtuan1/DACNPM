@@ -60,6 +60,8 @@ namespace DACNPM.BLL
             {
                 Entities.Vehicle vehicle = db.Vehicles.Where(p => p.License_Plate == BienSo).FirstOrDefault();
 
+                vehicle.Vehicle_State = true;
+
                 Entities.Detail_Contract detail = new Entities.Detail_Contract
                 {
                     ID_Contract = idHopDong,
@@ -165,6 +167,12 @@ namespace DACNPM.BLL
             db.Detail_Contracts.Remove(contract);
 
             db.SaveChanges();
+        }
+
+        public List<Entities.Vehicle> getCBBXE_BLL()
+        {
+            var list = db.Vehicles.Where(p => p.Vehicle_State == false);
+            return list.ToList();
         }
     }
 

@@ -23,6 +23,18 @@ namespace DACNPM.BLL
                     i.Vehicle.Driver.Driver_State = true;
                 }
             }
+
+            List<Entities.Contract> contracts2 = db.Contracts.Where(p => p.Date_Return < DateTime.Now).ToList();
+
+            foreach (Entities.Contract item in contracts2)
+            {
+                item.Contract_State = false;
+                foreach (Entities.Detail_Contract i in item.Detail_Contracts)
+                {
+                    i.Vehicle.Vehicle_State = false;
+                    i.Vehicle.Driver.Driver_State = false;
+                }
+            }
             db.SaveChanges();
         }
     }

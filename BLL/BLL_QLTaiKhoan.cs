@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DACNPM
+namespace DACNPM.BLL
 {
     public class BLL_QLTaiKhoan
     {
@@ -41,9 +41,9 @@ namespace DACNPM
             Account acc = DB.Accounts.Where(p => p.Username == username).FirstOrDefault();
             return acc;
         }
-        public List<Account> GetACC_ByUserNameandPass(string username,string pass)
-        {
 
+        public string hashPassMD5(string pass)
+        {
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(pass);
             //mang ket qua 
             byte[] hash = new MD5CryptoServiceProvider().ComputeHash(temp);
@@ -54,9 +54,14 @@ namespace DACNPM
             {
                 hashpass += i;
             }
+            return hashpass.ToString();
+        }
 
+        public List<Account> GetACC_ByUserNameandPass(string username,string pass)
+        {
             DACNPM DB = new DACNPM();
-            var list = DB.Accounts.Where(p => p.Username == username && p.UserPassword == hashpass).ToList();
+            string hashPass = hashPassMD5(pass);
+            var list = DB.Accounts.Where(p => p.Username == username && p.UserPassword == hashPass).ToList();
             return list;
         }
         public bool UpdateIn4_BLL(int ID, string TK, string Ten, string SDT, string MK, string Email)

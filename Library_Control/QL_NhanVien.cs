@@ -41,7 +41,7 @@ namespace DACNPM.Library_Control
                 Account acc = new Account
                 {
                     Username = txt_NameTK.Text,
-                    UserPassword = txt_Password.Text,
+                    UserPassword = BLL.BLL_QLTaiKhoan.Instance.hashPassMD5(txt_Password.Text),
                     ID_Type_Account = ((Type_Account)cbb_roleNV.SelectedItem).ID_Type_Account
                 };
                 Employee emp = new Employee
@@ -90,7 +90,6 @@ namespace DACNPM.Library_Control
             {
                 txt_NameTK.Enabled = false;
                 txt_NameTK.Text = data[0].Cells["Username"].Value.ToString();
-                txt_Password.Text = data[0].Cells["UserPassword"].Value.ToString();
                 txt_NameNV.Text = data[0].Cells["Name_Employee"].Value.ToString();
                 txt_Email.Text = data[0].Cells["Email"].Value.ToString();
                 txt_Phone.Text = data[0].Cells["Phone"].Value.ToString();
@@ -117,7 +116,7 @@ namespace DACNPM.Library_Control
                 {
                     Account acc = new Account
                     {
-                        UserPassword = txt_Password.Text,
+                        UserPassword = BLL.BLL_QLTaiKhoan.Instance.hashPassMD5(txt_Password.Text),
                         ID_Type_Account = ((Type_Account)cbb_roleNV.SelectedItem).ID_Type_Account
                     };
                     Employee emp = new Employee

@@ -95,9 +95,9 @@ namespace DACNPM
             {
                 if (txtPass.Text != "PASSWORD")
                 {
-                    List<Account> list = BLL_QLTaiKhoan.Instance.GetACC_ByUserNameandPass(txtUser.Text, txtPass.Text);
+                    List<Account> list = BLL.BLL_QLTaiKhoan.Instance.GetACC_ByUserNameandPass(txtUser.Text, txtPass.Text);
 
-                    if (list.ToList().Count != 0)
+                    if (list.Count != 0)
                     {
                         this.Hide();
                         FormWellcome wellcome = new FormWellcome();

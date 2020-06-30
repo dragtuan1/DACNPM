@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QL_HopDong));
             this.pn_chitiet = new System.Windows.Forms.Panel();
-            this.txtBienSo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.xoa_ct = new System.Windows.Forms.Button();
             this.them_ct = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.them_hd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.gw_hoadon = new System.Windows.Forms.DataGridView();
+            this.cbbXe = new System.Windows.Forms.ComboBox();
             this.pn_chitiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gw_chitiethoadon)).BeginInit();
             this.panel3.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             // pn_chitiet
             // 
-            this.pn_chitiet.Controls.Add(this.txtBienSo);
+            this.pn_chitiet.Controls.Add(this.cbbXe);
             this.pn_chitiet.Controls.Add(this.label14);
             this.pn_chitiet.Controls.Add(this.xoa_ct);
             this.pn_chitiet.Controls.Add(this.them_ct);
@@ -74,16 +74,6 @@
             this.pn_chitiet.Name = "pn_chitiet";
             this.pn_chitiet.Size = new System.Drawing.Size(1019, 295);
             this.pn_chitiet.TabIndex = 8;
-            // 
-            // txtBienSo
-            // 
-            this.txtBienSo.BackColor = System.Drawing.Color.White;
-            this.txtBienSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBienSo.Location = new System.Drawing.Point(117, 104);
-            this.txtBienSo.Multiline = true;
-            this.txtBienSo.Name = "txtBienSo";
-            this.txtBienSo.Size = new System.Drawing.Size(215, 25);
-            this.txtBienSo.TabIndex = 43;
             // 
             // label14
             // 
@@ -210,7 +200,6 @@
             // txtCMND_QLHopDong
             // 
             this.txtCMND_QLHopDong.BackColor = System.Drawing.Color.White;
-            this.txtCMND_QLHopDong.Enabled = false;
             this.txtCMND_QLHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND_QLHopDong.Location = new System.Drawing.Point(128, 54);
             this.txtCMND_QLHopDong.Multiline = true;
@@ -385,6 +374,14 @@
             this.gw_hoadon.TabIndex = 0;
             this.gw_hoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_hoadon_RowHeaderMouseClick);
             // 
+            // cbbXe
+            // 
+            this.cbbXe.FormattingEnabled = true;
+            this.cbbXe.Location = new System.Drawing.Point(116, 108);
+            this.cbbXe.Name = "cbbXe";
+            this.cbbXe.Size = new System.Drawing.Size(216, 21);
+            this.cbbXe.TabIndex = 44;
+            // 
             // QL_HopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,9 +422,9 @@
         private System.Windows.Forms.Button them_hd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView gw_hoadon;
-        private System.Windows.Forms.TextBox txtBienSo;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.TextBox txtCMND_QLHopDong;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbbXe;
     }
 }
