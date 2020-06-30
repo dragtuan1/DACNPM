@@ -280,14 +280,15 @@
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(473, 241);
+            this.button1.Location = new System.Drawing.Point(481, 238);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(144, 49);
             this.button1.TabIndex = 64;
-            this.button1.Text = "  Tìm Kiếm";
+            this.button1.Text = "            Tìm Kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
