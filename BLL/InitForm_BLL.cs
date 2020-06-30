@@ -39,9 +39,9 @@ namespace DACNPM.BLL
                 }
             }
 
-            List<Entities.Contract> contracts1 = db.Contracts.Where(p => p.Date_Return < DateTime.Now).ToList();
+            List<Entities.Contract> contracts2 = db.Contracts.Where(p => p.Date_Return < DateTime.Now).ToList();
 
-            foreach (Entities.Contract item in contracts1)
+            foreach (Entities.Contract item in contracts2)
             {
                 item.Contract_State = false;
                 foreach (Entities.Detail_Contract i in item.Detail_Contracts)

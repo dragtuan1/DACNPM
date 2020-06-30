@@ -30,7 +30,7 @@ namespace DACNPM.BLL
 
         public object getEmployees_BLL()
         {
-            var list = db.Employees.Select(p => new { p.ID_Employee, p.Account.Username, p.Account.UserPassword, p.Name_Employee, p.Account.Type_Account.Name_Type, p.Email, p.Phone, p.Account.Type_Account.Salary });
+            var list = db.Employees.Select(p => new { p.ID_Employee, p.Account.Username, p.Name_Employee, p.Account.Type_Account.Name_Type, p.Email, p.Phone, p.Account.Type_Account.Salary });
             return list.ToList();
         }
         public List<Entities.Type_Account> getTypeAcounts_BLL()

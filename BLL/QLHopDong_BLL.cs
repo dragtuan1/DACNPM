@@ -60,8 +60,8 @@ namespace DACNPM.BLL
             {
                 Entities.Contract contract = BLL.QLHopDong_BLL.Instance.getHopDongByID_BLL(idHopDong);
                 Entities.Vehicle vehicle = db.Vehicles.Where(p => p.License_Plate == BienSo).FirstOrDefault();
-
                 if(contract.Date_Return > DateTime.Now)
+
                 {
                     Entities.Detail_Contract detail = new Entities.Detail_Contract
                     {
@@ -194,6 +194,11 @@ namespace DACNPM.BLL
         {
             var list = db.Vehicles.Where(p => p.ID_Type_Vehicle == ID_TypeVehicle && p.Vehicle_State == false).ToList();
             return list;
+        }
+        public List<Entities.Vehicle> getCBBXE_BLL()
+        {
+            var list = db.Vehicles.Where(p => p.Vehicle_State == false);
+            return list.ToList();
         }
     }
 

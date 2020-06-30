@@ -57,7 +57,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(423, 495);
+            this.label6.Location = new System.Drawing.Point(36, 495);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(235, 21);
@@ -83,11 +83,11 @@
             this.DGV_QLKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.DGV_QLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_QLKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.DGV_QLKH.Location = new System.Drawing.Point(199, 545);
+            this.DGV_QLKH.Location = new System.Drawing.Point(40, 519);
             this.DGV_QLKH.Name = "DGV_QLKH";
             this.DGV_QLKH.RowHeadersWidth = 51;
             this.DGV_QLKH.RowTemplate.Height = 24;
-            this.DGV_QLKH.Size = new System.Drawing.Size(1027, 209);
+            this.DGV_QLKH.Size = new System.Drawing.Size(1027, 168);
             this.DGV_QLKH.TabIndex = 42;
             this.DGV_QLKH.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseClick);
             this.DGV_QLKH.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseDoubleClick_2);
@@ -312,11 +312,11 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox1.Location = new System.Drawing.Point(196, 99);
+            this.groupBox1.Location = new System.Drawing.Point(28, 97);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1046, 380);
+            this.groupBox1.Size = new System.Drawing.Size(1037, 371);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
@@ -327,7 +327,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Name = "QL_KhachHang";
-            this.Size = new System.Drawing.Size(1375, 782);
+            this.Size = new System.Drawing.Size(1100, 700);
             this.Load += new System.EventHandler(this.QL_KhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_QLKH)).EndInit();
             this.groupBox1.ResumeLayout(false);

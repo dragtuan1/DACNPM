@@ -48,29 +48,29 @@ namespace DACNPM.Library_Control
             if(ngaythem.Value >= ngaytra.Value)
             {
                 MessageBox.Show("Lỗi ngày thực thi hợp đồng");
-            } else
-            {
-                try
-                {
-                    BLL.QLHopDong_BLL.Instance.addHopDong_BLL(
-                    (BLL.QLHopDong_BLL.Instance.getAcountByUserName_BLL(Entities.AccountLogin.getInstance().User).Employees.ToList())[0].ID_Employee,
-                    (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer,
-                    ngaythem.Value,
-                    ngaytra.Value,
-                    0,
-                    true
-                    );
-
-                    MessageBox.Show("Them Thanh Cong");
-
-                    gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
-
-                }
-                catch
-                {
-                    MessageBox.Show("Error");
-                }
             }
+            try
+            {
+                BLL.QLHopDong_BLL.Instance.addHopDong_BLL(
+                (BLL.QLHopDong_BLL.Instance.getAcountByUserName_BLL(Entities.AccountLogin.getInstance().User).Employees.ToList())[0].ID_Employee,
+                (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer,
+                ngaythem.Value,
+                ngaytra.Value,
+                0,
+                true
+                );
+
+                MessageBox.Show("Them Thanh Cong");
+
+                gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
+                  
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -43,7 +43,7 @@ namespace DACNPM
         public List<Customer> GetALL_CTM()
         {
             DACNPM DB = new DACNPM();
-            var list = DB.Customers.Select(p => p);
+           var list = DB.Customers.Select(p => p);
         //    var List = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }) ;
             return list.ToList();
         }

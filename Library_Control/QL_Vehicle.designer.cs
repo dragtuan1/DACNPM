@@ -41,7 +41,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbb_Driver = new System.Windows.Forms.ComboBox();
             this.cbb_Type_Vehicle = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -142,7 +141,6 @@
             // 
             this.groupBox1.Controls.Add(this.cbb_Driver);
             this.groupBox1.Controls.Add(this.cbb_Type_Vehicle);
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.btn_reset);
             this.groupBox1.Controls.Add(this.btn_delete);
@@ -180,23 +178,6 @@
             this.cbb_Type_Vehicle.Name = "cbb_Type_Vehicle";
             this.cbb_Type_Vehicle.Size = new System.Drawing.Size(265, 38);
             this.cbb_Type_Vehicle.TabIndex = 75;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(424, 344);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(144, 49);
-            this.button2.TabIndex = 73;
-            this.button2.Text = "    Sort";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // btn_Search
             // 
@@ -366,7 +347,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_delete;
