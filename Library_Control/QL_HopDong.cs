@@ -12,16 +12,15 @@ namespace DACNPM.Library_Control
 {
     public partial class QL_HopDong : UserControl
     {
-
         public delegate void Mydel();
         public Mydel del { get; set; }
-
         public string Username { get; set; }
         public QL_HopDong()
         {
             InitializeComponent();
             gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
             SetView();
+            
         }
 
         public void SetView()
@@ -52,9 +51,10 @@ namespace DACNPM.Library_Control
             {
                 try
                 {
+                    int id_customer = (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer;
                     BLL.QLHopDong_BLL.Instance.addHopDong_BLL(
                     (BLL.QLHopDong_BLL.Instance.getAcountByUserName_BLL(Entities.AccountLogin.getInstance().User).Employees.ToList())[0].ID_Employee,
-                    (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer,
+                    id_customer,
                     ngaythem.Value,
                     ngaytra.Value,
                     0,
@@ -147,6 +147,7 @@ namespace DACNPM.Library_Control
                         MessageBox.Show("Xóa thành công");
                         SetView();
                         gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
+                        gw_chitiethoadon.DataSource = null;
                     }
                     catch
                     {

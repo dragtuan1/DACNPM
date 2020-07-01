@@ -13,7 +13,9 @@ using System.Drawing.Design;
 namespace DACNPM.Library_Control
 {
     public partial class QL_KhachHang : UserControl
-    {   
+    {
+        public delegate void Mydel();
+        public Mydel del { get; set; }
         public QL_KhachHang()
         {
             InitializeComponent();
@@ -147,6 +149,13 @@ namespace DACNPM.Library_Control
         private void TXT_Search_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddContract_Click(object sender, EventArgs e)
+        {
+   
+            del();
+      
         }
     }
 }

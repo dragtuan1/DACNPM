@@ -81,6 +81,7 @@
             // 
             // cbbXe
             // 
+            this.cbbXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbXe.FormattingEnabled = true;
             this.cbbXe.Location = new System.Drawing.Point(220, 113);
             this.cbbXe.Name = "cbbXe";
@@ -89,6 +90,7 @@
             // 
             // cbbLoaiXe
             // 
+            this.cbbLoaiXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLoaiXe.FormattingEnabled = true;
             this.cbbLoaiXe.Location = new System.Drawing.Point(116, 113);
             this.cbbLoaiXe.Name = "cbbLoaiXe";
@@ -154,6 +156,7 @@
             // txtma_hd_2
             // 
             this.txtma_hd_2.BackColor = System.Drawing.Color.White;
+            this.txtma_hd_2.Enabled = false;
             this.txtma_hd_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtma_hd_2.Location = new System.Drawing.Point(117, 64);
             this.txtma_hd_2.Multiline = true;
