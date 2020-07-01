@@ -23,7 +23,7 @@ namespace DACNPM
 
         private void textBox1_Click_1(object sender, EventArgs e)
         {
-            textBox1.Text = null;
+            txt_CauHoi2.Text = null;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -33,7 +33,30 @@ namespace DACNPM
 
         private void textBox2_Click(object sender, EventArgs e)
         {
-            textBox2.Text = null;
+            txt_CauHoi1.Text = null;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {   
+            
+            if((BLL_QLTaiKhoan.Instance.GetACC_ByUserName(txt_username.Text) == null))
+            {
+                MessageBox.Show("Không tồn tại tài khoản này"); 
+            }
+            else if(BLL_QLTaiKhoan.Instance.GetACC_ByUserName(txt_username.Text).Question1 != txt_CauHoi1.Text 
+                   || BLL_QLTaiKhoan.Instance.GetACC_ByUserName(txt_username.Text).Question1 != txt_CauHoi2.Text)
+            {
+                MessageBox.Show("Câu trả lời không hợp lệ");
+            }
+            else
+            {
+                string newPass;
+                Random rand = new Random();
+                newPass = (rand.Next(999999)).ToString();
+                MessageBox.Show("Mật khẩu mới của bạn là: " + newPass);
+                BLL_QLTaiKhoan.Instance.UpDatePassWord(txt_username.Text, newPass);
+            }        
+           
         }
     }
 }

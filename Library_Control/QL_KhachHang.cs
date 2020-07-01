@@ -17,7 +17,7 @@ namespace DACNPM.Library_Control
         public QL_KhachHang()
         {
             InitializeComponent();
-            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM().Select(p => new { p.CMND, p.Customer_Address, p.Customer_Name, p.ID_Customer }).ToList(); 
+            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM(); 
         }
         private void btn_add_Click(object sender, EventArgs e)
         {           
@@ -29,11 +29,11 @@ namespace DACNPM.Library_Control
             };
            
             if (BLL_QLKH.Instance.CheckIn4_CTMBLL(st1))
-            {
+            {   
                 BLL_QLKH.Instance.AddNV_BLL(st1);
-                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM().Select (  p => new { p.CMND, p.Customer_Address, p.Customer_Name, p.ID_Customer} ).ToList();
+                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
             }
-            else return;
+            
             
         }
         private void btn_delete_Click(object sender, EventArgs e)
@@ -119,14 +119,5 @@ namespace DACNPM.Library_Control
             Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
         }
 
-        private void QL_KhachHang_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

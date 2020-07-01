@@ -50,7 +50,7 @@ namespace DACNPM
           //  if (panelQuanLySubmenu.Visible == true)
          //       panelQuanLySubmenu.Visible = false;
          //   if (panelThongKeSubmenu.Visible == true)
-           //     panelThongKeSubmenu.Visible = false;
+         //     panelThongKeSubmenu.Visible = false;
         }
         private void showSubmenu(Panel subMenu)
         {
@@ -132,7 +132,7 @@ namespace DACNPM
         private void btnQL_NhanVien_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_NhanVien());
+            panelMain.Controls.Add(new Library_Control.QL_NhanVien(Username));
         }
 
         private void btnQL_TaiXe_Click(object sender, EventArgs e)

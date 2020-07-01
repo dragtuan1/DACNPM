@@ -106,6 +106,7 @@ namespace DACNPM
                         MainForm mainForm = new MainForm(txtUser.Text);
                         mainForm.Show();
                         mainForm.FormClosed += Logout;
+
                     }
                     else
                     {

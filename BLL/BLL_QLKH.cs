@@ -33,6 +33,7 @@ namespace DACNPM
                 DACNPM DB = new DACNPM();
                 DB.Customers.Add(ctm);
                 DB.SaveChanges();
+                MessageBox.Show("Thêm khách hàng hành công");
                 return true;
             }
             catch (Exception)
@@ -40,12 +41,12 @@ namespace DACNPM
                 return false;
             }
         }
-        public List<Customer> GetALL_CTM()
+        public object GetALL_CTM()
         {
             DACNPM DB = new DACNPM();
-            var list = DB.Customers.Select(p => p);
-        //    var List = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }) ;
-            return list.ToList();
+        //    var list = DB.Customers.Select(p => p);
+            var list = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }).ToList() ;
+            return list;
         }
         public bool DelNV_BLL(List<int> List_ID)
         {
@@ -63,6 +64,7 @@ namespace DACNPM
                     }
                 }
                 DB.SaveChanges();
+                MessageBox.Show("Xóa thành công ");
                 return true;
             }
             catch (Exception)
@@ -102,13 +104,62 @@ namespace DACNPM
                 MessageBox.Show("Vui Lòng Nhập Đầy đủ thông tin ");
                 return false; 
             }
-            if(cmt.Phone.Length > 11)
+            if (IsNewCustumer_BLL(cmt) == false)
             {
-               MessageBox.Show("Số Điện Thoại Vượt Quá 11 Số");
+                MessageBox.Show("Đã Tồn Tại Khách Hàng Này");
                 return false;
-            }    
+
+            }
+            if (CheckCMND_Phone(cmt.CMND, cmt.Phone) == false)
+            {
+
+                return false;
+            }
             
+    
+                         
             return true;
         }
+        public bool IsNewCustumer_BLL(Customer customer)
+        {
+            DACNPM DB = new DACNPM();
+            var List = DB.Customers.Where(p => p.Phone == customer.Phone && p.Customer_Name == customer.Customer_Name && p.Phone == customer.Phone);
+            if(List.Count() == 1)
+            { return false; }    
+            return true;
+        }
+        public bool CheckCMND_Phone(string CMND, string Phone)
+        {
+            DACNPM DB = new DACNPM();
+
+            try
+            {
+                var list = DB.Customers.Where(p => p.Phone == Phone);
+                if (list.Count() != 0)
+                {
+                    MessageBox.Show("Đã tồn tại số điện thoại này");
+                    return false; // Trùng số điện thoại
+                   
+                } 
+                var List = DB.Customers.Where(p => p.CMND  == CMND);
+                if (List.Count() != 0)
+                {
+                    MessageBox.Show("Đã tồn tại số CMND này");
+                    return false; // Trung cmnd
+                }
+                if (Phone.Length > 11)
+                {
+                    MessageBox.Show("Số Điện Thoại Vượt Quá 11 Số");
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                 
+                throw;
+            }
+            return true; // hợp lệ
+        }
+
     }
 }

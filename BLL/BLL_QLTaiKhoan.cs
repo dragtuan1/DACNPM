@@ -27,7 +27,6 @@ namespace DACNPM
         private BLL_QLTaiKhoan()
         {
         }
-
         public Employee GetNVBY_ID_BLL(int ID_NV)
         {
 
@@ -39,6 +38,7 @@ namespace DACNPM
         {
             DACNPM DB = new DACNPM();
             Account acc = DB.Accounts.Where(p => p.Username == username).FirstOrDefault();
+         //   MessageBox.Show(acc.Question1 + acc.Question2);
             return acc;
         }
 
@@ -59,9 +59,7 @@ namespace DACNPM
 
         public List<Account> GetACC_ByUserNameandPass(string username,string pass)
         {
-
             String Pass = hashPass(pass);
-
             DACNPM DB = new DACNPM();
             var list = DB.Accounts.Where(p => p.Username == username && p.UserPassword == Pass);
             return list.ToList();
@@ -72,7 +70,7 @@ namespace DACNPM
             {
                 DACNPM DB = new DACNPM();
                 Account acc = DB.Accounts.Where(p => p.Username == TK).FirstOrDefault();
-                acc.UserPassword = MK;
+                acc.UserPassword = BLL_QLTaiKhoan.Instance.hashPass(MK);
                 Employee e = DB.Employees.Where(p => p.ID_Employee == ID).FirstOrDefault();
                 e.Name_Employee = Ten;
                 e.Phone = SDT;
@@ -82,10 +80,26 @@ namespace DACNPM
             }
             catch (Exception)
             {
-                return true;
+                return false;
                 throw;
             }
+        }
+        public bool UpDatePassWord(string username, string password)
+        {
+            try
+            {
+                DACNPM DB = new DACNPM();
+                Account acc = DB.Accounts.Where(p => p.Username == username).FirstOrDefault();
+                acc.UserPassword = BLL_QLTaiKhoan.Instance.hashPass(password);
+                DB.SaveChanges();
+                return true;
+            }
 
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
         }
     }
 }

@@ -14,49 +14,29 @@ namespace DACNPM.Library_Control
 {
     public partial class QL_NhanVien : UserControl
     {
-        public QL_NhanVien()
+        private string username { get; set; }
+        public QL_NhanVien(string Username)
         {
+            this.username = Username;
             InitializeComponent();
             setview();
         }
 
         public void setview()
-        {
-            foreach (Type_Account i in BLL.QLNhanVien_BLL.Instance.getTypeAcounts_BLL())
-            {
-                cbb_roleNV.Items.Add(i);
-            }
-            cbb_roleNV.SelectedIndex = -1;
-            DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
-        }
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            if(txt_NameTK.Text == "" || txt_Password.Text == "" || txt_NameNV.Text == "" || 
-                txt_Email.Text == "" || txt_Phone.Text == "" || cbb_roleNV.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui long nhap day du thong tin");
-            }
-            else
-            {
-                Account acc = new Account
+        {   
+            
+                
+                foreach (Type_Account i in BLL.QLNhanVien_BLL.Instance.getTypeAcounts_BLL())
                 {
-                    Username = txt_NameTK.Text,
-                    UserPassword = txt_Password.Text,
-                    ID_Type_Account = ((Type_Account)cbb_roleNV.SelectedItem).ID_Type_Account
-                };
-                Employee emp = new Employee
-                {
-                    Name_Employee = txt_NameNV.Text,
-                    Email = txt_Email.Text,
-                    ID_Account = acc.ID_Account,
-                    Phone = txt_Phone.Text
-                };
-                BLL.QLNhanVien_BLL.Instance.AddNV_BLL(acc, emp);
-                DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
-                Reset();
-            }        
-        }
+                     if (BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username).Type_Account.Name_Type == "QuanLy" && i.Name_Type == "NhanVien")
+                     cbb_roleNV.Items.Add(i);
+                     if (BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username).Type_Account.Name_Type == "Admin") cbb_roleNV.Items.Add(i);
+                }
+            
 
+            cbb_roleNV.SelectedIndex = -1;
+            DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.ShowNV(username);
+        }
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = DGV_QLNV.SelectedRows;
@@ -90,7 +70,6 @@ namespace DACNPM.Library_Control
             {
                 txt_NameTK.Enabled = false;
                 txt_NameTK.Text = data[0].Cells["Username"].Value.ToString();
-                txt_Password.Text = data[0].Cells["UserPassword"].Value.ToString();
                 txt_NameNV.Text = data[0].Cells["Name_Employee"].Value.ToString();
                 txt_Email.Text = data[0].Cells["Email"].Value.ToString();
                 txt_Phone.Text = data[0].Cells["Phone"].Value.ToString();
@@ -105,15 +84,15 @@ namespace DACNPM.Library_Control
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            if (txt_Password.Text == "" || txt_NameNV.Text == "" || txt_Email.Text == "" || 
+            DataGridViewSelectedRowCollection r = DGV_QLNV.SelectedRows;
+            if (r.Count == 1)
+            {
+                if (txt_Password.Text == "" || txt_NameNV.Text == "" || txt_Email.Text == "" ||
                 txt_Phone.Text == "" || cbb_roleNV.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui long nhap day du thong tin");
-            }
-            else
-            {
-                DataGridViewSelectedRowCollection r = DGV_QLNV.SelectedRows;
-                if (r.Count == 1)
+                {
+                    MessageBox.Show("Vui long nhap day du thong tin");
+                }
+                else
                 {
                     Account acc = new Account
                     {
@@ -130,19 +109,20 @@ namespace DACNPM.Library_Control
                     if (BLL.QLNhanVien_BLL.Instance.UpdateNV_BLL(acc, emp))
                     {
                         MessageBox.Show("Update Thành Công ");
-                        DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
+                        if (BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username).Type_Account.Name_Type == "QuanLy")
+                            DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
+                        else
+                            DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getAllEmployees_BLL();
                         Reset();
-                    }
+                    }                
                     else
                     {
-                        MessageBox.Show("Error Data ");
-                    };
+                        MessageBox.Show("Vui Lòng Chọn Khách Hàng Cần Sửa Thông Tin");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Vui Lòng Chọn Khách Hàng Cần Sửa Thông Tin");
-                }
-            }          
+
+            }
+            else MessageBox.Show("Vui lòng chọn nhân viên cần sửa thông tin");
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
@@ -162,6 +142,55 @@ namespace DACNPM.Library_Control
             cbb_roleNV.SelectedIndex = -1;
             txt_LuongNV.Text = null;
             txtSearch.Text = null;
+        }
+
+        private void txt_Email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DGV_QLNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_Add_Click_1(object sender, EventArgs e)
+        {
+            txt_NameTK.Enabled = true;
+            if (txt_Email.Text != "" && txt_LuongNV.Text != "" && txt_NameTK.Text != "" && txt_NameNV.Text != ""
+                && txt_Password.Text != "" && txt_Phone.Text != "" )
+            {
+
+                Account acc = new Account
+                {
+                    Username = txt_NameTK.Text,
+                    UserPassword = txt_Password.Text,
+                    ID_Type_Account = ((Type_Account)cbb_roleNV.SelectedItem).ID_Type_Account
+                };
+                Employee emp = new Employee
+                {
+                    Name_Employee = txt_NameNV.Text,
+                    Email = txt_Email.Text,
+                    ID_Account = acc.ID_Account,
+                    Phone = txt_Phone.Text
+                };
+                if (BLL.QLNhanVien_BLL.Instance.Check_ACC_NV_BLL(acc, emp))
+                {
+                    BLL.QLNhanVien_BLL.Instance.AddNV_BLL(acc, emp);
+                    MessageBox.Show("Thêm thành công nhân viên");
+                    if (BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username).Type_Account.Name_Type == "QuanLy")
+                        DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
+                    else
+                        DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getAllEmployees_BLL();
+                    Reset();
+                }
+                else MessageBox.Show("Thêm thất bại");
+            }
+            else MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+
+               
+               
+            
         }
     }
 }

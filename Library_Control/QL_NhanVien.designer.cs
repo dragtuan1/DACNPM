@@ -104,7 +104,7 @@
             // 
             this.cbb_roleNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_roleNV.FormattingEnabled = true;
-            this.cbb_roleNV.Location = new System.Drawing.Point(615, 134);
+            this.cbb_roleNV.Location = new System.Drawing.Point(615, 133);
             this.cbb_roleNV.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_roleNV.Name = "cbb_roleNV";
             this.cbb_roleNV.Size = new System.Drawing.Size(194, 37);
@@ -116,7 +116,7 @@
             this.btn_Search.FlatAppearance.BorderSize = 0;
             this.btn_Search.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search.Location = new System.Drawing.Point(316, 322);
+            this.btn_Search.Location = new System.Drawing.Point(510, 310);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -131,7 +131,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(434, 387);
+            this.comboBox2.Location = new System.Drawing.Point(685, 375);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(230, 37);
@@ -143,7 +143,7 @@
             this.btn_Sort.FlatAppearance.BorderSize = 0;
             this.btn_Sort.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Sort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sort.Location = new System.Drawing.Point(316, 383);
+            this.btn_Sort.Location = new System.Drawing.Point(510, 371);
             this.btn_Sort.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sort.Name = "btn_Sort";
             this.btn_Sort.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
@@ -157,7 +157,7 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(434, 322);
+            this.txtSearch.Location = new System.Drawing.Point(685, 310);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -170,11 +170,11 @@
             this.btn_Reset.FlatAppearance.BorderSize = 0;
             this.btn_Reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_Reset.Image")));
             this.btn_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Reset.Location = new System.Drawing.Point(38, 384);
+            this.btn_Reset.Location = new System.Drawing.Point(173, 375);
             this.btn_Reset.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btn_Reset.Size = new System.Drawing.Size(110, 40);
+            this.btn_Reset.Size = new System.Drawing.Size(141, 40);
             this.btn_Reset.TabIndex = 34;
             this.btn_Reset.Text = "         Nhập Lại";
             this.btn_Reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,11 +188,11 @@
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(168, 384);
+            this.btn_Delete.Location = new System.Drawing.Point(341, 375);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.btn_Delete.Size = new System.Drawing.Size(110, 40);
+            this.btn_Delete.Size = new System.Drawing.Size(150, 40);
             this.btn_Delete.TabIndex = 38;
             this.btn_Delete.Text = "         Xóa";
             this.btn_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,10 +205,10 @@
             this.btn_Edit.FlatAppearance.BorderSize = 0;
             this.btn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Edit.Image")));
             this.btn_Edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Edit.Location = new System.Drawing.Point(168, 319);
+            this.btn_Edit.Location = new System.Drawing.Point(341, 310);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(110, 40);
+            this.btn_Edit.Size = new System.Drawing.Size(150, 40);
             this.btn_Edit.TabIndex = 36;
             this.btn_Edit.Text = "        Sửa Thông Tin";
             this.btn_Edit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,26 +221,26 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Add.Location = new System.Drawing.Point(38, 319);
+            this.btn_Add.Location = new System.Drawing.Point(173, 310);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.btn_Add.Size = new System.Drawing.Size(110, 40);
+            this.btn_Add.Size = new System.Drawing.Size(141, 40);
             this.btn_Add.TabIndex = 35;
             this.btn_Add.Text = "         Thêm Mới";
             this.btn_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Add.UseVisualStyleBackColor = false;
-            this.btn_Add.Click += new System.EventHandler(this.btn_add_Click);
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click_1);
             // 
             // txt_LuongNV
             // 
             this.txt_LuongNV.BackColor = System.Drawing.Color.White;
             this.txt_LuongNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LuongNV.Location = new System.Drawing.Point(619, 193);
+            this.txt_LuongNV.Location = new System.Drawing.Point(615, 192);
             this.txt_LuongNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_LuongNV.Multiline = true;
             this.txt_LuongNV.Name = "txt_LuongNV";
-            this.txt_LuongNV.Size = new System.Drawing.Size(369, 45);
+            this.txt_LuongNV.Size = new System.Drawing.Size(377, 45);
             this.txt_LuongNV.TabIndex = 33;
             // 
             // label12
@@ -248,7 +248,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(463, 204);
+            this.label12.Location = new System.Drawing.Point(459, 203);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 20);
@@ -283,7 +283,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(463, 134);
+            this.label9.Location = new System.Drawing.Point(463, 133);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 20);
@@ -312,6 +312,7 @@
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(250, 45);
             this.txt_Email.TabIndex = 20;
+            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // txt_NameNV
             // 
@@ -440,6 +441,7 @@
             this.DGV_QLNV.RowTemplate.Height = 24;
             this.DGV_QLNV.Size = new System.Drawing.Size(988, 150);
             this.DGV_QLNV.TabIndex = 77;
+            this.DGV_QLNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_QLNV_CellContentClick);
             this.DGV_QLNV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLNV_RowHeaderMouseClick);
             // 
             // label6
