@@ -263,5 +263,14 @@
   <ItemGroup>
     <None Include="Resources\fileboard [#1801].png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_left [#1506].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_left [#1506]1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-480.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

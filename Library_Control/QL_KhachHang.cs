@@ -47,23 +47,7 @@ namespace DACNPM.Library_Control
         }
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
-            if(r.Count != 0)
-            {
-                List<int> List_ID = new List<int>();
-
-                foreach (DataGridViewRow j in r)
-                {
-                    List_ID.Add((int)j.Cells["ID_Customer"].Value);
-                }
-                BLL_QLKH.Instance.DelNV_BLL(List_ID);
-                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
-                MessageBox.Show("Xóa thành công");
-            }
-            else
-            {
-                MessageBox.Show("Vui Lòng Chọn Một Đối Tượng cần xóa");
-            }     
+           
         }
         private void btn_edit_Click(object sender, EventArgs e)
         {
@@ -106,13 +90,7 @@ namespace DACNPM.Library_Control
         }
         private void DGV_QLKH_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
-            //  Txt_MaKH.Enabled = false;
-            //    Txt_MaKH.Text = r[0].Cells["ID_Customer"].Value.ToString();
-            Txt_CMND.Text = r[0].Cells["CMND"].Value.ToString();
-            Txt_DiaChi.Text = r[0].Cells["Customer_Address"].Value.ToString();
-            Txt_Phone.Text = r[0].Cells["Phone"].Value.ToString();
-            Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
+          
         }
 
         private void DGV_QLKH_RowHeaderMouseDoubleClick_2(object sender, DataGridViewCellMouseEventArgs e)
@@ -129,5 +107,46 @@ namespace DACNPM.Library_Control
             Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
         }
 
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
+            if (r.Count != 0)
+            {
+                List<int> List_ID = new List<int>();
+
+                foreach (DataGridViewRow j in r)
+                {
+                    List_ID.Add((int)j.Cells["ID_Customer"].Value);
+                }
+                BLL_QLKH.Instance.DelNV_BLL(List_ID);
+                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
+                MessageBox.Show("Xóa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Vui Lòng Chọn Một Đối Tượng cần xóa");
+            }
+        }
+
+        private void DGV_QLKH_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = DGV_QLKH.SelectedRows;
+            //  Txt_MaKH.Enabled = false;
+            //    Txt_MaKH.Text = r[0].Cells["ID_Customer"].Value.ToString();
+            Txt_CMND.Text = r[0].Cells["CMND"].Value.ToString();
+            Txt_DiaChi.Text = r[0].Cells["Customer_Address"].Value.ToString();
+            Txt_Phone.Text = r[0].Cells["Phone"].Value.ToString();
+            Txt_TenKH.Text = r[0].Cells["Customer_Name"].Value.ToString();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

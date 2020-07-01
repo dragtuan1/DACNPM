@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DACNPM.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,24 +38,26 @@ namespace DACNPM
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {   
+        {
+
+            Account acc = BLL.BLL_QLTaiKhoan.Instance.GetACC_ByUserName(txt_username.Text);
             
-            if((BLL.BLL_QLTaiKhoan.Instance.GetACC_ByUserName(txt_username.Text) == null))
+            if(acc == null)
             {
-                MessageBox.Show("Không tồn tại tài khoản này"); 
-            }
-            else if(BLL.BLL_QLTaiKhoan.Instance.GetACC_ByUserName(txt_username.Text).Question1 != txt_CauHoi1.Text 
-                   || BLL.BLL_QLTaiKhoan.Instance.GetACC_ByUserName(txt_username.Text).Question1 != txt_CauHoi2.Text)
-            {
-                MessageBox.Show("Câu trả lời không hợp lệ");
+                MessageBox.Show("Không tồn tại tài khoản này");
             }
             else
             {
-                string newPass;
-                Random rand = new Random();
-                newPass = (rand.Next(999999)).ToString();
-                MessageBox.Show("Mật khẩu mới của bạn là: " + newPass);
-                BLL.BLL_QLTaiKhoan.Instance.UpDatePassWord(txt_username.Text, newPass);
+                if (acc.Question1 == txt_CauHoi1.Text && acc.Question2 == txt_CauHoi2.Text)
+                {
+                    string newPass;
+                    Random rand = new Random();
+                    newPass = (rand.Next(999999)).ToString();
+                    MessageBox.Show("Mật khẩu mới của bạn là: " + newPass);
+                    BLL.BLL_QLTaiKhoan.Instance.UpDatePassWord(txt_username.Text, newPass);
+                }
+                else MessageBox.Show("Câu trả lời không đúng");
+             
             }        
            
         }

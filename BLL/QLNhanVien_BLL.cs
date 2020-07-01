@@ -152,13 +152,13 @@ namespace DACNPM.BLL
         {
             DACNPM DB = new DACNPM();
             var List = DB.Employees.Where(p => p.Name_Employee == employee.Name_Employee && p.Phone == employee.Phone && p.Email == employee.Email);
-            if (List.Count() == 0)
+            if (List.Count() == 1)
             {
                 MessageBox.Show("Đã tồn tại nhân viên này");
                 return false;
             }
                 
-            var list = DB.Employees.Where(p => p.Email == employee.Email || p.Phone == employee.Phone);
+            var list = DB.Employees.Where(p => p.Phone == employee.Phone);
             if (list.Count() != 0)
             {
                 MessageBox.Show("Đã tồn tại số điện thoại hoặc email này");
