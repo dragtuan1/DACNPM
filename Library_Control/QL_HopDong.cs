@@ -45,7 +45,7 @@ namespace DACNPM.Library_Control
   
         private void them_hd_Click(object sender, EventArgs e)
         {
-            if(ngaythem.Value >= ngaytra.Value || ngaythem.Value < DateTime.Now)
+            if(ngaythem.Value >= ngaytra.Value || DateTime.Now > ngaythem.Value)
             {
                 MessageBox.Show("Lỗi ngày thực thi hợp đồng");
             } else
@@ -68,7 +68,7 @@ namespace DACNPM.Library_Control
                 }
                 catch
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("Chưa có chứng mình nhân dân");
                 }
             }
             
@@ -82,9 +82,12 @@ namespace DACNPM.Library_Control
             if(index == 0)
             {
                 gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDongBySTD_BLL(txtSearch.Text);
-            } else if(index == 1)
+            } else if(index == 2)
             {
                 gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDongByName_BLL(txtSearch.Text);
+            } else if (index == 1)
+            {
+                gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDongByCNMD_BLL(txtSearch.Text);
             }
         }
 
@@ -248,6 +251,26 @@ namespace DACNPM.Library_Control
         private void button2_Click(object sender, EventArgs e)
         {
             del();
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if(gw_hoadon.Rows.Count == 0)
+            {
+                MessageBox.Show("Dữ liệu rỗng");
+            } else
+            {
+                List<int> id = new List<int>();
+
+                foreach(DataGridViewRow item in gw_hoadon.Rows)
+                {
+                    id.Add(Convert.ToInt32(item.Cells["ID_Contract"].Value.ToString()));
+                }
+
+                List<Entities.Contract> contracts = BLL.QLHopDong_BLL.Instance.sortDateContract_BLL(id);
+
+                gw_hoadon.DataSource = contracts.Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill }).ToList();
+            }
         }
     }
 }

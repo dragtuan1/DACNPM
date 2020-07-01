@@ -190,12 +190,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_Vehicle.resx">
       <DependentUpon>QL_Vehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_ChiPhi.resx">
       <DependentUpon>QL_ChiPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_HopDong.resx">
       <DependentUpon>QL_HopDong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Library_Control\QL_In4_TaiKhoan.resx">
       <DependentUpon>QL_In4_TaiKhoan.cs</DependentUpon>
