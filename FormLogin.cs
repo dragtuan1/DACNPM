@@ -95,7 +95,7 @@ namespace DACNPM
             {
                 if (txtPass.Text != "PASSWORD")
                 {
-                    List<Account> list = BLL_QLTaiKhoan.Instance.GetACC_ByUserNameandPass(txtUser.Text, txtPass.Text);
+                    List<Account> list = BLL.BLL_QLTaiKhoan.Instance.GetACC_ByUserNameandPass(txtUser.Text, txtPass.Text);
 
                     if (list.Count != 0)
                     {

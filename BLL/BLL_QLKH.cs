@@ -44,9 +44,15 @@ namespace DACNPM
         public object GetALL_CTM()
         {
             DACNPM DB = new DACNPM();
+<<<<<<< HEAD
         //    var list = DB.Customers.Select(p => p);
             var list = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }).ToList() ;
             return list;
+=======
+           var list = DB.Customers.Select(p => p);
+        //    var List = DB.Customers.Select(p => new { p.ID_Customer, p.Customer_Name, p.Customer_Address, p.CMND, p.Phone }) ;
+            return list.ToList();
+>>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
         }
         public bool DelNV_BLL(List<int> List_ID)
         {

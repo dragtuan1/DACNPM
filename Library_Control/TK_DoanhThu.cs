@@ -49,7 +49,6 @@ namespace DACNPM.Library_Control
                 Bieu_Do.Series["Doanh Thu"].Points.AddXY("10", tk1.Thang10);
                 Bieu_Do.Series["Doanh Thu"].Points.AddXY("11", tk1.Thang11);
                 Bieu_Do.Series["Doanh Thu"].Points.AddXY("12", tk1.Thang12);
-                Bieu_Do.Series["Doanh Thu"].Points.AddXY("", "");
                 Bieu_Do.ChartAreas["ChartArea1"].AxisX.Interval = 1;
                 tongtien.Text = tk1.TinhTong().ToString();
             }

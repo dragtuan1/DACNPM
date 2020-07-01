@@ -54,34 +54,45 @@ namespace DACNPM.BLL
             }
         }
 
-        public bool addDetailHopDong_BLL(int idHopDong, String BienSo)
+        public int addDetailHopDong_BLL(int idHopDong, String BienSo)
         {
             try
             {
-                Entities.Vehicle vehicle = db.Vehicles.Where(p => p.License_Plate == BienSo).FirstOrDefault();
-
-                Entities.Detail_Contract detail = new Entities.Detail_Contract
-                {
-                    ID_Contract = idHopDong,
-                    ID_Vehicle = vehicle.ID_Vehicle,
-                    Total_Price = vehicle.Price,
-                    Date_Make_Contract = DateTime.Now
-                };
-
-                db.Detail_Contracts.Add(detail);
-
                 Entities.Contract contract = BLL.QLHopDong_BLL.Instance.getHopDongByID_BLL(idHopDong);
+                Entities.Vehicle vehicle = db.Vehicles.Where(p => p.License_Plate == BienSo).FirstOrDefault();
+                if(contract.Date_Return > DateTime.Now)
 
-                contract.Total_Bill = contract.Total_Bill + detail.Total_Price;
+                {
+                    Entities.Detail_Contract detail = new Entities.Detail_Contract
+                    {
+                        ID_Contract = idHopDong,
+                        ID_Vehicle = vehicle.ID_Vehicle,
+                        Total_Price = vehicle.Price,
+                        Date_Make_Contract = DateTime.Now
+                    };
 
-                db.SaveChanges();
+                    vehicle.Vehicle_State = true;
+
+                    db.Detail_Contracts.Add(detail);
 
 
-                return true;
+
+                    contract.Total_Bill = contract.Total_Bill + detail.Total_Price;
+
+                    db.SaveChanges();
+
+
+                    return 1;
+                }
+                {
+                    return 2;
+                }
+
+               
             }
             catch
             {
-                return false;
+                return 3;
             }
         }
 
@@ -124,11 +135,18 @@ namespace DACNPM.BLL
         {
             try
             {
-                Entities.Contract contract = db.Contracts.Where(p => p.ID_Contract == id).FirstOrDefault();
-                contract.Date_Borrow = borrow;
-                contract.Date_Return = retun;
-                db.SaveChanges();
-                return true;
+                if(retun > DateTime.Now)
+                {
+                    Entities.Contract contract = db.Contracts.Where(p => p.ID_Contract == id).FirstOrDefault();
+                    contract.Date_Borrow = borrow;
+                    contract.Date_Return = retun;
+                    db.SaveChanges();
+                    return true;
+                } else
+                {
+                    return false;
+                }
+
             }
             catch
             {
@@ -145,6 +163,11 @@ namespace DACNPM.BLL
         public void deleteHopDongByID(int id)
         {
             Entities.Contract contract = db.Contracts.Where(p => p.ID_Contract == id).FirstOrDefault();
+            foreach(Entities.Detail_Contract item in contract.Detail_Contracts)
+            {
+                item.Vehicle.Vehicle_State = false;
+                item.Vehicle.Driver.Driver_State = false;
+            }
             db.Contracts.Remove(contract);
             db.SaveChanges();
         }
@@ -165,6 +188,22 @@ namespace DACNPM.BLL
             db.Detail_Contracts.Remove(contract);
 
             db.SaveChanges();
+        }
+
+        public List<Entities.Type_Vehicle> getAllTypeVehicle()
+        {
+            return db.Type_Vehicles.ToList();
+        }
+
+        public List<Entities.Vehicle> getVehicleByState_BLL(int ID_TypeVehicle)
+        {
+            var list = db.Vehicles.Where(p => p.ID_Type_Vehicle == ID_TypeVehicle && p.Vehicle_State == false).ToList();
+            return list;
+        }
+        public List<Entities.Vehicle> getCBBXE_BLL()
+        {
+            var list = db.Vehicles.Where(p => p.Vehicle_State == false);
+            return list.ToList();
         }
     }
 

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.label2.Location = new System.Drawing.Point(424, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 24);
+            this.label2.Size = new System.Drawing.Size(123, 18);
             this.label2.TabIndex = 63;
             this.label2.Text = "Tổng Doanh Thu:";
             // 
@@ -101,13 +101,14 @@
             this.label15.Location = new System.Drawing.Point(860, 59);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 28);
+            this.label15.Size = new System.Drawing.Size(43, 21);
             this.label15.TabIndex = 62;
             this.label15.Text = "VNĐ";
             // 
             // tongtien
             // 
             this.tongtien.BackColor = System.Drawing.Color.White;
+            this.tongtien.Enabled = false;
             this.tongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tongtien.Location = new System.Drawing.Point(592, 57);
             this.tongtien.Margin = new System.Windows.Forms.Padding(4);
@@ -125,7 +126,7 @@
             this.Doanh_Thu.Margin = new System.Windows.Forms.Padding(4);
             this.Doanh_Thu.Name = "Doanh_Thu";
             this.Doanh_Thu.ShowUpDown = true;
-            this.Doanh_Thu.Size = new System.Drawing.Size(152, 34);
+            this.Doanh_Thu.Size = new System.Drawing.Size(152, 29);
             this.Doanh_Thu.TabIndex = 59;
             this.Doanh_Thu.ValueChanged += new System.EventHandler(this.Doanh_Thu_ValueChanged);
             // 
@@ -137,7 +138,7 @@
             this.label11.Location = new System.Drawing.Point(159, 67);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 24);
+            this.label11.Size = new System.Drawing.Size(44, 18);
             this.label11.TabIndex = 56;
             this.label11.Text = "Năm:";
             // 
@@ -149,7 +150,7 @@
             this.label1.Location = new System.Drawing.Point(24, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 28);
+            this.label1.Size = new System.Drawing.Size(81, 21);
             this.label1.TabIndex = 24;
             this.label1.Text = "TÌM KIẾM";
             // 
@@ -161,7 +162,7 @@
             this.label3.Location = new System.Drawing.Point(342, 12);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(408, 46);
+            this.label3.Size = new System.Drawing.Size(325, 37);
             this.label3.TabIndex = 52;
             this.label3.Text = "THỐNG KÊ DOANH THU";
             // 
@@ -175,30 +176,30 @@
             // 
             // Bieu_Do
             // 
-            chartArea3.Name = "ChartArea1";
-            chartArea3.Position.Auto = false;
-            chartArea3.Position.Height = 87.29252F;
-            chartArea3.Position.Width = 100F;
-            chartArea3.Position.Y = 9.70748F;
-            this.Bieu_Do.ChartAreas.Add(chartArea3);
-            legend3.AutoFitMinFontSize = 5;
-            legend3.Name = "Legend1";
-            this.Bieu_Do.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 87.29252F;
+            chartArea1.Position.Width = 100F;
+            chartArea1.Position.Y = 9.70748F;
+            this.Bieu_Do.ChartAreas.Add(chartArea1);
+            legend1.AutoFitMinFontSize = 5;
+            legend1.Name = "Legend1";
+            this.Bieu_Do.Legends.Add(legend1);
             this.Bieu_Do.Location = new System.Drawing.Point(6, 21);
             this.Bieu_Do.Name = "Bieu_Do";
-            series3.ChartArea = "ChartArea1";
-            series3.CustomProperties = "PointWidth=0.5";
-            series3.IsValueShownAsLabel = true;
-            series3.IsXValueIndexed = true;
-            series3.Legend = "Legend1";
-            series3.MarkerSize = 1;
-            series3.Name = "Doanh Thu";
-            this.Bieu_Do.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.CustomProperties = "PointWidth=0.5";
+            series1.IsValueShownAsLabel = true;
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 1;
+            series1.Name = "Doanh Thu";
+            this.Bieu_Do.Series.Add(series1);
             this.Bieu_Do.Size = new System.Drawing.Size(1054, 453);
             this.Bieu_Do.TabIndex = 0;
             this.Bieu_Do.Text = "chart1";
-            title3.Name = "Tháng";
-            this.Bieu_Do.Titles.Add(title3);
+            title1.Name = "Tháng";
+            this.Bieu_Do.Titles.Add(title1);
             this.Bieu_Do.Click += new System.EventHandler(this.chart1_Click);
             // 
             // groupBox2

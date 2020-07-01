@@ -23,10 +23,37 @@ namespace DACNPM.Library_Control
         }
 
         public void setview()
+<<<<<<< HEAD
         {   
             
                 
                 foreach (Type_Account i in BLL.QLNhanVien_BLL.Instance.getTypeAcounts_BLL())
+=======
+        {
+            foreach (Type_Account i in BLL.QLNhanVien_BLL.Instance.getTypeAcounts_BLL())
+            {
+                cbb_roleNV.Items.Add(i);
+            }
+            cbb_roleNV.SelectedIndex = -1;
+            DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getEmployees_BLL();
+        }
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            if(txt_NameTK.Text == "" || txt_Password.Text == "" || txt_NameNV.Text == "" || 
+                txt_Email.Text == "" || txt_Phone.Text == "" || cbb_roleNV.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui long nhap day du thong tin");
+            }
+            else
+            {
+                Account acc = new Account
+                {
+                    Username = txt_NameTK.Text,
+                    UserPassword = BLL.BLL_QLTaiKhoan.Instance.hashPassMD5(txt_Password.Text),
+                    ID_Type_Account = ((Type_Account)cbb_roleNV.SelectedItem).ID_Type_Account
+                };
+                Employee emp = new Employee
+>>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
                 {
                      if (BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username).Type_Account.Name_Type == "QuanLy" && i.Name_Type == "NhanVien")
                      cbb_roleNV.Items.Add(i);
@@ -96,7 +123,7 @@ namespace DACNPM.Library_Control
                 {
                     Account acc = new Account
                     {
-                        UserPassword = txt_Password.Text,
+                        UserPassword = BLL.BLL_QLTaiKhoan.Instance.hashPassMD5(txt_Password.Text),
                         ID_Type_Account = ((Type_Account)cbb_roleNV.SelectedItem).ID_Type_Account
                     };
                     Employee emp = new Employee
