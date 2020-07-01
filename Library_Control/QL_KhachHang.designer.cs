@@ -88,8 +88,8 @@
             this.DGV_QLKH.RowTemplate.Height = 24;
             this.DGV_QLKH.Size = new System.Drawing.Size(1027, 168);
             this.DGV_QLKH.TabIndex = 42;
-            this.DGV_QLKH.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseClick);
-            this.DGV_QLKH.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseDoubleClick_2);
+//            this.DGV_QLKH.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseClick);
+//            this.DGV_QLKH.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLKH_RowHeaderMouseDoubleClick_2);
             // 
             // label5
             // 
@@ -237,7 +237,7 @@
             this.btn_edit.Text = "        Sửa Thông Tin";
             this.btn_edit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_edit.UseVisualStyleBackColor = false;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+ //           this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_delete
             // 
@@ -255,7 +255,7 @@
             this.btn_delete.Text = "         Xóa";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+ //          this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_reset
             // 
@@ -272,7 +272,7 @@
             this.btn_reset.Text = "         Nhập Lại";
             this.btn_reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_reset.UseVisualStyleBackColor = false;
-            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+//            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // button1
             // 
@@ -290,7 +290,7 @@
             this.button1.Text = "            Tìm Kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+//            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -315,11 +315,11 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-<<<<<<< HEAD
+
             this.groupBox1.Size = new System.Drawing.Size(1030, 380);
-=======
+
             this.groupBox1.Size = new System.Drawing.Size(1037, 371);
->>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
+
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
@@ -330,12 +330,11 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Name = "QL_KhachHang";
-<<<<<<< HEAD
+
             this.Size = new System.Drawing.Size(1375, 782);
-=======
+
             this.Size = new System.Drawing.Size(1100, 700);
-            this.Load += new System.EventHandler(this.QL_KhachHang_Load);
->>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
+
             ((System.ComponentModel.ISupportInitialize)(this.DGV_QLKH)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

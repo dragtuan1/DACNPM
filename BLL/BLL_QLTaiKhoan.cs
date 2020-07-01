@@ -58,10 +58,8 @@ namespace DACNPM.BLL
         }
         public List<Account> GetACC_ByUserNameandPass(string username,string pass)
         {
-<<<<<<< HEAD
-            String Pass = hashPass(pass);
-=======
->>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
+
+            String Pass = hashPassMD5(pass);
             DACNPM DB = new DACNPM();
             string hashPass = hashPassMD5(pass);
             var list = DB.Accounts.Where(p => p.Username == username && p.UserPassword == hashPass).ToList();
@@ -73,7 +71,7 @@ namespace DACNPM.BLL
             {
                 DACNPM DB = new DACNPM();
                 Account acc = DB.Accounts.Where(p => p.Username == TK).FirstOrDefault();
-                acc.UserPassword = BLL_QLTaiKhoan.Instance.hashPass(MK);
+                acc.UserPassword = BLL_QLTaiKhoan.Instance.hashPassMD5(MK);
                 Employee e = DB.Employees.Where(p => p.ID_Employee == ID).FirstOrDefault();
                 e.Name_Employee = Ten;
                 e.Phone = SDT;
@@ -93,7 +91,7 @@ namespace DACNPM.BLL
             {
                 DACNPM DB = new DACNPM();
                 Account acc = DB.Accounts.Where(p => p.Username == username).FirstOrDefault();
-                acc.UserPassword = BLL_QLTaiKhoan.Instance.hashPass(password);
+                acc.UserPassword = BLL_QLTaiKhoan.Instance.hashPassMD5(password);
                 DB.SaveChanges();
                 return true;
             }

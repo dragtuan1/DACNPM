@@ -113,7 +113,7 @@ namespace DACNPM.BLL
             try
             {
                 Entities.Account a = getAccountByID_BLL(Convert.ToInt32(acc.ID_Type_Account.ToString()));
-                a.UserPassword = BLL_QLTaiKhoan.Instance.hashPass( acc.UserPassword);
+                a.UserPassword = BLL_QLTaiKhoan.Instance.hashPassMD5( acc.UserPassword);
                 a.ID_Type_Account = acc.ID_Type_Account;
                 Entities.Employee e = getNhanVienByID_BLL(Convert.ToInt32(emp.ID_Employee.ToString()));
                 e.Name_Employee = emp.Name_Employee;

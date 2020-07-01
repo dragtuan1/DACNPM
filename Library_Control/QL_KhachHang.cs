@@ -17,11 +17,11 @@ namespace DACNPM.Library_Control
         public QL_KhachHang()
         {
             InitializeComponent();
-<<<<<<< HEAD
+
             DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM(); 
-=======
-            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM().Select(p => new { p.CMND, p.Customer_Address, p.Customer_Name, p.ID_Customer, p.Phone }).ToList(); 
->>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
+
+            DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM(); 
+
         }
         private void btn_add_Click(object sender, EventArgs e)
         {           
@@ -35,21 +35,15 @@ namespace DACNPM.Library_Control
             if (BLL_QLKH.Instance.CheckIn4_CTMBLL(st1))
             {   
                 BLL_QLKH.Instance.AddNV_BLL(st1);
-<<<<<<< HEAD
                 DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
-            }
             
-            
-=======
-                DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM().Select(p => new { p.CMND, p.Customer_Address, p.Customer_Name, p.ID_Customer }).ToList();
-                MessageBox.Show("Thêm khách hàng thành công");
             }
             else
             {
                 MessageBox.Show("Thêm khách hàng thất bại");
                 return;
             }
->>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
+
         }
         private void btn_delete_Click(object sender, EventArgs e)
         {

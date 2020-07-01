@@ -123,37 +123,9 @@
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
-<<<<<<< HEAD
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(685, 375);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 37);
-            this.comboBox2.TabIndex = 50;
-            // 
-            // btn_Sort
-            // 
-            this.btn_Sort.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_Sort.FlatAppearance.BorderSize = 0;
-            this.btn_Sort.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Sort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sort.Location = new System.Drawing.Point(510, 371);
-            this.btn_Sort.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Sort.Name = "btn_Sort";
-            this.btn_Sort.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.btn_Sort.Size = new System.Drawing.Size(110, 40);
-            this.btn_Sort.TabIndex = 49;
-            this.btn_Sort.Text = "     Sort";
-            this.btn_Sort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sort.UseVisualStyleBackColor = false;
-            // 
-=======
->>>>>>> d717fd6d5f3232f0ec76f64e32898b413adbba99
-            // txtSearch
-            // 
+
+ 
+
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(685, 310);
