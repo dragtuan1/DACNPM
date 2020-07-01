@@ -50,7 +50,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.DGV_QLXe = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_QLXe)).BeginInit();
@@ -140,11 +139,8 @@
             // 
             // groupBox1
             // 
-<<<<<<< HEAD
+
             this.groupBox1.Controls.Add(this.btn_AddTX);
-=======
-            this.groupBox1.Controls.Add(this.button2);
->>>>>>> 900e4b81262b2a8406965a33e535e395dc6a578f
             this.groupBox1.Controls.Add(this.cbb_Driver);
             this.groupBox1.Controls.Add(this.cbb_Type_Vehicle);
             this.groupBox1.Controls.Add(this.btn_reset);
@@ -322,24 +318,7 @@
             this.DGV_QLXe.TabIndex = 76;
             this.DGV_QLXe.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_QLXe_RowHeaderMouseClick);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(417, 282);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(155, 45);
-            this.button2.TabIndex = 76;
-            this.button2.Text = "         Tìm Kiếm";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+
             // 
             // QL_Vehicle
             // 
@@ -380,10 +359,10 @@
         private System.Windows.Forms.DataGridView DGV_QLXe;
         private System.Windows.Forms.ComboBox cbb_Type_Vehicle;
         private System.Windows.Forms.ComboBox cbb_Driver;
-<<<<<<< HEAD
+
         private System.Windows.Forms.Button btn_AddTX;
-=======
-        private System.Windows.Forms.Button button2;
->>>>>>> 900e4b81262b2a8406965a33e535e395dc6a578f
+
+ 
+
     }
 }

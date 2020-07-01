@@ -118,7 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-<<<<<<< HEAD
   <data name="btn_AddTX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAApZJREFUSEvF
@@ -134,7 +133,8 @@
         8+Gitri6dVafvcvOI2swhJO1P6B4FMWvwqCY8LzBNtvgh3xctN1/dmEAd0EOP5v7Irhqsq+5VZ69fH3s
         ZCw4GVWE3n/zAZzOr8EMXlxF+tB7H3z4gedmB3fKY0x6bfoeG0YtLeifnvcyHy78lxBPl0j8BqMJYzOF
         9v4RAAAAAElFTkSuQmCC
-=======
+</value>
+  </data>
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAPZJREFUSEvt
@@ -143,7 +143,6 @@
         mhOE2pHApLZ2l9CVtuYEoWaNOV5b4zWFvrQ1JwiV2wu+o95ImElbc4JQuTjARaI5k9vLtZd2nxOUkVfm
         GwP5kPk9hYdfZHJuL/95T3K8TEpTsM0Lm+uQZlnzoczywqK6pDlNR7nsfx8JPlFNNqfpXEYikSpIkhfn
         2Z+75vVywQAAAABJRU5ErkJggg==
->>>>>>> 900e4b81262b2a8406965a33e535e395dc6a578f
 </value>
   </data>
   <data name="btn_reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
