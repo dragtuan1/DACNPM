@@ -41,6 +41,14 @@ namespace DACNPM.Library_Control
             {
                 cbbLoaiXe.Items.Add(item);
             }
+            if (cbb_HopDong.Items != null)
+            {
+                cbb_HopDong.Items.Clear();
+            }
+            foreach(Entities.Customer item in BLL_QLKH.Instance.GetADD_KH())
+            {
+                cbb_HopDong.Items.Add(item.CMND);
+            }
         }
   
         private void them_hd_Click(object sender, EventArgs e)
@@ -54,7 +62,7 @@ namespace DACNPM.Library_Control
                 {
                     BLL.QLHopDong_BLL.Instance.addHopDong_BLL(
                     (BLL.QLHopDong_BLL.Instance.getAcountByUserName_BLL(Entities.AccountLogin.getInstance().User).Employees.ToList())[0].ID_Employee,
-                    (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer,
+                    (BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(cbb_HopDong.SelectedItem.ToString())).ID_Customer,
                     ngaythem.Value,
                     ngaytra.Value,
                     0,
@@ -63,7 +71,7 @@ namespace DACNPM.Library_Control
 
                     MessageBox.Show("Them Thanh Cong");
 
-                    gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDongByIDCustomer_BLL((BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer);
+                    gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDongByIDCustomer_BLL((BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(cbb_HopDong.SelectedItem.ToString())).ID_Customer);
 
                 }
                 catch
@@ -116,7 +124,7 @@ namespace DACNPM.Library_Control
             DataGridViewSelectedRowCollection data = gw_hoadon.SelectedRows;
             if(data.Count == 1)
             {
-                txtCMND_QLHopDong.Text = (BLL.QLHopDong_BLL.Instance.getHopDongByID_BLL(Convert.ToInt32(data[0].Cells["ID_Contract"].Value.ToString()))).Customer.CMND;
+                cbb_HopDong.Text = (BLL.QLHopDong_BLL.Instance.getHopDongByID_BLL(Convert.ToInt32(data[0].Cells["ID_Contract"].Value.ToString()))).Customer.CMND;
                 ngaythem.Value = Convert.ToDateTime(data[0].Cells["Date_Borrow"].Value.ToString());
                 ngaytra.Value = Convert.ToDateTime(data[0].Cells["Date_Return"].Value.ToString());
                 txtma_hd_2.Text = data[0].Cells["ID_Contract"].Value.ToString();
@@ -271,6 +279,11 @@ namespace DACNPM.Library_Control
 
                 gw_hoadon.DataSource = contracts.Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill }).ToList();
             }
+        }
+
+        private void ngaytra_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

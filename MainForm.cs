@@ -21,7 +21,6 @@ namespace DACNPM
             Username = username;
             loadUserData();
             customDesign();
-            btnTK_LNV.Visible = false;
         //    btnMaximum.Visible = false;
             RoleLoad();
             BLL.InitForm_BLL.Instance.ReloadState();
@@ -122,7 +121,7 @@ namespace DACNPM
         private void btnQL_ChiPhi_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_ChiPhi());
+            panelMain.Controls.Add(new Library_Control.QL_ChiPhi(Username));
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -145,7 +144,9 @@ namespace DACNPM
         private void btnQL_KH_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_KhachHang());
+            Library_Control.QL_KhachHang ql = new Library_Control.QL_KhachHang();
+            ql.del += new Library_Control.QL_KhachHang.Mydel(showHopDong);
+            panelMain.Controls.Add(ql);
         }
 
         private void btnQL_TK_Click(object sender, EventArgs e)
@@ -212,13 +213,11 @@ namespace DACNPM
             }
             if (acc.ID_Type_Account == 2) 
             {
-                btnQL_TK.Visible = false;
-                btnQL_ChiPhi.Visible = false;
+            //    btnQL_ChiPhi.Visible = false;
                 btnQL_NhanVien.Visible = false;
                 btnTK_DT.Visible = false;
                 btnTK_HD.Visible = false;
-                btnTK_LNV.Visible = false;
-                panelQuanLySubmenu.Height = 200;
+                panelQuanLySubmenu.Height = 210;
                 panelThongKeSubmenu.Height = 0;
             }
             if (acc.ID_Type_Account == 3) 
@@ -229,12 +228,24 @@ namespace DACNPM
         public void showKhachHang()
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_KhachHang());
+            Library_Control.QL_KhachHang ql = new Library_Control.QL_KhachHang();
+            ql.del += new Library_Control.QL_KhachHang.Mydel(showHopDong);
+            panelMain.Controls.Add(ql);
         }
+
         public void showTaiXe()
         {
             panelMain.Controls.Clear();
+
             panelMain.Controls.Add(new Library_Control.QL_TaiXe());
+        }
+
+        public void showHopDong()
+        {
+            panelMain.Controls.Clear();
+            Library_Control.QL_HopDong ql = new Library_Control.QL_HopDong();
+            ql.del += new Library_Control.QL_HopDong.Mydel(showKhachHang);
+            panelMain.Controls.Add(ql);
         }
     }
 }

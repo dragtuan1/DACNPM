@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DACNPM.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -115,6 +116,18 @@ namespace DACNPM.BLL
                                             || p.Driver.Name_Driver.Contains(StrSearch) || p.Type_Vehicle.Name_Type.Contains(StrSearch))
                 .Select(p => new { p.ID_Vehicle, p.License_Plate, p.Driver.Name_Driver, p.Type_Vehicle.Name_Type, p.Type_Vehicle.Amount_Seat, p.Price, p.Vehicle_State });
             return list.ToList();
+        }
+        public bool CheckVehiCel_BLL(Vehicle vhc)
+        {
+            DACNPM DB = new DACNPM();
+            var List = DB.Vehicles.Where(p => p.License_Plate == vhc.License_Plate);
+            if(List.Count() != 0 )
+            {   
+                
+                MessageBox.Show("Đã tồn tại xe này");
+                return false;
+            }    
+            return true;
         }
     }
 }

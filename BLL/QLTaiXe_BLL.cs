@@ -96,15 +96,9 @@ namespace DACNPM.BLL
             }
         }
 
-        public object searchTaiXebyName_BLL(string ten)
+        public object searchTaiXebyCMND_BLL(string search)
         {
-            return db.Drivers.Where(p => p.Name_Driver.Contains(ten)).Select(p => new { p.ID_Driver, p.Name_Driver, p.Driver_Address, p.Phone, p.CMND, p.License }).ToList();
-
-        }
-
-        public object searchTaiXebyCMND_BLL(string cmnd)
-        {
-            return db.Drivers.Where(p => p.CMND == cmnd).Select(p => new { p.ID_Driver, p.Name_Driver, p.Driver_Address, p.Phone, p.CMND, p.License }).ToList();
+            return db.Drivers.Where(p => p.CMND == search || p.Name_Driver.Contains(search)).Select(p => new { p.ID_Driver, p.Name_Driver, p.Driver_Address, p.Phone, p.CMND, p.License }).ToList();
         }
         public object SearchKH_BLL(string StrSeach)
         {

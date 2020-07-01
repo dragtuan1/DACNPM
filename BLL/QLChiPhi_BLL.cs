@@ -43,7 +43,7 @@ namespace DACNPM.BLL
 
         public Entities.Vehicle getVehicleByID_BLL(int ID)
         {
-            return (db.Vehicles.Where(p => p.Type_Vehicle.ID_Type_Vehicle == ID).ToList())[0];
+            return db.Vehicles.Where(p => p.ID_Vehicle == ID).FirstOrDefault();
         }
 
         public bool UpdatePhiXeByIDXe_BLL(int id, int Price)
@@ -63,6 +63,11 @@ namespace DACNPM.BLL
         }
 
         public Object getNhanVien_BLL()
+        {
+            var NhanViens = db.Employees.Where(p=> p.Account.Type_Account.Name_Type == "NhanVien").Select(p => new { p.ID_Employee, p.Name_Employee, p.Account.Type_Account.Name_Type, p.Account.Type_Account.Salary });
+            return NhanViens.ToList();
+        }
+        public object getAllNhanVien_BLL()
         {
             var NhanViens = db.Employees.Select(p => new { p.ID_Employee, p.Name_Employee, p.Account.Type_Account.Name_Type, p.Account.Type_Account.Salary });
             return NhanViens.ToList();

@@ -99,6 +99,7 @@ namespace DACNPM.Library_Control
                 {
                     Account acc = new Account
                     {
+                        Username = txt_NameTK.Text,
                         UserPassword = BLL.BLL_QLTaiKhoan.Instance.hashPassMD5(txt_Password.Text),
                         ID_Type_Account = ((Type_Account)cbb_roleNV.SelectedItem).ID_Type_Account
                     };
@@ -108,10 +109,7 @@ namespace DACNPM.Library_Control
                         Name_Employee = txt_NameNV.Text,
                         Email = txt_Email.Text,
                         Phone = txt_Phone.Text
-                    };
-                    
-                    if (BLL.QLNhanVien_BLL.Instance.AddNV_BLL(acc, emp))
-                    {
+                    };                                  
                         BLL.QLNhanVien_BLL.Instance.UpdateNV_BLL(acc, emp);
                         MessageBox.Show("Update Thành Công ");
                         if (BLL_QLTaiKhoan.Instance.GetACC_ByUserName(username).Type_Account.Name_Type == "QuanLy")
@@ -119,11 +117,8 @@ namespace DACNPM.Library_Control
                         else
                             DGV_QLNV.DataSource = BLL.QLNhanVien_BLL.Instance.getAllEmployees_BLL();
                         Reset();
-                    }                
-                    else
-                    {
-                        MessageBox.Show("Sửa thất  bại");
-                    }
+                                    
+                   
                 }
 
             }

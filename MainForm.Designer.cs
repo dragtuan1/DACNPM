@@ -31,13 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelThongKeSubmenu = new System.Windows.Forms.Panel();
-            this.btnTK_LNV = new System.Windows.Forms.Button();
             this.btnTK_HD = new System.Windows.Forms.Button();
             this.btnTK_DT = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.panelQuanLySubmenu = new System.Windows.Forms.Panel();
             this.btnQL_NhanVien = new System.Windows.Forms.Button();
-            this.btnQL_ChiPhi = new System.Windows.Forms.Button();
             this.btnQL_Car = new System.Windows.Forms.Button();
             this.btnQL_HD = new System.Windows.Forms.Button();
             this.btnQL_KH = new System.Windows.Forms.Button();
@@ -90,7 +88,7 @@
             this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(267, 788);
             this.panelMenu.TabIndex = 0;
@@ -98,35 +96,14 @@
             // panelThongKeSubmenu
             // 
             this.panelThongKeSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.panelThongKeSubmenu.Controls.Add(this.btnTK_LNV);
             this.panelThongKeSubmenu.Controls.Add(this.btnTK_HD);
             this.panelThongKeSubmenu.Controls.Add(this.btnTK_DT);
             this.panelThongKeSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelThongKeSubmenu.Location = new System.Drawing.Point(0, 690);
-            this.panelThongKeSubmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelThongKeSubmenu.Location = new System.Drawing.Point(0, 563);
+            this.panelThongKeSubmenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelThongKeSubmenu.Name = "panelThongKeSubmenu";
-            this.panelThongKeSubmenu.Size = new System.Drawing.Size(267, 185);
+            this.panelThongKeSubmenu.Size = new System.Drawing.Size(267, 104);
             this.panelThongKeSubmenu.TabIndex = 8;
-            // 
-            // btnTK_LNV
-            // 
-            this.btnTK_LNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnTK_LNV.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnTK_LNV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTK_LNV.FlatAppearance.BorderSize = 0;
-            this.btnTK_LNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTK_LNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTK_LNV.ForeColor = System.Drawing.Color.White;
-            this.btnTK_LNV.Image = global::DACNPM.Properties.Resources.sketch___125_;
-            this.btnTK_LNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTK_LNV.Location = new System.Drawing.Point(0, 133);
-            this.btnTK_LNV.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTK_LNV.Name = "btnTK_LNV";
-            this.btnTK_LNV.Size = new System.Drawing.Size(267, 50);
-            this.btnTK_LNV.TabIndex = 7;
-            this.btnTK_LNV.Text = "      Thống kê lương NV";
-            this.btnTK_LNV.UseVisualStyleBackColor = false;
-            this.btnTK_LNV.Click += new System.EventHandler(this.btnTK_LNV_Click);
             // 
             // btnTK_HD
             // 
@@ -139,10 +116,10 @@
             this.btnTK_HD.ForeColor = System.Drawing.Color.White;
             this.btnTK_HD.Image = ((System.Drawing.Image)(resources.GetObject("btnTK_HD.Image")));
             this.btnTK_HD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTK_HD.Location = new System.Drawing.Point(0, 71);
+            this.btnTK_HD.Location = new System.Drawing.Point(0, 50);
             this.btnTK_HD.Margin = new System.Windows.Forms.Padding(0);
             this.btnTK_HD.Name = "btnTK_HD";
-            this.btnTK_HD.Size = new System.Drawing.Size(267, 62);
+            this.btnTK_HD.Size = new System.Drawing.Size(267, 50);
             this.btnTK_HD.TabIndex = 5;
             this.btnTK_HD.Text = "       Thống kê hợp đồng";
             this.btnTK_HD.UseVisualStyleBackColor = false;
@@ -162,7 +139,7 @@
             this.btnTK_DT.Location = new System.Drawing.Point(0, 0);
             this.btnTK_DT.Margin = new System.Windows.Forms.Padding(0);
             this.btnTK_DT.Name = "btnTK_DT";
-            this.btnTK_DT.Size = new System.Drawing.Size(267, 71);
+            this.btnTK_DT.Size = new System.Drawing.Size(267, 50);
             this.btnTK_DT.TabIndex = 6;
             this.btnTK_DT.Text = "       Thống kê doanh thu";
             this.btnTK_DT.UseVisualStyleBackColor = false;
@@ -177,8 +154,8 @@
             this.btnThongKe.Font = new System.Drawing.Font("Consolas", 16F);
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 617);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 490);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(267, 73);
             this.btnThongKe.TabIndex = 7;
@@ -190,17 +167,16 @@
             // 
             this.panelQuanLySubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_NhanVien);
-            this.panelQuanLySubmenu.Controls.Add(this.btnQL_ChiPhi);
-            this.panelQuanLySubmenu.Controls.Add(this.btnQL_Car);
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_HD);
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_KH);
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_TaiXe);
             this.panelQuanLySubmenu.Controls.Add(this.btnQL_TK);
+            this.panelQuanLySubmenu.Controls.Add(this.btnQL_Car);
             this.panelQuanLySubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQuanLySubmenu.Location = new System.Drawing.Point(0, 186);
-            this.panelQuanLySubmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelQuanLySubmenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelQuanLySubmenu.Name = "panelQuanLySubmenu";
-            this.panelQuanLySubmenu.Size = new System.Drawing.Size(267, 431);
+            this.panelQuanLySubmenu.Size = new System.Drawing.Size(267, 304);
             this.panelQuanLySubmenu.TabIndex = 6;
             // 
             // btnQL_NhanVien
@@ -214,34 +190,14 @@
             this.btnQL_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btnQL_NhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_NhanVien.Image")));
             this.btnQL_NhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_NhanVien.Location = new System.Drawing.Point(0, 372);
+            this.btnQL_NhanVien.Location = new System.Drawing.Point(0, 250);
             this.btnQL_NhanVien.Margin = new System.Windows.Forms.Padding(0);
             this.btnQL_NhanVien.Name = "btnQL_NhanVien";
-            this.btnQL_NhanVien.Size = new System.Drawing.Size(267, 62);
+            this.btnQL_NhanVien.Size = new System.Drawing.Size(267, 50);
             this.btnQL_NhanVien.TabIndex = 4;
             this.btnQL_NhanVien.Text = "       Quản lý nhân viên";
             this.btnQL_NhanVien.UseVisualStyleBackColor = false;
             this.btnQL_NhanVien.Click += new System.EventHandler(this.btnQL_NhanVien_Click);
-            // 
-            // btnQL_ChiPhi
-            // 
-            this.btnQL_ChiPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(103)))), ((int)(((byte)(107)))), ((int)(((byte)(120)))));
-            this.btnQL_ChiPhi.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnQL_ChiPhi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQL_ChiPhi.FlatAppearance.BorderSize = 0;
-            this.btnQL_ChiPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQL_ChiPhi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQL_ChiPhi.ForeColor = System.Drawing.Color.White;
-            this.btnQL_ChiPhi.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_ChiPhi.Image")));
-            this.btnQL_ChiPhi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_ChiPhi.Location = new System.Drawing.Point(0, 310);
-            this.btnQL_ChiPhi.Margin = new System.Windows.Forms.Padding(0);
-            this.btnQL_ChiPhi.Name = "btnQL_ChiPhi";
-            this.btnQL_ChiPhi.Size = new System.Drawing.Size(267, 62);
-            this.btnQL_ChiPhi.TabIndex = 5;
-            this.btnQL_ChiPhi.Text = "   Quản lý chi phí";
-            this.btnQL_ChiPhi.UseVisualStyleBackColor = false;
-            this.btnQL_ChiPhi.Click += new System.EventHandler(this.btnQL_ChiPhi_Click);
             // 
             // btnQL_Car
             // 
@@ -254,10 +210,10 @@
             this.btnQL_Car.ForeColor = System.Drawing.Color.White;
             this.btnQL_Car.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_Car.Image")));
             this.btnQL_Car.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_Car.Location = new System.Drawing.Point(0, 248);
+            this.btnQL_Car.Location = new System.Drawing.Point(0, 0);
             this.btnQL_Car.Margin = new System.Windows.Forms.Padding(0);
             this.btnQL_Car.Name = "btnQL_Car";
-            this.btnQL_Car.Size = new System.Drawing.Size(267, 62);
+            this.btnQL_Car.Size = new System.Drawing.Size(267, 50);
             this.btnQL_Car.TabIndex = 6;
             this.btnQL_Car.Text = "          Quản lý xe";
             this.btnQL_Car.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,10 +233,10 @@
             this.btnQL_HD.ForeColor = System.Drawing.Color.White;
             this.btnQL_HD.Image = global::DACNPM.Properties.Resources.fileboard___1801_;
             this.btnQL_HD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_HD.Location = new System.Drawing.Point(0, 186);
+            this.btnQL_HD.Location = new System.Drawing.Point(0, 200);
             this.btnQL_HD.Margin = new System.Windows.Forms.Padding(0);
             this.btnQL_HD.Name = "btnQL_HD";
-            this.btnQL_HD.Size = new System.Drawing.Size(267, 62);
+            this.btnQL_HD.Size = new System.Drawing.Size(267, 50);
             this.btnQL_HD.TabIndex = 8;
             this.btnQL_HD.Text = "       Quản lý hợp đồng";
             this.btnQL_HD.UseVisualStyleBackColor = false;
@@ -297,10 +253,10 @@
             this.btnQL_KH.ForeColor = System.Drawing.Color.White;
             this.btnQL_KH.Image = global::DACNPM.Properties.Resources.emoji_happy_circle___540_;
             this.btnQL_KH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_KH.Location = new System.Drawing.Point(0, 124);
+            this.btnQL_KH.Location = new System.Drawing.Point(0, 150);
             this.btnQL_KH.Margin = new System.Windows.Forms.Padding(0);
             this.btnQL_KH.Name = "btnQL_KH";
-            this.btnQL_KH.Size = new System.Drawing.Size(267, 62);
+            this.btnQL_KH.Size = new System.Drawing.Size(267, 50);
             this.btnQL_KH.TabIndex = 2;
             this.btnQL_KH.Text = "        Quản lý khách hàng";
             this.btnQL_KH.UseVisualStyleBackColor = false;
@@ -317,10 +273,10 @@
             this.btnQL_TaiXe.ForeColor = System.Drawing.Color.White;
             this.btnQL_TaiXe.Image = ((System.Drawing.Image)(resources.GetObject("btnQL_TaiXe.Image")));
             this.btnQL_TaiXe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_TaiXe.Location = new System.Drawing.Point(0, 62);
+            this.btnQL_TaiXe.Location = new System.Drawing.Point(0, 100);
             this.btnQL_TaiXe.Margin = new System.Windows.Forms.Padding(0);
             this.btnQL_TaiXe.Name = "btnQL_TaiXe";
-            this.btnQL_TaiXe.Size = new System.Drawing.Size(267, 62);
+            this.btnQL_TaiXe.Size = new System.Drawing.Size(267, 50);
             this.btnQL_TaiXe.TabIndex = 3;
             this.btnQL_TaiXe.Text = " Quản lý tài xế";
             this.btnQL_TaiXe.UseVisualStyleBackColor = false;
@@ -337,10 +293,10 @@
             this.btnQL_TK.ForeColor = System.Drawing.Color.White;
             this.btnQL_TK.Image = global::DACNPM.Properties.Resources.profile_minus___1340_;
             this.btnQL_TK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQL_TK.Location = new System.Drawing.Point(0, 0);
+            this.btnQL_TK.Location = new System.Drawing.Point(0, 50);
             this.btnQL_TK.Margin = new System.Windows.Forms.Padding(0);
             this.btnQL_TK.Name = "btnQL_TK";
-            this.btnQL_TK.Size = new System.Drawing.Size(267, 62);
+            this.btnQL_TK.Size = new System.Drawing.Size(267, 50);
             this.btnQL_TK.TabIndex = 7;
             this.btnQL_TK.Text = "       Quản lý tài khoản";
             this.btnQL_TK.UseVisualStyleBackColor = false;
@@ -358,7 +314,7 @@
             this.btnQuanLy.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLy.Image")));
             this.btnQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLy.Location = new System.Drawing.Point(0, 129);
-            this.btnQuanLy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLy.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuanLy.Name = "btnQuanLy";
             this.btnQuanLy.Size = new System.Drawing.Size(267, 57);
             this.btnQuanLy.TabIndex = 5;
@@ -376,7 +332,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 129);
             this.panel1.TabIndex = 4;
@@ -436,7 +392,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(83, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -471,7 +427,7 @@
             this.panelToolbar.Controls.Add(this.btnSlide);
             this.panelToolbar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelToolbar.Location = new System.Drawing.Point(267, 0);
-            this.panelToolbar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelToolbar.Margin = new System.Windows.Forms.Padding(4);
             this.panelToolbar.Name = "panelToolbar";
             this.panelToolbar.Size = new System.Drawing.Size(1120, 62);
             this.panelToolbar.TabIndex = 1;
@@ -481,7 +437,7 @@
             // 
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.Location = new System.Drawing.Point(56, 15);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(40, 37);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -494,7 +450,7 @@
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(1003, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(33, 31);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -507,7 +463,7 @@
             this.btnResize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnResize.Image = ((System.Drawing.Image)(resources.GetObject("btnResize.Image")));
             this.btnResize.Location = new System.Drawing.Point(1044, 0);
-            this.btnResize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnResize.Margin = new System.Windows.Forms.Padding(4);
             this.btnResize.Name = "btnResize";
             this.btnResize.Size = new System.Drawing.Size(33, 31);
             this.btnResize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -521,7 +477,7 @@
             this.btnMaximum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximum.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximum.Image")));
             this.btnMaximum.Location = new System.Drawing.Point(1044, 0);
-            this.btnMaximum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaximum.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximum.Name = "btnMaximum";
             this.btnMaximum.Size = new System.Drawing.Size(33, 31);
             this.btnMaximum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -534,7 +490,7 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(1085, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(33, 31);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -547,7 +503,7 @@
             this.btnSlide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSlide.Image = ((System.Drawing.Image)(resources.GetObject("btnSlide.Image")));
             this.btnSlide.Location = new System.Drawing.Point(8, 15);
-            this.btnSlide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSlide.Margin = new System.Windows.Forms.Padding(4);
             this.btnSlide.Name = "btnSlide";
             this.btnSlide.Size = new System.Drawing.Size(40, 37);
             this.btnSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -560,7 +516,7 @@
             this.panelMain.Controls.Add(this.panel);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(267, 62);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1120, 726);
             this.panelMain.TabIndex = 2;
@@ -572,7 +528,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.Image = ((System.Drawing.Image)(resources.GetObject("panel.Image")));
             this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1120, 726);
             this.panel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -589,7 +545,7 @@
             this.Controls.Add(this.panelToolbar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -636,14 +592,12 @@
         private System.Windows.Forms.Button btnQL_KH;
         private System.Windows.Forms.Button btnQL_TaiXe;
         private System.Windows.Forms.Button btnQL_NhanVien;
-        private System.Windows.Forms.Button btnQL_ChiPhi;
         private System.Windows.Forms.Button btnQL_Car;
         private System.Windows.Forms.Button btnQuanLy;
         private System.Windows.Forms.Panel panelThongKeSubmenu;
         private System.Windows.Forms.Button btnTK_HD;
         private System.Windows.Forms.Button btnTK_DT;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnTK_LNV;
         private System.Windows.Forms.Button btnQL_HD;
         private System.Windows.Forms.Button btnQL_TK;
         private System.Windows.Forms.Label lb_Name;

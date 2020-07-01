@@ -49,6 +49,13 @@ namespace DACNPM
             return list;
 
         }
+        public List<Customer> GetADD_KH()
+        {
+            DACNPM DB = new DACNPM();
+            var list = DB.Customers.ToList();
+            return list;
+        }
+
         public bool DelNV_BLL(List<int> List_ID)
         {
             try

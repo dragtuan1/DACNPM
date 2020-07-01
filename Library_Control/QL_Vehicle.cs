@@ -16,6 +16,10 @@ namespace DACNPM.Library_Control
         }
         public void setView()
         {
+            if(cbb_Driver.SelectedItem != null)
+            {
+                cbb_Driver.Items.Clear();    
+            }    
             foreach (Type_Vehicle i in BLL.QLXe_BLL.Instance.getTypeVehiCle_BLL())
             {
                 cbb_Type_Vehicle.Items.Add(i);
@@ -67,9 +71,15 @@ namespace DACNPM.Library_Control
                     Price = Convert.ToInt32(txt_Gia.Text),
                     Vehicle_State = false
                 };
-                BLL.QLXe_BLL.Instance.AddVehicle_BLL(veh);
-                DGV_QLXe.DataSource = BLL.QLXe_BLL.Instance.getVehicles_BLL();
-                Reset();
+                if (BLL.QLXe_BLL.Instance.CheckVehiCel_BLL(veh))
+                {
+                    BLL.QLXe_BLL.Instance.AddVehicle_BLL(veh);
+                    MessageBox.Show("Add thành công");
+                    DGV_QLXe.DataSource = BLL.QLXe_BLL.Instance.getVehicles_BLL();
+                    Reset();
+                }
+                
+               
             }
         }
         private void btn_delete_Click(object sender, EventArgs e)
@@ -160,6 +170,17 @@ namespace DACNPM.Library_Control
         private void btn_AddTX_Click(object sender, EventArgs e)
         {
             del();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string strSreach = txt_Search.Text;
+            DGV_QLXe.DataSource = BLL.QLXe_BLL.Instance.SearchVehicle_BLL(strSreach);
+
         }
     }
 }

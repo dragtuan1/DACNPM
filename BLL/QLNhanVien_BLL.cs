@@ -59,10 +59,14 @@ namespace DACNPM.BLL
         {
             return db.Type_Accounts.ToList();
         }
-        public Entities.Account getAccountByID_BLL(int ID)
+        public Entities.Account getAccountByID_Type_BLL(int ID)
         {
             return (db.Accounts.Where(p => p.Type_Account.ID_Type_Account == ID).FirstOrDefault());
         }
+        //public Entities.Account getAccountByUsername_BLL(string username)
+        //{
+        //    return (db.Accounts.Where(p => p.Username == username).FirstOrDefault());
+        //}
         public Entities.Account getAccountByUsername_BLL(string username)
         {
             return (db.Accounts.Where(p => p.Username == username).FirstOrDefault());
@@ -112,8 +116,8 @@ namespace DACNPM.BLL
         {
             try
             {
-                Entities.Account a = getAccountByID_BLL(Convert.ToInt32(acc.ID_Type_Account.ToString()));
-                a.UserPassword = BLL_QLTaiKhoan.Instance.hashPassMD5( acc.UserPassword);
+                Entities.Account a = getAccountByUsername_BLL(acc.Username);
+                a.UserPassword = acc.UserPassword;
                 a.ID_Type_Account = acc.ID_Type_Account;
                 Entities.Employee e = getNhanVienByID_BLL(Convert.ToInt32(emp.ID_Employee.ToString()));
                 e.Name_Employee = emp.Name_Employee;
