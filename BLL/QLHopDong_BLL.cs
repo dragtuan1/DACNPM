@@ -137,6 +137,13 @@ namespace DACNPM.BLL
             return hopdong;
         }
 
+        public Object getHopDongByCNMD_BLL(String cmnd)
+        {
+            var hopDong = db.Contracts.Where(p => p.Customer.CMND == cmnd).Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill });
+            return hopDong.ToList();
+        }
+
+
         public bool UpdateHopDong_BLL(int id, DateTime borrow, DateTime retun)
         {
             try
@@ -210,6 +217,37 @@ namespace DACNPM.BLL
         {
             var list = db.Vehicles.Where(p => p.Vehicle_State == false);
             return list.ToList();
+        }
+
+        public List<Entities.Contract> sortDateContract_BLL(List<int> id)
+        {
+            List<Entities.Contract> contracts = db.Contracts.ToList();
+            List<Entities.Contract> temp = new List<Entities.Contract>();
+            foreach(Entities.Contract item in contracts)
+            {
+                foreach(int idcontract in id)
+                {
+                    if(idcontract == item.ID_Contract)
+                    {
+                        temp.Add(item);
+                    }
+                }
+            }
+
+            for (int i = 0; i < temp.Count; i++)
+            {
+                for (int j = i + 1; j < temp.Count; j++)
+                {
+                    if(temp[i].Date_Return < temp[j].Date_Return)
+                    {
+                        Entities.Contract tam = temp[i];
+                        temp[i] = temp[j];
+                        temp[j] = tam;
+                    }
+                }
+            }
+
+            return temp;
         }
     }
 

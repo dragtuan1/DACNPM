@@ -40,6 +40,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.gw_chitiethoadon = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCMND_QLHopDong = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@
             this.them_hd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.gw_hoadon = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSort = new System.Windows.Forms.Button();
             this.pn_chitiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gw_chitiethoadon)).BeginInit();
             this.panel3.SuspendLayout();
@@ -186,6 +187,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnSort);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtCMND_QLHopDong);
@@ -206,6 +208,22 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1021, 346);
             this.panel3.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Info;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 266);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(181, 40);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "         Thêm mới khách hàng";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -288,6 +306,7 @@
             this.cbbType.FormattingEnabled = true;
             this.cbbType.Items.AddRange(new object[] {
             "SĐT",
+            "CMND",
             "Tên khách hàng"});
             this.cbbType.Location = new System.Drawing.Point(117, 211);
             this.cbbType.Name = "cbbType";
@@ -394,21 +413,22 @@
             this.gw_hoadon.TabIndex = 0;
             this.gw_hoadon.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gw_hoadon_RowHeaderMouseClick);
             // 
-            // button2
+            // btnSort
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 266);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(181, 40);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "         Thêm mới khách hàng";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSort.BackColor = System.Drawing.SystemColors.Info;
+            this.btnSort.FlatAppearance.BorderSize = 0;
+            this.btnSort.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSort.Image = ((System.Drawing.Image)(resources.GetObject("btnSort.Image")));
+            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSort.Location = new System.Drawing.Point(766, 266);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.btnSort.Size = new System.Drawing.Size(110, 40);
+            this.btnSort.TabIndex = 62;
+            this.btnSort.Text = "         Sắp xếp";
+            this.btnSort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // QL_HopDong
             // 
@@ -456,5 +476,6 @@
         private System.Windows.Forms.ComboBox cbbXe;
         private System.Windows.Forms.ComboBox cbbLoaiXe;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSort;
     }
 }
