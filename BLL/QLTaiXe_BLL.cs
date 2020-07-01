@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DACNPM.BLL
 {
@@ -30,54 +31,78 @@ namespace DACNPM.BLL
             db = new DACNPM();
         }
 
-        public Object getAllTaiXe_BLL()
+        public object getAllTaiXe_BLL()
         {
             var taixes = db.Drivers.Select(p => new { p.ID_Driver, p.Name_Driver, p.Driver_Address, p.Phone, p.CMND, p.License });
             return taixes.ToList();
         }
 
-        public void addTaiXe(String adress, String cmnd, String name, String phone, String banglai, bool state)
+        public bool addTaiXe(Entities.Driver driver)
         {
-            Entities.Driver driver = new Entities.Driver
+            try
             {
-                Driver_Address = adress,
-                CMND = cmnd,
-                Name_Driver = name,
-                Phone = phone,
-                License = banglai,
-                Driver_State = state
-            };
-
-            db.Drivers.Add(driver);
-            db.SaveChanges();
+                db.Drivers.Add(driver);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
         }
 
-        public void updateTaiXe_BLL(int idTaiXe, String adress, String cmnd, String name, String phone, String banglai, bool state)
+        public bool updateTaiXe_BLL(Entities.Driver driver)
         {
-            Entities.Driver driver = db.Drivers.Where(p => p.ID_Driver == idTaiXe).FirstOrDefault();
-            driver.Name_Driver = name;
-            driver.Driver_Address = adress;
-            driver.CMND = cmnd;
-            driver.Phone = phone;
-            driver.License = banglai;
-            driver.Driver_State = state;
-            db.SaveChanges();
+            try
+            {
+                Entities.Driver dr = db.Drivers.Where(p => p.ID_Driver == driver.ID_Driver).FirstOrDefault();
+                dr.Name_Driver = driver.Name_Driver;
+                dr.Driver_Address = driver.Driver_Address;
+                dr.CMND = driver.CMND;
+                dr.Phone = driver.Phone;
+                dr.License = driver.License;
+                dr.Driver_State = driver.Driver_State;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
         }
 
-        public void deleteTaiXeByID_BLL(int id)
+        public bool deleteTaiXeByID_BLL(List<int> List_ID)
         {
-            Entities.Driver driver = db.Drivers.Where(p => p.ID_Driver == id).FirstOrDefault();
-            db.Drivers.Remove(driver);
-            db.SaveChanges();
+            try
+            {
+                foreach (Entities.Driver i in db.Drivers)
+                {
+                    foreach (int j in List_ID.ToArray())
+                    {
+                        if (i.ID_Driver == j)
+                        {
+                            db.Drivers.Remove(i);
+                        }
+                    }
+                }
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public Object searchTaiXebyName_BLL(string ten)
+        public object searchTaiXebyName_BLL(string ten)
         {
             return db.Drivers.Where(p => p.Name_Driver.Contains(ten)).Select(p => new { p.ID_Driver, p.Name_Driver, p.Driver_Address, p.Phone, p.CMND, p.License }).ToList();
 
         }
 
-        public Object searchTaiXebyCMND_BLL(string cmnd)
+        public object searchTaiXebyCMND_BLL(string cmnd)
         {
             return db.Drivers.Where(p => p.CMND == cmnd).Select(p => new { p.ID_Driver, p.Name_Driver, p.Driver_Address, p.Phone, p.CMND, p.License }).ToList();
         }
@@ -88,6 +113,42 @@ namespace DACNPM.BLL
                        .Select(c => new { c.ID_Driver, c.CMND, c.Driver_Address, c.Name_Driver, c.Phone });
             
             return List.ToList();
+        }
+        public bool CheckIn4_TaiXe_BLL(Entities.Driver driver)
+        {
+
+            try
+            {
+                var list = db.Drivers.Where(p => p.Phone == driver.Phone).ToList();
+                if (list.Count() != 0)
+                {
+                    MessageBox.Show("Đã tồn tại số điện thoại này");
+                    return false; // Trùng số điện thoại
+
+                }
+                var list1 = db.Drivers.Where(p => p.CMND == driver.CMND).ToList();
+                if (list1.Count() != 0)
+                {
+                    MessageBox.Show("Đã tồn tại số CMND này");
+                    return false; // Trung cmnd
+                }
+                var list2 = db.Drivers.Where(p => p.License == driver.License).ToList();
+                if (list2.Count() != 0)
+                {
+                    MessageBox.Show("Đã tồn tại số bằng lái xe này");
+                    return false; // Trung cmnd
+                }
+                if (driver.Phone.Length > 11)
+                {
+                    MessageBox.Show("Số Điện Thoại Vượt Quá 11 Số");
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return true; // hợp lệ
         }
     }
 }

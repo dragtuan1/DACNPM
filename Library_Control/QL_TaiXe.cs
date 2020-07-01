@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DACNPM.Library_Control
@@ -20,24 +14,34 @@ namespace DACNPM.Library_Control
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            try
+            if (txtName.Text == "" || txtDiaChi.Text == "" || txtSdt.Text == "" || txtCMND.Text == "" || txtBangLai.Text == "")
             {
-                BLL.QLTaiXe_BLL.Instance.addTaiXe(txtDiaChi.Text, txtCMND.Text,
-                    txtName.Text, txtSdt.Text, txtBangLai.Text, false);
-
-                gw_taixe.DataSource = BLL.QLTaiXe_BLL.Instance.getAllTaiXe_BLL();
+                MessageBox.Show("Vui long nhap day du thong tin");
             }
-            catch
+            else
             {
-                MessageBox.Show("Error");
+                Entities.Driver driver = new Entities.Driver
+                {
+                    Name_Driver = txtName.Text,
+                    Driver_Address = txtDiaChi.Text,
+                    Phone = txtSdt.Text,
+                    CMND = txtCMND.Text,
+                    License = txtBangLai.Text,
+                    Driver_State = false
+                };
+                if (BLL.QLTaiXe_BLL.Instance.CheckIn4_TaiXe_BLL(driver))
+                {
+                    if (BLL.QLTaiXe_BLL.Instance.addTaiXe(driver))
+                        MessageBox.Show("Thêm tài xế thành công");
+                    gw_taixe.DataSource = BLL.QLTaiXe_BLL.Instance.getAllTaiXe_BLL();
+                }
             }
-
         }
 
         private void gw_taixe_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridViewSelectedRowCollection data = gw_taixe.SelectedRows;
-            if(data.Count == 1)
+            if (data.Count == 1)
             {
                 txtIdTaiXe.Text = data[0].Cells["ID_Driver"].Value.ToString();
                 txtName.Text = data[0].Cells["Name_Driver"].Value.ToString();
@@ -51,58 +55,58 @@ namespace DACNPM.Library_Control
         private void btn_edit_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection data = gw_taixe.SelectedRows;
-            if(data.Count == 1)
+            if (data.Count == 1)
             {
-                try
+                if (txtName.Text == "" || txtDiaChi.Text == "" || txtSdt.Text == "" || txtCMND.Text == "" || txtBangLai.Text == "")
                 {
-                    BLL.QLTaiXe_BLL.Instance.updateTaiXe_BLL(Convert.ToInt32(txtIdTaiXe.Text),
-                            txtDiaChi.Text, txtCMND.Text, txtName.Text, txtSdt.Text,
-                            txtBangLai.Text, false);
+                    MessageBox.Show("Vui long nhap day du thong tin");
+                }
+                else
+                {
+                    Entities.Driver driver = new Entities.Driver
+                    {
+                        ID_Driver = Convert.ToInt32(data[0].Cells["ID_Driver"].Value.ToString()),
+                        Name_Driver = txtName.Text,
+                        Driver_Address = txtDiaChi.Text,
+                        Phone = txtSdt.Text,
+                        CMND = txtCMND.Text,
+                        License = txtBangLai.Text,
+                        Driver_State = false
+                    };
+                    if (BLL.QLTaiXe_BLL.Instance.updateTaiXe_BLL(driver))
+                        MessageBox.Show("Cập nhật tài xế thành công");
                     gw_taixe.DataSource = BLL.QLTaiXe_BLL.Instance.getAllTaiXe_BLL();
                 }
-                catch
-                {
-                    MessageBox.Show("Error");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Error");
             }
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection data = gw_taixe.SelectedRows;
-            if (data.Count > 0)
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                try
+                if (data.Count > 0)
                 {
-                    foreach (DataGridViewRow i in data)
+                    List<int> List_ID = new List<int>();
+                    foreach (DataGridViewRow j in data)
                     {
-                        int id = Convert.ToInt32(i.Cells["ID_Driver"].Value.ToString());
-                        BLL.QLTaiXe_BLL.Instance.deleteTaiXeByID_BLL(id);
+                        List_ID.Add((int)j.Cells["ID_Driver"].Value);
                     }
-
+                    BLL.QLTaiXe_BLL.Instance.deleteTaiXeByID_BLL(List_ID);
                     gw_taixe.DataSource = BLL.QLTaiXe_BLL.Instance.getAllTaiXe_BLL();
-
                 }
-                catch
+                else
                 {
                     MessageBox.Show("Error");
                 }
-
-            }
-            else
-            {
-                MessageBox.Show("Error");
             }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int index = cbbType.SelectedIndex;
-            if(index == 0)
+            if (index == 0)
             {
                 //cmnd
                 try
@@ -114,12 +118,13 @@ namespace DACNPM.Library_Control
                     MessageBox.Show("Error");
                 }
 
-            } else if(index == 1)
+            }
+            else if (index == 1)
             {
                 //ten
                 try
                 {
-                  
+
                     gw_taixe.DataSource = BLL.QLTaiXe_BLL.Instance.searchTaiXebyName_BLL(txtSearch.Text);
                 }
                 catch

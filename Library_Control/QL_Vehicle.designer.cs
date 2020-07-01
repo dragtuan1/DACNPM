@@ -39,6 +39,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_AddTX = new System.Windows.Forms.Button();
             this.cbb_Driver = new System.Windows.Forms.ComboBox();
             this.cbb_Type_Vehicle = new System.Windows.Forms.ComboBox();
             this.btn_Search = new System.Windows.Forms.Button();
@@ -139,6 +140,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_AddTX);
             this.groupBox1.Controls.Add(this.cbb_Driver);
             this.groupBox1.Controls.Add(this.cbb_Type_Vehicle);
             this.groupBox1.Controls.Add(this.btn_Search);
@@ -162,6 +164,24 @@
             this.groupBox1.Size = new System.Drawing.Size(1024, 413);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btn_AddTX
+            // 
+            this.btn_AddTX.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_AddTX.FlatAppearance.BorderSize = 0;
+            this.btn_AddTX.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddTX.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddTX.Image")));
+            this.btn_AddTX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_AddTX.Location = new System.Drawing.Point(424, 344);
+            this.btn_AddTX.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AddTX.Name = "btn_AddTX";
+            this.btn_AddTX.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btn_AddTX.Size = new System.Drawing.Size(147, 49);
+            this.btn_AddTX.TabIndex = 76;
+            this.btn_AddTX.Text = "        Thêm Mới                Tài Xế";
+            this.btn_AddTX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_AddTX.UseVisualStyleBackColor = false;
+            this.btn_AddTX.Click += new System.EventHandler(this.btn_AddTX_Click);
             // 
             // cbb_Driver
             // 
@@ -357,5 +377,6 @@
         private System.Windows.Forms.DataGridView DGV_QLXe;
         private System.Windows.Forms.ComboBox cbb_Type_Vehicle;
         private System.Windows.Forms.ComboBox cbb_Driver;
+        private System.Windows.Forms.Button btn_AddTX;
     }
 }
