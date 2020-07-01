@@ -45,7 +45,7 @@ namespace DACNPM.Library_Control
   
         private void them_hd_Click(object sender, EventArgs e)
         {
-            if(ngaythem.Value >= ngaytra.Value)
+            if(ngaythem.Value >= ngaytra.Value || ngaythem.Value < DateTime.Now)
             {
                 MessageBox.Show("Lỗi ngày thực thi hợp đồng");
             } else
@@ -63,7 +63,7 @@ namespace DACNPM.Library_Control
 
                     MessageBox.Show("Them Thanh Cong");
 
-                    gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDong_BLL();
+                    gw_hoadon.DataSource = BLL.QLHopDong_BLL.Instance.getHopDongByIDCustomer_BLL((BLL.QLHopDong_BLL.Instance.getCustomerByCMND_BLL(txtCMND_QLHopDong.Text)).ID_Customer);
 
                 }
                 catch
