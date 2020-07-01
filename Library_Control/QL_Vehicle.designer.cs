@@ -139,10 +139,7 @@
             // 
             // groupBox1
             // 
-<<<<<<< HEAD
 
-=======
->>>>>>> 1c406fd9b274a447acec760c5ff923b65b71c911
             this.groupBox1.Controls.Add(this.btn_AddTX);
             this.groupBox1.Controls.Add(this.cbb_Driver);
             this.groupBox1.Controls.Add(this.cbb_Type_Vehicle);
@@ -362,15 +359,12 @@
         private System.Windows.Forms.DataGridView DGV_QLXe;
         private System.Windows.Forms.ComboBox cbb_Type_Vehicle;
         private System.Windows.Forms.ComboBox cbb_Driver;
-<<<<<<< HEAD
 
         private System.Windows.Forms.Button btn_AddTX;
 
  
 
-=======
-        private System.Windows.Forms.Button btn_AddTX;
         private System.Windows.Forms.Button button2;
->>>>>>> 1c406fd9b274a447acec760c5ff923b65b71c911
+
     }
 }
