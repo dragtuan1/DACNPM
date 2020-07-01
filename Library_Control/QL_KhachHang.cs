@@ -64,9 +64,9 @@ namespace DACNPM.Library_Control
                     Customer_Name = Txt_TenKH.Text,
                     Phone = Txt_Phone.Text,
                 };
-                if (BLL_QLKH.Instance.CheckCMND_Phone(st1.CMND, st1.Phone))
+                if (BLL_QLKH.Instance.UpdateNV_BLL(st1))
                 {
-                    BLL_QLKH.Instance.UpdateNV_BLL(st1);
+                    
                     MessageBox.Show("Update Thành Công ");
                     DGV_QLKH.DataSource = BLL_QLKH.Instance.GetALL_CTM();
                 }
@@ -127,6 +127,13 @@ namespace DACNPM.Library_Control
         private void button2_Click(object sender, EventArgs e)
         {
             del();
+        }
+
+        private void btnAddContract_Click(object sender, EventArgs e)
+        {
+   
+            del();
+      
         }
     }
 }

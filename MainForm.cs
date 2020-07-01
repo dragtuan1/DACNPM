@@ -144,17 +144,21 @@ namespace DACNPM
         private void btnQL_KH_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            Library_Control.QL_KhachHang ql = new Library_Control.QL_KhachHang();
-            ql.del += new Library_Control.QL_KhachHang.Mydel(showHopDong);
-            panelMain.Controls.Add(ql);
+
+            //Library_Control.QL_KhachHang ql = new Library_Control.QL_KhachHang();
+            //ql.del += new Library_Control.QL_KhachHang.Mydel(showHopDong);
+            //panelMain.Controls.Add(ql);
+
+            Library_Control.QL_KhachHang qlkh = new Library_Control.QL_KhachHang();
+            qlkh.del += new Library_Control.QL_KhachHang.Mydel(showHopDong);
+            panelMain.Controls.Add(qlkh);
+
         }
 
         private void btnQL_TK_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Library_Control.QL_In4_TaiKhoan(Username,ID_NV));
-
-            
         }
 
         private void btnQL_HD_Click(object sender, EventArgs e)
@@ -228,7 +232,7 @@ namespace DACNPM
         public void showKhachHang()
         {
             panelMain.Controls.Clear();
-            Library_Control.QL_KhachHang ql = new Library_Control.QL_KhachHang();
+             Library_Control.QL_KhachHang ql = new Library_Control.QL_KhachHang();
             ql.del += new Library_Control.QL_KhachHang.Mydel(showHopDong);
             panelMain.Controls.Add(ql);
         }
@@ -236,7 +240,6 @@ namespace DACNPM
         public void showTaiXe()
         {
             panelMain.Controls.Clear();
-
             panelMain.Controls.Add(new Library_Control.QL_TaiXe());
         }
 
