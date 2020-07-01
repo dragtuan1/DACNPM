@@ -32,7 +32,6 @@
             this.gw_taixe = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.txtBangLai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdTaiXe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gw_taixe)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,13 +80,13 @@
             this.label6.Location = new System.Drawing.Point(29, 441);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 21);
+            this.label6.Size = new System.Drawing.Size(242, 28);
             this.label6.TabIndex = 25;
             this.label6.Text = "Danh Sách Chi Tiết Tài Xế";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.txtBangLai);
             this.groupBox1.Controls.Add(this.label4);
@@ -113,23 +113,6 @@
             this.groupBox1.Size = new System.Drawing.Size(1051, 394);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Info;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(201, 344);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(155, 49);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtSearch
             // 
@@ -161,7 +144,7 @@
             this.label4.Location = new System.Drawing.Point(539, 222);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 34;
             this.label4.Text = "Bằng Lái:";
             // 
@@ -184,7 +167,7 @@
             this.label1.Location = new System.Drawing.Point(539, 154);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 32;
             this.label1.Text = "CMND:";
             // 
@@ -207,7 +190,7 @@
             this.label11.Location = new System.Drawing.Point(536, 92);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 16);
+            this.label11.Size = new System.Drawing.Size(119, 20);
             this.label11.TabIndex = 30;
             this.label11.Text = "Số Điện Thoại:";
             // 
@@ -219,7 +202,7 @@
             this.label8.Location = new System.Drawing.Point(31, 211);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 16);
+            this.label8.Size = new System.Drawing.Size(69, 20);
             this.label8.TabIndex = 21;
             this.label8.Text = "Địa Chỉ:";
             // 
@@ -242,7 +225,7 @@
             this.label5.Location = new System.Drawing.Point(8, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 21);
+            this.label5.Size = new System.Drawing.Size(164, 28);
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông Tin Tài Xế";
             // 
@@ -316,7 +299,7 @@
             this.label3.Location = new System.Drawing.Point(28, 151);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên Tài Xế:";
             // 
@@ -340,9 +323,28 @@
             this.label2.Location = new System.Drawing.Point(28, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Tài Xế:";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Info;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(201, 341);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(155, 45);
+            this.button2.TabIndex = 66;
+            this.button2.Text = "         Tìm Kiếm";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // QL_TaiXe
             // 
@@ -364,7 +366,6 @@
         private System.Windows.Forms.DataGridView gw_taixe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
 
  //       private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cbbType;
@@ -385,5 +386,6 @@
         private System.Windows.Forms.TextBox txtIdTaiXe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button button2;
     }
 }

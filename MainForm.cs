@@ -115,7 +115,9 @@ namespace DACNPM
         private void btnQL_Car_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(new Library_Control.QL_Vehicle());
+            Library_Control.QL_Vehicle ql = new Library_Control.QL_Vehicle();
+            ql.del += new Library_Control.QL_Vehicle.Mydel(showTaiXe);
+            panelMain.Controls.Add(ql);
         }
         private void btnQL_ChiPhi_Click(object sender, EventArgs e)
         {
@@ -228,6 +230,11 @@ namespace DACNPM
         {
             panelMain.Controls.Clear();
             panelMain.Controls.Add(new Library_Control.QL_KhachHang());
+        }
+        public void showTaiXe()
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(new Library_Control.QL_TaiXe());
         }
     }
 }

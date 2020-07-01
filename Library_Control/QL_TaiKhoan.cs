@@ -21,5 +21,10 @@ namespace DACNPM.Library_Control
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

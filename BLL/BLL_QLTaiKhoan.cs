@@ -38,7 +38,6 @@ namespace DACNPM.BLL
         {
             DACNPM DB = new DACNPM();
             Account acc = DB.Accounts.Where(p => p.Username == username).FirstOrDefault();
-         //   MessageBox.Show(acc.Question1 + acc.Question2);
             return acc;
         }
 
