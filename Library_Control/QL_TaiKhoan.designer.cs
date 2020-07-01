@@ -58,6 +58,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,6 +68,7 @@
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -136,6 +138,7 @@
             this.button1.Text = "  Tìm kiếm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -424,6 +427,24 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "QUẢN LÍ TÀI KHOẢN";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Info;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(430, 156);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(161, 48);
+            this.button3.TabIndex = 66;
+            this.button3.Text = "         Tìm Kiếm";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // QL_TaiKhoan
             // 
             this.Controls.Add(this.panel1);
@@ -471,5 +492,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn employee;
+        private System.Windows.Forms.Button button3;
     }
 }

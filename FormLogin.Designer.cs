@@ -104,12 +104,13 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(391, 9);
+            this.label1.Location = new System.Drawing.Point(358, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "LOGIN";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLogin
             // 
@@ -119,7 +120,7 @@
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLogin.Location = new System.Drawing.Point(381, 239);
+            this.btnLogin.Location = new System.Drawing.Point(398, 248);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(117, 49);
@@ -134,21 +135,22 @@
             this.lblMessageError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessageError.ForeColor = System.Drawing.Color.DarkGray;
             this.lblMessageError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblMessageError.Location = new System.Drawing.Point(279, 196);
+            this.lblMessageError.Location = new System.Drawing.Point(217, 196);
             this.lblMessageError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessageError.Name = "lblMessageError";
             this.lblMessageError.Size = new System.Drawing.Size(120, 20);
             this.lblMessageError.TabIndex = 5;
             this.lblMessageError.Text = "Error Message";
             this.lblMessageError.Visible = false;
+            this.lblMessageError.Click += new System.EventHandler(this.lblMessageError_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(558, 196);
+            this.label2.Location = new System.Drawing.Point(586, 196);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
@@ -201,7 +203,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
             this.Opacity = 0.9D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

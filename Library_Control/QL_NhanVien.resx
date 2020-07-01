@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAPZJREFUSEvt
+        lT0KwkAQRlPZqJUew9JWUAtRPJF4APUqlnojf/EU+j1JIJldhY1JbPbBA/PNLsOsG5JEIpEqWcqLfDbk
+        WS7k+4dvQZ2epLdQxoMcy3bqRB6lby16w1BX8hNr6dvjDUNkUmjJnbzJq9ymGfgmd4JQOV6gka2RwVTa
+        mhOE2pHApLZ2l9CVtuYEoWaNOV5b4zWFvrQ1JwiV2wu+o95ImElbc4JQuTjARaI5k9vLtZd2nxOUkVfm
+        GwP5kPk9hYdfZHJuL/95T3K8TEpTsM0Lm+uQZlnzoczywqK6pDlNR7nsfx8JPlFNNqfpXEYikSpIkhfn
+        2Z+75vVywQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btn_Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAu5JREFUSEvF

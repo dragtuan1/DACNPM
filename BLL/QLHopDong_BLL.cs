@@ -117,6 +117,12 @@ namespace DACNPM.BLL
             return hopDong.ToList();
         }
 
+        public Object getHopDongByIDCustomer_BLL(int Id_Custumer)
+        {
+            var contract = db.Contracts.Where(p => p.ID_Customer == Id_Custumer).Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill });
+            return contract.ToList();
+        }
+
         public Object getHopDongBySTD_BLL(String sdt)
         {
             var hopDong = db.Contracts.Where(p => p.Customer.Phone == sdt).Select(p => new { p.ID_Contract, p.Customer.Customer_Name, p.Employee.Name_Employee, p.Date_Borrow, p.Date_Return, p.Total_Bill });

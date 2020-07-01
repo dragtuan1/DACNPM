@@ -83,9 +83,39 @@ namespace DACNPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_480 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-480", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap profile_minus___1340_ {
             get {
                 object obj = ResourceManager.GetObject("profile_minus [#1340]", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_left___1506_ {
+            get {
+                object obj = ResourceManager.GetObject("search_left [#1506]", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_left___1506_1 {
+            get {
+                object obj = ResourceManager.GetObject("search_left [#1506]1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

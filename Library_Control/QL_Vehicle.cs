@@ -147,6 +147,11 @@ namespace DACNPM.Library_Control
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             string search = txt_Search.Text;
             DGV_QLXe.DataSource = BLL.QLXe_BLL.Instance.SearchVehicle_BLL(search);
             Reset();
